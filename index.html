@@ -803,10 +803,19 @@ img { max-width: 100%; height: auto; display: block; }
     margin-right: 16px;
   }
 
-  .hero { padding: 120px 24px 60px; min-height: 90vh; }
+  .hero { padding: 120px 24px 60px; min-height: auto; }
   .hero-content { max-width: 100%; }
-  .hero-image-frame { display: none; }
-  .hero h1 { font-size: clamp(40px, 10vw, 56px); }
+  .hero-image-frame {
+    position: relative;
+    right: auto; bottom: auto;
+    width: 100%; max-width: 100%;
+    height: 360px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    order: -1;
+  }
+  .hero { display: flex; flex-direction: column; justify-content: flex-start; padding-top: 80px; }
+  .hero h1 { font-size: clamp(36px, 9vw, 48px); }
 
   .section { padding: clamp(64px, 10vw, 100px) 24px; }
 
@@ -817,7 +826,8 @@ img { max-width: 100%; height: auto; display: block; }
   .proof-divider { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-image { aspect-ratio: 4/3; }
+  .about-image { aspect-ratio: 3/4; max-height: 480px; }
+  .about-image img { object-position: center 15%; }
   .about-accent { display: none; }
 
   .fresh-grid { grid-template-columns: 1fr; gap: 1px; }
@@ -825,14 +835,16 @@ img { max-width: 100%; height: auto; display: block; }
   .fresh-letter { font-size: 48px; min-width: 56px; margin-bottom: 0; }
   .fresh-word { margin-bottom: 8px; }
 
-  .cta-card { grid-template-columns: 1fr; padding: 48px 32px; }
-  .cta-card-image { aspect-ratio: 16/9; }
+  .cta-card { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
+  .cta-card-image { aspect-ratio: 4/5; max-height: 400px; }
+  .cta-card-image img { object-position: center 20%; }
 
   .pathway-grid { grid-template-columns: 1fr; }
   .pathway-card::before { font-size: 80px; }
 
   .podcast-grid { grid-template-columns: 1fr; gap: 48px; }
-  .podcast-cover { max-width: 300px; }
+  .podcast-cover { max-width: 100%; aspect-ratio: 16/9; }
+  .podcast-cover img { object-position: center 30%; }
 
   .footer-inner { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; gap: 8px; }
