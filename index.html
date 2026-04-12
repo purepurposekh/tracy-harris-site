@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracy Harris Co | Freedom-Filled Business for Women</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:       #FAF8F4;
+  --warm-white:  #F5F0E8;
+  --sand:        #E8DDD0;
+  --bark:        #A89080;
+  --espresso:    #3D2B1F;
+  --sage:        #8FA68A;
+  --sage-dark:   #6B8566;
+  --blush:       #D4B5A0;
+  --gold:        #C9A96E;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+
+  --section-pad: clamp(80px, 12vw, 160px);
+  --content-max: 1100px;
+  --wide-max: 1400px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.70;
+}
+a { color: inherit; text-decoration: none; transition: color 200ms ease; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ═══ NAV ═══ */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px;
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sand);
+}
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--espresso);
+}
+.nav-links {
+  display: flex; gap: 28px; list-style: none; align-items: center;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--bark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 200ms ease;
+}
+.nav-links a:hover { color: var(--espresso); }
+.nav-cta {
+  display: inline-block;
+  background: var(--sage);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 200ms ease;
+}
+.nav-cta:hover { background: var(--sage-dark); color: #fff; }
+
+/* Hamburger */
+.menu-toggle { display: none; cursor: pointer; width: 28px; height: 20px; position: relative; z-index: 101; }
+.menu-toggle span { display: block; width: 100%; height: 1.5px; background: var(--espresso); position: absolute; left: 0; transition: all 0.3s ease; }
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 9px; }
+.menu-toggle span:nth-child(3) { top: 18px; }
+#menu-state { display: none; }
+#menu-state:checked ~ .mobile-overlay { opacity: 1; visibility: visible; }
+#menu-state:checked ~ .nav .menu-toggle span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+#menu-state:checked ~ .nav .menu-toggle span:nth-child(2) { opacity: 0; }
+#menu-state:checked ~ .nav .menu-toggle span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+.mobile-overlay {
+  position: fixed; inset: 0; background: rgba(61, 43, 31, 0.97);
+  z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+  opacity: 0; visibility: hidden; transition: all 0.3s ease;
+}
+.mobile-overlay a {
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 400; color: var(--cream); letter-spacing: 1px;
+}
+.mobile-overlay a:hover { color: var(--sage); }
+
+/* ═══ HERO ═══ */
+.hero {
+  padding: clamp(100px, 15vw, 200px) 48px var(--section-pad);
+  background: var(--cream);
+  max-width: var(--wide-max);
+  margin: 0 auto;
+}
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 32px;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 300;
+  line-height: 1.08;
+  color: var(--espresso);
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--sage);
+}
+.hero p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.70;
+  color: var(--bark);
+  max-width: 560px;
+  margin-bottom: 48px;
+}
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ═══ BUTTONS ═══ */
+.btn-primary {
+  display: inline-block;
+  background: var(--sage);
+  color: #fff;
+  padding: 16px 36px;
+  border: 1px solid var(--sage);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: background 200ms ease;
+}
+.btn-primary:hover { background: var(--sage-dark); border-color: var(--sage-dark); }
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--espresso);
+  padding: 16px 36px;
+  border: 1px solid var(--sand);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+.btn-outline:hover { border-color: var(--espresso); }
+
+/* ═══ SOCIAL PROOF BAR ═══ */
+.proof-bar {
+  padding: 48px;
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
+  background: var(--cream);
+}
+.proof-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: clamp(32px, 6vw, 80px);
+  flex-wrap: wrap;
+  text-align: center;
+}
+.proof-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proof-stat .number {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300;
+  color: var(--espresso);
+  line-height: 1.1;
+}
+.proof-stat .label {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--bark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+/* ═══ EDITORIAL SECTION ═══ */
+.section {
+  padding: var(--section-pad) 48px;
+}
+.section-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.section.cream { background: var(--cream); }
+.section.warm { background: var(--warm-white); }
+.section.espresso { background: var(--espresso); color: var(--cream); }
+.section.sage-bg { background: var(--sage); color: #fff; }
+
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+.section.cream .section-eyebrow,
+.section.warm .section-eyebrow { color: var(--sage); }
+.section.espresso .section-eyebrow { color: var(--gold); }
+.section.sage-bg .section-eyebrow { color: rgba(255,255,255,0.7); }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 300;
+  line-height: 1.12;
+  margin-bottom: 32px;
+}
+.section-title em { font-style: italic; }
+
+.section-body {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.80;
+  max-width: 640px;
+}
+.section.espresso .section-body { color: rgba(250, 248, 244, 0.85); }
+
+/* ═══ ABOUT (story split) ═══ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--sand);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.about-image .placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--bark); letter-spacing: 2px; text-transform: uppercase;
+}
+.about-text .section-body { max-width: 100%; }
+.about-text .section-body p { margin-bottom: 24px; }
+.about-text .section-body p:last-child { margin-bottom: 0; }
+
+/* ═══ FRESH FRAMEWORK ═══ */
+.fresh-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 64px;
+}
+.fresh-card {
+  padding: 48px 32px;
+  border-right: 1px solid rgba(250, 248, 244, 0.15);
+  text-align: center;
+}
+.fresh-card:last-child { border-right: none; }
+.fresh-letter {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 5vw, 80px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 16px;
+  color: var(--gold);
+}
+.fresh-word {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.7);
+}
+.fresh-desc {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.70;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ═══ PATHWAY ═══ */
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 64px;
+}
+.pathway-card {
+  padding: 48px 36px;
+  border: 1px solid var(--sand);
+  border-radius: 4px;
+  background: var(--cream);
+}
+.pathway-step {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.pathway-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--espresso);
+}
+.pathway-desc {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.70;
+  color: var(--bark);
+  margin-bottom: 24px;
+}
+.pathway-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid var(--sage);
+  padding-bottom: 2px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.pathway-link:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
+
+/* ═══ TESTIMONIAL ═══ */
+.testimonial-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.50;
+  color: var(--cream);
+  margin-bottom: 40px;
+  position: relative;
+}
+.testimonial-quote::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 120px;
+  color: var(--gold);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  opacity: 0.5;
+}
+.testimonial-attr {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+/* ═══ QUIZ CTA ═══ */
+.quiz-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.quiz-cta-inner .section-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+.quiz-cta-inner .section-body {
+  max-width: 560px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+/* ═══ PODCAST ═══ */
+.podcast-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.podcast-episodes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.episode {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--sand);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.episode:first-child { padding-top: 0; }
+.episode-num {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--bark);
+  min-width: 48px;
+}
+.episode-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--espresso);
+  padding: 0 16px;
+}
+.episode-play {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ═══ FOOTER ═══ */
+.footer {
+  padding: 64px 48px;
+  background: var(--espresso);
+  border-top: 1px solid rgba(250, 248, 244, 0.08);
+}
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.footer-tagline {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--bark);
+}
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--bark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 200ms ease;
+}
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: var(--content-max);
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(250, 248, 244, 0.08);
+  font-size: 12px;
+  color: rgba(168, 144, 128, 0.6);
+  letter-spacing: 1px;
+}
+
+/* ═══ WORDMARK ═══ */
+.wordmark {
+  padding: 80px 48px;
+  text-align: center;
+  background: var(--cream);
+  overflow: hidden;
+}
+.wordmark-text {
+  font-family: var(--font-display);
+  font-size: clamp(60px, 12vw, 180px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sand);
+  line-height: 1.0;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
+
+  .hero { padding: 80px 24px 60px; }
+  .section { padding: clamp(60px, 10vw, 120px) 24px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-image { aspect-ratio: 4/3; max-height: 400px; }
+
+  .fresh-grid { grid-template-columns: 1fr; gap: 0; }
+  .fresh-card { border-right: none; border-bottom: 1px solid rgba(250, 248, 244, 0.1); padding: 36px 24px; text-align: left; display: flex; gap: 24px; align-items: flex-start; }
+  .fresh-card:last-child { border-bottom: none; }
+  .fresh-letter { font-size: 48px; min-width: 48px; margin-bottom: 0; }
+  .fresh-word { margin-bottom: 8px; }
+
+  .pathway-grid { grid-template-columns: 1fr; }
+
+  .podcast-grid { grid-template-columns: 1fr; gap: 48px; }
+
+  .footer-inner { flex-direction: column; }
+
+  .proof-inner { gap: 24px; }
+  .proof-stat .number { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Mobile menu checkbox -->
+<input type="checkbox" id="menu-state">
+
+<!-- Mobile overlay -->
+<div class="mobile-overlay">
+  <label for="menu-state" style="position:absolute; top:18px; right:24px; font-size:28px; color:var(--cream); cursor:pointer; z-index:102;">&times;</label>
+  <a href="#about" onclick="document.getElementById('menu-state').checked=false">About</a>
+  <a href="#fresh" onclick="document.getElementById('menu-state').checked=false">F.R.E.S.H.</a>
+  <a href="#pathway" onclick="document.getElementById('menu-state').checked=false">Work With Me</a>
+  <a href="#podcast" onclick="document.getElementById('menu-state').checked=false">Podcast</a>
+  <a href="#quiz" onclick="document.getElementById('menu-state').checked=false">Take the Quiz</a>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="/" class="nav-brand">Tracy Harris</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#fresh">F.R.E.S.H.</a></li>
+    <li><a href="#pathway">Work With Me</a></li>
+    <li><a href="#podcast">Podcast</a></li>
+    <li><a href="#quiz" class="nav-cta">Take the Quiz</a></li>
+  </ul>
+  <label class="menu-toggle" for="menu-state">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-eyebrow">For women building freedom-filled businesses</div>
+  <h1>Build a business that <em>supports</em> the life you actually want.</h1>
+  <p>I help women create thriving online businesses rooted in self-leadership, strategic growth, and a life that feels as good as it looks.</p>
+  <div class="hero-buttons">
+    <a href="#quiz" class="btn-primary">Take the Free Quiz</a>
+    <a href="#pathway" class="btn-outline">How I Can Help</a>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<div class="proof-bar">
+  <div class="proof-inner">
+    <div class="proof-stat">
+      <span class="number">100,000+</span>
+      <span class="label">Women Supported</span>
+    </div>
+    <div class="proof-stat">
+      <span class="number">7+</span>
+      <span class="label">Years Running</span>
+    </div>
+    <div class="proof-stat">
+      <span class="number">500+</span>
+      <span class="label">Podcast Episodes</span>
+    </div>
+    <div class="proof-stat">
+      <span class="number">Multi 7-Fig</span>
+      <span class="label">Business Built</span>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="section warm" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="placeholder">Tracy Photo</div>
+      </div>
+      <div class="about-text">
+        <div class="section-eyebrow">About Tracy</div>
+        <h2 class="section-title">I see <em>you.</em></h2>
+        <div class="section-body">
+          <p>I'm a former teacher turned entrepreneur, a mum of two boys, and the founder of a multi-seven-figure digital education company.</p>
+          <p>I built this business while living between Australia and Bali. While working four days a week. While prioritising my health, my family, and my faith.</p>
+          <p>I didn't build it fast. I built it <strong>right.</strong></p>
+          <p>And now I help other women do the same. Not with hype. Not with hustle culture. With strategy, self-leadership, and a framework I call F.R.E.S.H.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRESH Framework -->
+<section class="section espresso" id="fresh">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Framework</div>
+    <h2 class="section-title">F.R.E.S.H.</h2>
+    <div class="section-body">My personal operating system for building a business that feeds your life instead of consuming it. Every letter, every day.</div>
+    <div class="fresh-grid">
+      <div class="fresh-card">
+        <div class="fresh-letter">F</div>
+        <div>
+          <div class="fresh-word">Fitness</div>
+          <div class="fresh-desc">Moving your body from a place of self-care and energy, not guilt or punishment.</div>
+        </div>
+      </div>
+      <div class="fresh-card">
+        <div class="fresh-letter">R</div>
+        <div>
+          <div class="fresh-word">Relationships</div>
+          <div class="fresh-desc">Surrounding yourself with people who are aligned with where you're going, not just where you've been.</div>
+        </div>
+      </div>
+      <div class="fresh-card">
+        <div class="fresh-letter">E</div>
+        <div>
+          <div class="fresh-word">Environment</div>
+          <div class="fresh-desc">Creating a workspace and daily life that feels intentional, energising, and aligned.</div>
+        </div>
+      </div>
+      <div class="fresh-card">
+        <div class="fresh-letter">S</div>
+        <div>
+          <div class="fresh-word">Self</div>
+          <div class="fresh-desc">Trusting your instincts, investing in personal growth, and leading yourself first.</div>
+        </div>
+      </div>
+      <div class="fresh-card">
+        <div class="fresh-letter">H</div>
+        <div>
+          <div class="fresh-word">Hustle</div>
+          <div class="fresh-desc">Doing the work with purpose and strategy, not burnout and busyness.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="section espresso" style="padding-top:0;">
+  <div class="testimonial-inner">
+    <div class="testimonial-quote">
+      [INSERT CLIENT TESTIMONIAL]
+    </div>
+    <div class="testimonial-attr">[Client Name] &middot; [Business Type]</div>
+  </div>
+</section>
+
+<!-- Quiz CTA -->
+<section class="section sage-bg" id="quiz">
+  <div class="quiz-cta-inner">
+    <div class="section-eyebrow">Free Assessment</div>
+    <h2 class="section-title">Where should you focus <em>right now?</em></h2>
+    <div class="section-body">Take the 2-minute Business Focus Quiz and find out which pillar of your business needs attention first. Build, Sell, Lead, or F.R.E.S.H.</div>
+    <a href="#" class="btn-primary" style="background:#fff; color:var(--sage); border-color:#fff;">Take the Quiz</a>
+  </div>
+</section>
+
+<!-- Pathway -->
+<section class="section cream" id="pathway">
+  <div class="section-inner">
+    <div class="section-eyebrow">Work With Me</div>
+    <h2 class="section-title">Your pathway to a <em>freedom-filled</em> business.</h2>
+    <div class="section-body" style="margin-bottom:0;">Every woman starts where she is. I meet you there and help you build what's next.</div>
+    <div class="pathway-grid">
+      <div class="pathway-card">
+        <div class="pathway-step">Step One</div>
+        <div class="pathway-name">Take the Quiz</div>
+        <div class="pathway-desc">Find out where your business needs attention right now. Two minutes. Instant clarity.</div>
+        <a href="#" class="pathway-link">Start Here</a>
+      </div>
+      <div class="pathway-card">
+        <div class="pathway-step">Step Two</div>
+        <div class="pathway-name">FFB Mentorship</div>
+        <div class="pathway-desc">12 months of guidance to build your offer, find your audience, and create a business that works without burning out.</div>
+        <a href="#" class="pathway-link">Learn More</a>
+      </div>
+      <div class="pathway-card">
+        <div class="pathway-step">Step Three</div>
+        <div class="pathway-name">FFM Mastermind</div>
+        <div class="pathway-desc">For established business owners ready to scale with intention. Retreats, hot seats, 1:1 access. Application only.</div>
+        <a href="#" class="pathway-link">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Podcast -->
+<section class="section warm" id="podcast">
+  <div class="section-inner">
+    <div class="podcast-grid">
+      <div>
+        <div class="section-eyebrow">The Podcast</div>
+        <h2 class="section-title">500+ episodes of real talk.</h2>
+        <div class="section-body">
+          <p>Strategies, stories, and straight talk for women building online businesses. No fluff. Just the stuff that actually moves the needle.</p>
+        </div>
+        <a href="#" class="btn-primary" style="margin-top:32px;">Listen Now</a>
+      </div>
+      <div class="podcast-episodes">
+        <div class="episode">
+          <span class="episode-num">533</span>
+          <span class="episode-title">[Latest Episode Title]</span>
+          <span class="episode-play">Listen</span>
+        </div>
+        <div class="episode">
+          <span class="episode-num">532</span>
+          <span class="episode-title">[Episode Title]</span>
+          <span class="episode-play">Listen</span>
+        </div>
+        <div class="episode">
+          <span class="episode-num">531</span>
+          <span class="episode-title">[Episode Title]</span>
+          <span class="episode-play">Listen</span>
+        </div>
+        <div class="episode">
+          <span class="episode-num">530</span>
+          <span class="episode-title">[Episode Title]</span>
+          <span class="episode-play">Listen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wordmark -->
+<div class="wordmark">
+  <div class="wordmark-text">Tracy Harris</div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Tracy Harris Co</div>
+      <div class="footer-tagline">Freedom-filled business, by design.</div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Podcast</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Tracy Harris Co. All rights reserved. &middot; Australia &amp; Bali
+  </div>
+</footer>
+
+</body>
+</html>
