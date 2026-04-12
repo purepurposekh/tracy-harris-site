@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tracy Harris Co | Luxury Editorial Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;1,400&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              teal: {
+                900: "#1e3735",
+                950: "#0f1f1e",
+              },
+              sage: "#6e8e77",
+              canvas: "#f6f4f1",
+              charcoal: "#313131",
+              terracotta: "#cb9275",
+              sand: "#d4d0ca",
+              nearblack: "#1a1a1a"
+            },
+            borderRadius: {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            fontFamily: {
+              headline: ["Libre Caslon Text", "serif"],
+              body: ["DM Sans", "sans-serif"],
+              label: ["DM Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f6f4f1;
+            color: #313131;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+        }
+        .hero-gradient {
+            background: linear-gradient(160deg, #0f1f1e 0%, #1e3735 40%, #2a4a47 100%);
+            position: relative;
+        }
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(203,146,117,0.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .scrapbook-shadow {
+            box-shadow: rgba(30,55,53,0.10) -3px -3px 16px, rgba(30,55,53,0.16) 11px 3px 36px;
+        }
+        .letter-spacing-label {
+            letter-spacing: 0.3em;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-terracotta/30">
+<!-- Navigation -->
+<nav class="bg-[#f6f4f1]/85 dark:bg-[#1e3735]/85 backdrop-blur-md docked full-width top-0 sticky z-50 transition-all duration-500">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<a class="text-2xl font-serif italic text-[#1e3735] dark:text-[#f6f4f1]" href="#">Tracy Harris Co</a>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[12px] uppercase tracking-[0.25em] text-[#1e3735] dark:text-[#f6f4f1] border-b border-[#cb9275] pb-1 hover:text-[#cb9275] transition-colors duration-500" href="#">The Experience</a>
+<a class="text-[12px] uppercase tracking-[0.25em] text-[#727272] dark:text-[#d4d0ca] hover:text-[#cb9275] transition-colors duration-500" href="#">Programs</a>
+<a class="text-[12px] uppercase tracking-[0.25em] text-[#727272] dark:text-[#d4d0ca] hover:text-[#cb9275] transition-colors duration-500" href="#">Journal</a>
+<a class="text-[12px] uppercase tracking-[0.25em] text-[#727272] dark:text-[#d4d0ca] hover:text-[#cb9275] transition-colors duration-500" href="#">About</a>
+</div>
+<a class="bg-sage text-white px-8 py-3 text-[11px] uppercase tracking-[0.2em] hover:bg-teal-900 transition-all duration-300" href="#">Apply Now</a>
+</div>
+</nav>
+<!-- Section 1: HERO -->
+<section class="hero-gradient min-h-screen flex items-center overflow-hidden pt-20">
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-16 items-center w-full">
+<div class="md:col-span-7 flex flex-col items-start space-y-10 z-10">
+<span class="text-sage text-[11px] uppercase tracking-[0.4em] font-medium">EDUCATOR · SPEAKER · MENTOR</span>
+<h1 class="text-white font-headline italic text-6xl md:text-8xl leading-[1.1] max-w-2xl">
+                    Build a business that feels like <span class="text-terracotta">freedom</span>.
+                </h1>
+<p class="text-sand/80 font-body text-lg max-w-lg leading-relaxed">
+                    Strategy and soul for the modern entrepreneur who values unhurried success and intentional growth.
+                </p>
+<div class="flex flex-wrap items-center gap-8 pt-4">
+<button class="bg-sage text-white px-12 py-5 text-[12px] uppercase tracking-[0.3em] hover:bg-terracotta transition-all duration-500">Take the Free Quiz</button>
+<button class="text-white text-[12px] uppercase tracking-[0.3em] border-b border-white/30 pb-1 hover:border-terracotta transition-all duration-500">Work With Me</button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] w-full scrapbook-shadow rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Sophisticated female entrepreneur in elegant dark blazer sitting in a sunlit architectural studio with minimalist luxury decor" src="tracy-hero.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: PROOF BAR -->
+<section class="bg-canvas py-24 border-y border-sand/30">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid grid-cols-2 md:grid-cols-5 divide-x divide-sand/50">
+<div class="flex flex-col items-center text-center px-4">
+<span class="font-headline italic text-4xl text-teal-900 mb-2">100K+</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-teal-900/60">Women Impacted</span>
+</div>
+<div class="flex flex-col items-center text-center px-4">
+<span class="font-headline italic text-4xl text-teal-900 mb-2">10+</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-teal-900/60">Years in Business</span>
+</div>
+<div class="flex flex-col items-center text-center px-4">
+<span class="font-headline italic text-4xl text-teal-900 mb-2">500+</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-teal-900/60">Global Mentorships</span>
+</div>
+<div class="flex flex-col items-center text-center px-4">
+<span class="font-headline italic text-4xl text-teal-900 mb-2">Multi 7-Fig</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-teal-900/60">Revenue Portfolio</span>
+</div>
+<div class="flex flex-col items-center text-center px-4">
+<span class="font-headline italic text-4xl text-teal-900 mb-2">Mum of 2</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-teal-900/60">The Real Bottom Line</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: QUOTE -->
+<section class="bg-canvas py-[180px]">
+<div class="max-w-4xl mx-auto px-12 text-center relative">
+<span class="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[180px] font-headline italic text-sand/40 select-none leading-none">“</span>
+<h2 class="font-headline italic text-4xl md:text-5xl text-teal-900 leading-snug relative z-10">
+                Your business is only as strong as the level of self-leadership you bring to it.
+            </h2>
+<div class="mt-12 flex flex-col items-center gap-4">
+<div class="h-12 w-[1px] bg-terracotta/40"></div>
+<span class="text-[11px] uppercase tracking-[0.4em] text-teal-900/80 font-medium">TRACY HARRIS</span>
+</div>
+</div>
+</section>
+<!-- Section 4: ABOUT -->
+<section class="bg-white py-[160px]">
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-20 items-center">
+<div class="md:col-span-5 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-sage opacity-10 -z-10"></div>
+<div class="aspect-[3/4] w-full scrapbook-shadow relative">
+<img class="w-full h-full object-cover" data-alt="Candid lifestyle portrait of a confident woman in a warm neutral setting, looking thoughtfully away from camera" src="tracy-about.jpg"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-3/4 h-24 bg-sage/5 border border-sand/20"></div>
+</div>
+<div class="md:col-span-7 space-y-8">
+<span class="text-sage text-[11px] uppercase tracking-[0.4em] font-medium">ABOUT TRACY</span>
+<h3 class="font-headline italic text-5xl md:text-6xl text-teal-900">Former teacher. Founder. <span class="text-terracotta">Leader</span>.</h3>
+<div class="space-y-6 text-charcoal/80 font-body text-lg leading-relaxed max-w-xl">
+<p>Building a multi-seven-figure empire wasn't an accident. It was a series of intentional shifts from frantic hustle to focused leadership.</p>
+<p>I believe that true success isn't measured just by the bottom line, but by the space you have in your calendar and the peace you have in your heart. We don't just scale; we refine.</p>
+</div>
+<div class="pt-6">
+<span class="font-headline italic text-3xl text-teal-900">Xx Tracy</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: F.R.E.S.H. FRAMEWORK -->
+<section class="hero-gradient py-[160px] text-white">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="mb-24 text-center">
+<span class="text-sage text-[11px] uppercase tracking-[0.4em] font-medium block mb-6">THE FRAMEWORK</span>
+<h2 class="font-headline italic text-7xl md:text-9xl tracking-[0.2em] opacity-90">F.R.E.S.H.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 border border-sand/10">
+<div class="p-12 border-r border-sand/10 hover:bg-teal-950 transition-colors duration-500">
+<span class="font-headline italic text-5xl text-terracotta block mb-6">F</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-medium mb-4 block">Focus</span>
+<p class="text-sand/60 text-sm leading-relaxed">Identifying the highest leverage tasks that move the needle without the noise.</p>
+</div>
+<div class="p-12 border-r border-sand/10 hover:bg-teal-950 transition-colors duration-500">
+<span class="font-headline italic text-5xl text-terracotta block mb-6">R</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-medium mb-4 block">Refinement</span>
+<p class="text-sand/60 text-sm leading-relaxed">Polishing your offers and systems until they shine with effortless clarity.</p>
+</div>
+<div class="p-12 border-r border-sand/10 hover:bg-teal-950 transition-colors duration-500">
+<span class="font-headline italic text-5xl text-terracotta block mb-6">E</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-medium mb-4 block">Expansion</span>
+<p class="text-sand/60 text-sm leading-relaxed">Opening the doors to new markets and bigger opportunities with poise.</p>
+</div>
+<div class="p-12 border-r border-sand/10 hover:bg-teal-950 transition-colors duration-500">
+<span class="font-headline italic text-5xl text-terracotta block mb-6">S</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-medium mb-4 block">Sustainability</span>
+<p class="text-sand/60 text-sm leading-relaxed">Ensuring your growth supports your lifestyle, not the other way around.</p>
+</div>
+<div class="p-12 hover:bg-teal-950 transition-colors duration-500">
+<span class="font-headline italic text-5xl text-terracotta block mb-6">H</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-medium mb-4 block">Harvest</span>
+<p class="text-sand/60 text-sm leading-relaxed">Enjoying the literal and metaphorical fruits of your intentional labor.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: EXCLUSIVITY -->
+<section class="bg-nearblack py-[200px] text-center px-12 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-sand/20 rounded-full scale-150"></div>
+</div>
+<div class="max-w-3xl mx-auto relative z-10 space-y-10">
+<span class="text-terracotta text-[11px] uppercase tracking-[0.4em] font-medium">THE INVITATION</span>
+<h2 class="font-headline italic text-5xl md:text-7xl text-white">This isn't for everyone.</h2>
+<p class="text-sand/60 font-body text-lg leading-relaxed italic">
+                We work with high-performing women who are ready to trade the "hustle culture" for an era of refined impact and unhurried wealth.
+            </p>
+<div class="pt-8">
+<button class="bg-sage text-white px-16 py-6 text-[12px] uppercase tracking-[0.4em] hover:bg-terracotta transition-all duration-700 group">
+                    See If You Qualify <span class="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 7: TESTIMONIAL -->
+<section class="bg-sage py-[140px] text-white">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 relative">
+<div class="space-y-8 relative">
+<span class="absolute top-[-30px] left-[-20px] text-[120px] font-headline italic text-white/10 select-none">“</span>
+<p class="font-headline italic text-3xl leading-relaxed relative z-10">
+                        Tracy doesn't just give you a blueprint; she gives you the permission to build a business that actually serves your life. My revenue doubled while my working hours halved.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="w-12 h-[1px] bg-white/40"></div>
+<span class="text-[10px] uppercase tracking-[0.3em]">Marleigh J. — CEO</span>
+</div>
+</div>
+<div class="space-y-8 relative">
+<span class="absolute top-[-30px] left-[-20px] text-[120px] font-headline italic text-white/10 select-none">“</span>
+<p class="font-headline italic text-3xl leading-relaxed relative z-10">
+                        The clarity I gained from the F.R.E.S.H. framework was the missing piece. I finally feel like the CEO of my business instead of its most exhausted employee.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="w-12 h-[1px] bg-white/40"></div>
+<span class="text-[10px] uppercase tracking-[0.3em]">Madeline W. — Founder</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: QUIZ CTA -->
+<section class="bg-canvas py-32 px-12">
+<div class="max-w-5xl mx-auto bg-teal-900 scrapbook-shadow flex flex-col md:flex-row items-center overflow-hidden">
+<div class="md:w-1/2 h-full">
+<img class="w-full h-full object-cover min-h-[400px]" data-alt="Abstract lifestyle shot of luxury planners and an elegant coffee cup on a textured marble desk at dawn" src="tracy-quiz.jpg"/>
+</div>
+<div class="md:w-1/2 p-16 space-y-8 text-white text-center md:text-left">
+<span class="text-terracotta text-[10px] uppercase tracking-[0.4em] font-medium">QUIZ</span>
+<h3 class="font-headline italic text-4xl md:text-5xl leading-tight">Where should you <span class="text-sage">focus</span> right now?</h3>
+<p class="text-sand/60 text-sm leading-relaxed">A 2-minute diagnostic to reveal your current season and the next move to make.</p>
+<button class="bg-sage text-white px-10 py-4 text-[11px] uppercase tracking-[0.3em] hover:bg-terracotta transition-all duration-300 w-full md:w-auto">Start the diagnostic</button>
+</div>
+</div>
+</section>
+<!-- Section 9: PATHWAY -->
+<section class="bg-white py-[160px]">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="text-center mb-24">
+<span class="text-sage text-[11px] uppercase tracking-[0.4em] font-medium block mb-4">WORK WITH ME</span>
+<h2 class="font-headline italic text-6xl text-teal-900">Your Journey Forward</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group border border-sand/30 p-12 space-y-8 hover:border-sage transition-all duration-500">
+<span class="text-8xl font-headline italic text-sand/20 group-hover:text-sage/20 transition-colors block leading-none">01</span>
+<h4 class="font-headline text-2xl text-teal-900 italic">The Freedom Foundation</h4>
+<p class="text-charcoal/70 text-sm leading-relaxed">Our signature digital portal for emerging founders ready to structure for scale.</p>
+<a class="inline-block text-[11px] uppercase tracking-[0.3em] text-sage font-medium group-hover:translate-x-2 transition-transform" href="#">Explore More →</a>
+</div>
+<div class="group border border-sand/30 p-12 space-y-8 hover:border-sage transition-all duration-500">
+<span class="text-8xl font-headline italic text-sand/20 group-hover:text-sage/20 transition-colors block leading-none">02</span>
+<h4 class="font-headline text-2xl text-teal-900 italic">Private Mentorship</h4>
+<p class="text-charcoal/70 text-sm leading-relaxed">1:1 bespoke partnership for high-level leaders seeking intense refinement and growth.</p>
+<a class="inline-block text-[11px] uppercase tracking-[0.3em] text-sage font-medium group-hover:translate-x-2 transition-transform" href="#">Inquire Within →</a>
+</div>
+<div class="group border border-sand/30 p-12 space-y-8 hover:border-sage transition-all duration-500">
+<span class="text-8xl font-headline italic text-sand/20 group-hover:text-sage/20 transition-colors block leading-none">03</span>
+<h4 class="font-headline text-2xl text-teal-900 italic">The Mastermind</h4>
+<p class="text-charcoal/70 text-sm leading-relaxed">An exclusive circle of seven-figure peers meeting globally for expansion.</p>
+<a class="inline-block text-[11px] uppercase tracking-[0.3em] text-sage font-medium group-hover:translate-x-2 transition-transform" href="#">Apply Now →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 10: PODCAST -->
+<section class="bg-canvas py-[160px]">
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-20 items-center">
+<div class="md:col-span-6 relative">
+<div class="aspect-square w-full scrapbook-shadow relative group">
+<img class="w-full h-full object-cover" data-alt="Close up of a professional studio microphone in a softly lit, moody interior with warm wood accents" src="tracy-speaker.jpg"/>
+<div class="absolute inset-0 bg-teal-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-6xl">play_circle</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 space-y-10">
+<span class="text-sage text-[11px] uppercase tracking-[0.4em] font-medium">THE PODCAST</span>
+<h2 class="font-headline italic text-5xl md:text-6xl text-teal-900">Real talk for real <span class="text-terracotta">business</span>.</h2>
+<div class="space-y-6">
+<div class="flex items-center justify-between py-6 border-b border-sand/50 group cursor-pointer">
+<div class="space-y-2">
+<span class="text-[9px] uppercase tracking-[0.2em] text-teal-900/50">Episode 342</span>
+<h5 class="font-headline text-lg italic text-teal-900 group-hover:text-sage transition-colors">The Art of the Slow Scale</h5>
+</div>
+<span class="material-symbols-outlined text-teal-900/30 group-hover:text-sage transition-colors">arrow_forward</span>
+</div>
+<div class="flex items-center justify-between py-6 border-b border-sand/50 group cursor-pointer">
+<div class="space-y-2">
+<span class="text-[9px] uppercase tracking-[0.2em] text-teal-900/50">Episode 341</span>
+<h5 class="font-headline text-lg italic text-teal-900 group-hover:text-sage transition-colors">Setting Boundaried Ambition</h5>
+</div>
+<span class="material-symbols-outlined text-teal-900/30 group-hover:text-sage transition-colors">arrow_forward</span>
+</div>
+<div class="flex items-center justify-between py-6 group cursor-pointer">
+<div class="space-y-2">
+<span class="text-[9px] uppercase tracking-[0.2em] text-teal-900/50">Episode 340</span>
+<h5 class="font-headline text-lg italic text-teal-900 group-hover:text-sage transition-colors">Self-Leadership in Chaos</h5>
+</div>
+<span class="material-symbols-outlined text-teal-900/30 group-hover:text-sage transition-colors">arrow_forward</span>
+</div>
+</div>
+<button class="text-[11px] uppercase tracking-[0.3em] font-medium text-teal-900 border-b border-terracotta pb-1 inline-block">View All Episodes</button>
+</div>
+</div>
+</section>
+<!-- Section 11: WORDMARK -->
+<section class="bg-canvas py-24 text-center">
+<h2 class="text-9xl md:text-[18rem] font-headline italic text-sand/20 select-none tracking-tight">Tracy Harris</h2>
+</section>
+<!-- Section 12: FOOTER -->
+<footer class="bg-teal-900 dark:bg-[#1a1a1a] w-full px-12 pt-32 pb-12 flex flex-col items-center gap-16 border-t border-[#d4d0ca]/10 text-[#f6f4f1]">
+<div class="w-full max-w-[1440px] grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 items-start">
+<div class="space-y-8">
+<span class="text-3xl font-serif italic text-[#f6f4f1]">Tracy Harris Co</span>
+<p class="font-light text-sm leading-relaxed max-w-xs opacity-70">
+                    A refined destination for entrepreneurs who believe success should be as sustainable as it is significant.
+                </p>
+<div class="flex gap-6">
+<a class="opacity-50 hover:opacity-100 transition-opacity" href="#">Instagram</a>
+<a class="opacity-50 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+<a class="opacity-50 hover:opacity-100 transition-opacity" href="#">Pinterest</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<span class="uppercase tracking-[0.3em] text-[10px] font-medium opacity-40">Navigation</span>
+<nav class="flex flex-col gap-4">
+<a class="text-[#f6f4f1]/70 hover:text-[#cb9275] transition-all duration-300" href="#">The Experience</a>
+<a class="text-[#f6f4f1]/70 hover:text-[#cb9275] transition-all duration-300" href="#">Mastermind Circle</a>
+<a class="text-[#f6f4f1]/70 hover:text-[#cb9275] transition-all duration-300" href="#">Journal</a>
+<a class="text-[#f6f4f1]/70 hover:text-[#cb9275] transition-all duration-300" href="#">The Freedom Filled® Method</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<span class="uppercase tracking-[0.3em] text-[10px] font-medium opacity-40">The Inner Circle</span>
+<p class="font-light text-sm leading-relaxed opacity-70">Join our weekly digital correspondence for quiet insights on leadership.</p>
+<form class="flex border-b border-white/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-white/30 p-0" placeholder="Email address" type="email"/>
+<button class="text-[10px] uppercase tracking-[0.2em] font-medium text-sage" type="submit">Join</button>
+</form>
+</div>
+</div>
+<div class="w-full max-w-[1440px] pt-12 mt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="text-[10px] uppercase tracking-[0.3em] opacity-40 text-center md:text-left">© Tracy Harris Co. All Rights Reserved. Member of the Exclusive Circle.</span>
+<div class="flex gap-8">
+<a class="text-[10px] uppercase tracking-[0.3em] opacity-40 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[10px] uppercase tracking-[0.3em] opacity-40 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[10px] uppercase tracking-[0.3em] opacity-40 hover:opacity-100" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
