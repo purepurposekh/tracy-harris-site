@@ -9,15 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,300;1,6..12,400;1,6..12,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --cream:       #FAF8F4;
-  --warm-white:  #F5F0E8;
-  --sand:        #E8DDD0;
-  --bark:        #A89080;
-  --espresso:    #3D2B1F;
-  --sage:        #8FA68A;
-  --sage-dark:   #6B8566;
-  --blush:       #D4B5A0;
-  --gold:        #C9A96E;
+  --cream:       #f6f4f1;
+  --warm-white:  #edeae6;
+  --sand:        #d4d0ca;
+  --bark:        #727272;
+  --espresso:    #1e3735;
+  --sage:        #6e8e77;
+  --sage-dark:   #567260;
+  --charcoal:    #313131;
+  --gold:        #a8c4a0;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', -apple-system, sans-serif;
@@ -27,14 +27,14 @@
   --content-max: 1100px;
   --wide-max: 1400px;
 
-  --shadow-scrapbook: rgba(61, 43, 31, 0.12) -3px -3px 16px 0px, rgba(61, 43, 31, 0.18) 11px 3px 36px 0px;
+  --shadow-scrapbook: rgba(30, 55, 53, 0.12) -3px -3px 16px 0px, rgba(30, 55, 53, 0.18) 11px 3px 36px 0px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
 body {
   background: var(--cream);
-  color: var(--espresso);
+  color: var(--charcoal);
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 300;
@@ -61,7 +61,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: var(--espresso);
+  color: var(--charcoal);
   text-transform: uppercase;
 }
 .nav-links {
@@ -75,10 +75,10 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 1.8px;
   transition: color 200ms ease;
 }
-.nav-links a:hover { color: var(--espresso); text-decoration: none; }
+.nav-links a:hover { color: var(--charcoal); text-decoration: none; }
 .nav-cta-link {
   display: inline-block;
-  background: var(--espresso);
+  background: var(--charcoal);
   color: var(--cream) !important;
   padding: 10px 24px;
   border-radius: 4px;
@@ -87,11 +87,11 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 1.5px !important;
   transition: background 200ms ease;
 }
-.nav-cta-link:hover { background: var(--sage-dark); color: #fff !important; }
+.nav-cta-link:hover { background: var(--espresso); color: #fff !important; }
 
 /* Hamburger */
 .menu-toggle { display: none; cursor: pointer; width: 28px; height: 20px; position: relative; z-index: 101; }
-.menu-toggle span { display: block; width: 100%; height: 1px; background: var(--espresso); position: absolute; left: 0; transition: all 0.3s ease; }
+.menu-toggle span { display: block; width: 100%; height: 1px; background: var(--charcoal); position: absolute; left: 0; transition: all 0.3s ease; }
 .menu-toggle span:nth-child(1) { top: 0; }
 .menu-toggle span:nth-child(2) { top: 9px; }
 .menu-toggle span:nth-child(3) { top: 18px; }
@@ -101,7 +101,7 @@ img { max-width: 100%; height: auto; display: block; }
 #menu-state:checked ~ .nav .menu-toggle span:nth-child(2) { opacity: 0; }
 #menu-state:checked ~ .nav .menu-toggle span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
 .mobile-overlay {
-  position: fixed; inset: 0; background: var(--espresso);
+  position: fixed; inset: 0; background: var(--charcoal);
   z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px;
   opacity: 0; visibility: hidden; transition: all 0.4s ease;
 }
@@ -127,14 +127,14 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--espresso) 0%, #2a1f15 40%, #4a3528 100%);
+  background: linear-gradient(135deg, var(--espresso) 0%, #162c2a 40%, #2a4a47 100%);
   opacity: 1;
 }
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(201, 169, 110, 0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 70% 30%, rgba(110, 142, 119, 0.1) 0%, transparent 60%);
 }
 .hero-image-frame {
   position: absolute;
@@ -258,7 +258,7 @@ img { max-width: 100%; height: auto; display: block; }
   text-transform: uppercase;
   transition: all 200ms ease;
 }
-.btn-dark:hover { background: #2a1f15; border-color: #2a1f15; color: var(--cream); text-decoration: none; }
+.btn-dark:hover { background: #162c2a; border-color: #162c2a; color: var(--cream); text-decoration: none; }
 
 .btn-ghost {
   display: inline-block;
@@ -295,7 +295,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: var(--font-display);
   font-size: clamp(40px, 4.5vw, 64px);
   font-weight: 300;
-  color: var(--espresso);
+  color: var(--charcoal);
   line-height: 1.0;
   letter-spacing: -1px;
 }
@@ -420,7 +420,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 300;
   font-style: italic;
   line-height: 1.30;
-  color: var(--espresso);
+  color: var(--charcoal);
   max-width: 900px;
   margin: 0 auto;
   letter-spacing: -0.3px;
@@ -463,7 +463,7 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: center;
   transition: background 400ms ease;
 }
-.fresh-card:hover { background: #4a3528; }
+.fresh-card:hover { background: #2a4a47; }
 .fresh-letter {
   font-family: var(--font-display);
   font-size: clamp(56px, 6vw, 96px);
@@ -607,7 +607,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 400;
   line-height: 1.15;
   margin-bottom: 20px;
-  color: var(--espresso);
+  color: var(--charcoal);
   position: relative;
 }
 .pathway-desc {
@@ -679,7 +679,7 @@ img { max-width: 100%; height: auto; display: block; }
 .episode-title {
   font-size: 15px;
   font-weight: 400;
-  color: var(--espresso);
+  color: var(--charcoal);
 }
 .episode-play {
   font-family: var(--font-mono);
