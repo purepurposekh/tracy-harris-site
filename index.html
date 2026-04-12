@@ -6,7 +6,7 @@
 <title>Tracy Harris Co | Freedom-Filled Business for Women</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;1,6..12,300;1,6..12,400;1,6..12,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream:       #FAF8F4;
@@ -21,14 +21,17 @@
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', -apple-system, sans-serif;
+  --font-mono: 'DM Mono', 'SFMono-Regular', monospace;
 
-  --section-pad: clamp(80px, 12vw, 160px);
+  --section-pad: clamp(100px, 14vw, 187px);
   --content-max: 1100px;
   --wide-max: 1400px;
+
+  --shadow-scrapbook: rgba(61, 43, 31, 0.12) -3px -3px 16px 0px, rgba(61, 43, 31, 0.18) 11px 3px 36px 0px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
 body {
   background: var(--cream);
   color: var(--espresso);
@@ -37,55 +40,58 @@ body {
   font-weight: 300;
   line-height: 1.70;
 }
-a { color: inherit; text-decoration: none; transition: color 200ms ease; }
+a { color: inherit; text-decoration: none; transition: all 200ms ease; }
 img { max-width: 100%; height: auto; display: block; }
 
-/* ═══ NAV ═══ */
+/* ═══════════════════════════════════════════
+   NAV
+   ═══════════════════════════════════════════ */
 .nav {
-  position: sticky; top: 0; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: center;
-  padding: 18px 48px;
-  background: rgba(250, 248, 244, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--sand);
+  padding: 20px 48px;
+  background: rgba(250, 248, 244, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 221, 208, 0.6);
+  transition: background 300ms ease;
 }
 .nav-brand {
   font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
   color: var(--espresso);
+  text-transform: uppercase;
 }
 .nav-links {
-  display: flex; gap: 28px; list-style: none; align-items: center;
+  display: flex; gap: 32px; list-style: none; align-items: center;
 }
 .nav-links a {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--bark);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   transition: color 200ms ease;
 }
-.nav-links a:hover { color: var(--espresso); }
-.nav-cta {
+.nav-links a:hover { color: var(--espresso); text-decoration: none; }
+.nav-cta-link {
   display: inline-block;
-  background: var(--sage);
-  color: #fff;
+  background: var(--espresso);
+  color: var(--cream) !important;
   padding: 10px 24px;
   border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1.5px !important;
   transition: background 200ms ease;
 }
-.nav-cta:hover { background: var(--sage-dark); color: #fff; }
+.nav-cta-link:hover { background: var(--sage-dark); color: #fff !important; }
 
 /* Hamburger */
 .menu-toggle { display: none; cursor: pointer; width: 28px; height: 20px; position: relative; z-index: 101; }
-.menu-toggle span { display: block; width: 100%; height: 1.5px; background: var(--espresso); position: absolute; left: 0; transition: all 0.3s ease; }
+.menu-toggle span { display: block; width: 100%; height: 1px; background: var(--espresso); position: absolute; left: 0; transition: all 0.3s ease; }
 .menu-toggle span:nth-child(1) { top: 0; }
 .menu-toggle span:nth-child(2) { top: 9px; }
 .menu-toggle span:nth-child(3) { top: 18px; }
@@ -95,152 +101,251 @@ img { max-width: 100%; height: auto; display: block; }
 #menu-state:checked ~ .nav .menu-toggle span:nth-child(2) { opacity: 0; }
 #menu-state:checked ~ .nav .menu-toggle span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
 .mobile-overlay {
-  position: fixed; inset: 0; background: rgba(61, 43, 31, 0.97);
-  z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
-  opacity: 0; visibility: hidden; transition: all 0.3s ease;
+  position: fixed; inset: 0; background: var(--espresso);
+  z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px;
+  opacity: 0; visibility: hidden; transition: all 0.4s ease;
 }
 .mobile-overlay a {
   font-family: var(--font-display);
-  font-size: 28px; font-weight: 400; color: var(--cream); letter-spacing: 1px;
+  font-size: 32px; font-weight: 300; color: var(--cream); letter-spacing: 1px; font-style: italic;
 }
-.mobile-overlay a:hover { color: var(--sage); }
+.mobile-overlay a:hover { color: var(--gold); text-decoration: none; }
 
-/* ═══ HERO ═══ */
+/* ═══════════════════════════════════════════
+   HERO — Full viewport, cinematic
+   ═══════════════════════════════════════════ */
 .hero {
-  padding: clamp(100px, 15vw, 200px) 48px var(--section-pad);
-  background: var(--cream);
-  max-width: var(--wide-max);
-  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 48px 80px;
+  background: var(--espresso);
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--espresso) 0%, #2a1f15 40%, #4a3528 100%);
+  opacity: 1;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(201, 169, 110, 0.08) 0%, transparent 60%);
+}
+.hero-image-frame {
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+  width: 42%;
+  max-width: 560px;
+  height: 85%;
+  background: var(--bark);
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-scrapbook);
+}
+.hero-image-frame .placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: rgba(250,248,244,0.4); letter-spacing: 3px; text-transform: uppercase;
+  font-family: var(--font-mono);
+  background: linear-gradient(180deg, rgba(168,144,128,0.3) 0%, rgba(168,144,128,0.6) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 55%;
 }
 .hero-eyebrow {
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 500;
-  color: var(--sage);
+  font-weight: 400;
+  color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 32px;
+  line-height: 1.80;
 }
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: clamp(52px, 7vw, 96px);
   font-weight: 300;
-  line-height: 1.08;
-  color: var(--espresso);
+  line-height: 1.06;
+  color: var(--cream);
   margin-bottom: 40px;
-  max-width: 900px;
+  letter-spacing: -0.5px;
 }
 .hero h1 em {
   font-style: italic;
-  color: var(--sage);
+  color: var(--gold);
 }
-.hero p {
-  font-size: 20px;
+.hero-sub {
+  font-size: 18px;
   font-weight: 300;
-  line-height: 1.70;
-  color: var(--bark);
-  max-width: 560px;
+  line-height: 1.80;
+  color: rgba(250, 248, 244, 0.65);
+  max-width: 480px;
   margin-bottom: 48px;
 }
 .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* ═══ BUTTONS ═══ */
+/* ═══════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════ */
 .btn-primary {
   display: inline-block;
   background: var(--sage);
   color: #fff;
-  padding: 16px 36px;
+  padding: 16px 40px;
   border: 1px solid var(--sage);
   border-radius: 4px;
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  transition: background 200ms ease;
-}
-.btn-primary:hover { background: var(--sage-dark); border-color: var(--sage-dark); }
-.btn-outline {
-  display: inline-block;
-  background: transparent;
-  color: var(--espresso);
-  padding: 16px 36px;
-  border: 1px solid var(--sand);
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all 200ms ease;
 }
-.btn-outline:hover { border-color: var(--espresso); }
+.btn-primary:hover { background: var(--sage-dark); border-color: var(--sage-dark); color: #fff; text-decoration: none; }
 
-/* ═══ SOCIAL PROOF BAR ═══ */
+.btn-outline-light {
+  display: inline-block;
+  background: transparent;
+  color: var(--cream);
+  padding: 16px 40px;
+  border: 1px solid rgba(250, 248, 244, 0.25);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+.btn-outline-light:hover { border-color: var(--cream); color: var(--cream); text-decoration: none; }
+
+.btn-outline-dark {
+  display: inline-block;
+  background: transparent;
+  color: var(--espresso);
+  padding: 16px 40px;
+  border: 1px solid var(--sand);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+.btn-outline-dark:hover { border-color: var(--espresso); text-decoration: none; }
+
+.btn-dark {
+  display: inline-block;
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 16px 40px;
+  border: 1px solid var(--espresso);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+}
+.btn-dark:hover { background: #2a1f15; border-color: #2a1f15; color: var(--cream); text-decoration: none; }
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--sage);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--sage);
+  padding-bottom: 4px;
+  transition: all 200ms ease;
+}
+.btn-ghost:hover { color: var(--sage-dark); border-color: var(--sage-dark); text-decoration: none; }
+
+/* ═══════════════════════════════════════════
+   PROOF BAR
+   ═══════════════════════════════════════════ */
 .proof-bar {
-  padding: 48px;
-  border-top: 1px solid var(--sand);
+  padding: 56px 48px;
+  background: var(--warm-white);
   border-bottom: 1px solid var(--sand);
-  background: var(--cream);
 }
 .proof-inner {
-  max-width: var(--content-max);
+  max-width: var(--wide-max);
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: clamp(32px, 6vw, 80px);
+  justify-content: space-between;
   flex-wrap: wrap;
-  text-align: center;
+  gap: 32px;
 }
-.proof-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.proof-stat { text-align: center; flex: 1; min-width: 140px; }
 .proof-stat .number {
   font-family: var(--font-display);
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: clamp(40px, 4.5vw, 64px);
   font-weight: 300;
   color: var(--espresso);
-  line-height: 1.1;
+  line-height: 1.0;
+  letter-spacing: -1px;
 }
 .proof-stat .label {
-  font-size: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 400;
   color: var(--bark);
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-top: 8px;
+  margin-top: 12px;
+}
+.proof-divider {
+  width: 1px;
+  background: var(--sand);
+  align-self: stretch;
 }
 
-/* ═══ EDITORIAL SECTION ═══ */
-.section {
-  padding: var(--section-pad) 48px;
-}
-.section-inner {
-  max-width: var(--content-max);
-  margin: 0 auto;
-}
+/* ═══════════════════════════════════════════
+   SECTIONS
+   ═══════════════════════════════════════════ */
+.section { padding: var(--section-pad) 48px; }
+.section-inner { max-width: var(--content-max); margin: 0 auto; }
+.section-wide { max-width: var(--wide-max); margin: 0 auto; }
+
 .section.cream { background: var(--cream); }
 .section.warm { background: var(--warm-white); }
 .section.espresso { background: var(--espresso); color: var(--cream); }
 .section.sage-bg { background: var(--sage); color: #fff; }
 
 .section-eyebrow {
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  line-height: 1.80;
 }
-.section.cream .section-eyebrow,
-.section.warm .section-eyebrow { color: var(--sage); }
-.section.espresso .section-eyebrow { color: var(--gold); }
-.section.sage-bg .section-eyebrow { color: rgba(255,255,255,0.7); }
+.cream .section-eyebrow, .warm .section-eyebrow { color: var(--sage); }
+.espresso .section-eyebrow { color: var(--gold); }
+.sage-bg .section-eyebrow { color: rgba(255,255,255,0.6); }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 72px);
+  font-size: clamp(40px, 6vw, 80px);
   font-weight: 300;
-  line-height: 1.12;
+  line-height: 1.08;
   margin-bottom: 32px;
+  letter-spacing: -0.5px;
 }
 .section-title em { font-style: italic; }
 
@@ -248,50 +353,120 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 18px;
   font-weight: 300;
   line-height: 1.80;
-  max-width: 640px;
+  max-width: 600px;
 }
-.section.espresso .section-body { color: rgba(250, 248, 244, 0.85); }
+.espresso .section-body { color: rgba(250, 248, 244, 0.7); }
+.sage-bg .section-body { color: rgba(255,255,255,0.85); }
 
-/* ═══ ABOUT (story split) ═══ */
+/* ═══════════════════════════════════════════
+   ABOUT — Asymmetric editorial split
+   ═══════════════════════════════════════════ */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 5fr 6fr;
+  gap: 100px;
   align-items: center;
 }
+.about-image-wrap { position: relative; }
 .about-image {
   width: 100%;
   aspect-ratio: 3/4;
   background: var(--sand);
   border-radius: 4px;
   overflow: hidden;
+  box-shadow: var(--shadow-scrapbook);
   position: relative;
 }
 .about-image .placeholder {
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px; color: var(--bark); letter-spacing: 2px; text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 12px; color: var(--bark); letter-spacing: 3px; text-transform: uppercase;
+  background: linear-gradient(180deg, rgba(212,181,160,0.4) 0%, rgba(212,181,160,0.7) 100%);
 }
-.about-text .section-body { max-width: 100%; }
-.about-text .section-body p { margin-bottom: 24px; }
+.about-accent {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 48%;
+  aspect-ratio: 1;
+  background: var(--sage);
+  border-radius: 4px;
+  z-index: -1;
+  opacity: 0.15;
+}
+.about-text .section-body p { margin-bottom: 20px; }
 .about-text .section-body p:last-child { margin-bottom: 0; }
+.about-signature {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--bark);
+  margin-top: 40px;
+}
 
-/* ═══ FRESH FRAMEWORK ═══ */
+/* ═══════════════════════════════════════════
+   MONUMENTAL STATEMENT — Full-bleed text
+   ═══════════════════════════════════════════ */
+.statement {
+  padding: clamp(80px, 12vw, 160px) 48px;
+  background: var(--cream);
+  text-align: center;
+}
+.statement-text {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.30;
+  color: var(--espresso);
+  max-width: 900px;
+  margin: 0 auto;
+  letter-spacing: -0.3px;
+}
+.statement-attr {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--bark);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-top: 40px;
+}
+
+/* ═══════════════════════════════════════════
+   FRESH FRAMEWORK — Dark editorial panels
+   ═══════════════════════════════════════════ */
+.fresh-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.fresh-header .section-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+.fresh-header .section-body {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 560px;
+}
 .fresh-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  margin-top: 64px;
+  gap: 1px;
+  background: rgba(250, 248, 244, 0.08);
 }
 .fresh-card {
-  padding: 48px 32px;
-  border-right: 1px solid rgba(250, 248, 244, 0.15);
+  padding: 56px 32px;
+  background: var(--espresso);
   text-align: center;
+  transition: background 400ms ease;
 }
-.fresh-card:last-child { border-right: none; }
+.fresh-card:hover { background: #4a3528; }
 .fresh-letter {
   font-family: var(--font-display);
-  font-size: clamp(48px, 5vw, 80px);
+  font-size: clamp(56px, 6vw, 96px);
   font-weight: 300;
   font-style: italic;
   line-height: 1;
@@ -299,262 +474,356 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--gold);
 }
 .fresh-word {
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
-  margin-bottom: 20px;
-  color: rgba(255,255,255,0.7);
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+  color: rgba(250, 248, 244, 0.45);
 }
 .fresh-desc {
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.70;
-  color: rgba(255,255,255,0.8);
+  line-height: 1.80;
+  color: rgba(250, 248, 244, 0.65);
 }
 
-/* ═══ PATHWAY ═══ */
+/* ═══════════════════════════════════════════
+   TESTIMONIAL — Cinematic quote
+   ═══════════════════════════════════════════ */
+.testimonial {
+  padding: var(--section-pad) 48px;
+  background: var(--sage);
+  position: relative;
+  overflow: hidden;
+}
+.testimonial::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: clamp(300px, 40vw, 600px);
+  color: rgba(255,255,255,0.06);
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  line-height: 1;
+  pointer-events: none;
+}
+.testimonial-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.40;
+  color: #fff;
+  margin-bottom: 48px;
+}
+.testimonial-attr {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ═══════════════════════════════════════════
+   QUIZ CTA — Signature conversion card
+   ═══════════════════════════════════════════ */
+.cta-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--espresso);
+  border-radius: 4px;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  box-shadow: var(--shadow-scrapbook);
+}
+.cta-card-image {
+  aspect-ratio: 4/5;
+  background: var(--bark);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.cta-card-image .placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px; color: rgba(250,248,244,0.4); letter-spacing: 3px; text-transform: uppercase;
+  background: linear-gradient(180deg, rgba(168,144,128,0.3) 0%, rgba(168,144,128,0.6) 100%);
+}
+.cta-card-content .section-eyebrow { color: var(--gold); }
+.cta-card-content .section-title { color: var(--cream); font-size: clamp(32px, 4vw, 56px); }
+.cta-card-content .section-body { color: rgba(250,248,244,0.65); margin-bottom: 40px; }
+
+/* ═══════════════════════════════════════════
+   PATHWAY — Three-step editorial cards
+   ═══════════════════════════════════════════ */
 .pathway-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 64px;
+  gap: 2px;
+  margin-top: 72px;
+  background: var(--sand);
 }
 .pathway-card {
-  padding: 48px 36px;
-  border: 1px solid var(--sand);
-  border-radius: 4px;
+  padding: 56px 40px;
   background: var(--cream);
+  position: relative;
+}
+.pathway-card::before {
+  content: attr(data-step);
+  font-family: var(--font-display);
+  font-size: clamp(80px, 8vw, 140px);
+  font-weight: 300;
+  color: var(--sand);
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  line-height: 1;
+  opacity: 0.5;
 }
 .pathway-step {
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--sage);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
 }
 .pathway-name {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 16px;
+  line-height: 1.15;
+  margin-bottom: 20px;
   color: var(--espresso);
+  position: relative;
 }
 .pathway-desc {
   font-size: 15px;
   font-weight: 300;
-  line-height: 1.70;
+  line-height: 1.80;
   color: var(--bark);
-  margin-bottom: 24px;
-}
-.pathway-link {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--sage);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  border-bottom: 1px solid var(--sage);
-  padding-bottom: 2px;
-  transition: color 200ms ease, border-color 200ms ease;
-}
-.pathway-link:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
-
-/* ═══ TESTIMONIAL ═══ */
-.testimonial-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-.testimonial-quote {
-  font-family: var(--font-display);
-  font-size: clamp(24px, 3.5vw, 40px);
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.50;
-  color: var(--cream);
-  margin-bottom: 40px;
-  position: relative;
-}
-.testimonial-quote::before {
-  content: '\201C';
-  font-family: var(--font-display);
-  font-size: 120px;
-  color: var(--gold);
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  line-height: 1;
-  opacity: 0.5;
-}
-.testimonial-attr {
-  font-size: 13px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--gold);
+  margin-bottom: 32px;
 }
 
-/* ═══ QUIZ CTA ═══ */
-.quiz-cta-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-.quiz-cta-inner .section-title {
-  margin-left: auto;
-  margin-right: auto;
-}
-.quiz-cta-inner .section-body {
-  max-width: 560px;
-  margin: 0 auto 48px;
-  text-align: center;
-}
-
-/* ═══ PODCAST ═══ */
+/* ═══════════════════════════════════════════
+   PODCAST — Split layout with latest episodes
+   ═══════════════════════════════════════════ */
 .podcast-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 100px;
   align-items: center;
 }
-.podcast-episodes {
+.podcast-cover {
+  aspect-ratio: 1;
+  background: var(--espresso);
+  border-radius: 4px;
+  box-shadow: var(--shadow-scrapbook);
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
+.podcast-cover-inner {
+  text-align: center;
+  padding: 48px;
+}
+.podcast-cover-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.podcast-cover-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.podcast-right .section-body { margin-bottom: 40px; }
+.episode-list { margin-top: 40px; }
 .episode {
-  padding: 28px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--sand);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
   align-items: center;
+  gap: 16px;
+  transition: background 200ms ease;
 }
-.episode:first-child { padding-top: 0; }
+.episode:first-child { border-top: 1px solid var(--sand); }
 .episode-num {
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--bark);
-  min-width: 48px;
+  font-style: italic;
 }
 .episode-title {
-  flex: 1;
   font-size: 15px;
   font-weight: 400;
   color: var(--espresso);
-  padding: 0 16px;
 }
 .episode-play {
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
   color: var(--sage);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+}
+.episode-play:hover { color: var(--sage-dark); text-decoration: none; }
+
+/* ═══════════════════════════════════════════
+   WORDMARK — Monumental close (Valencia signature)
+   ═══════════════════════════════════════════ */
+.wordmark {
+  padding: 80px 48px 100px;
+  text-align: center;
+  background: var(--cream);
+  overflow: hidden;
+  border-top: 1px solid var(--sand);
+}
+.wordmark-text {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 14vw, 220px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sand);
+  line-height: 0.90;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  opacity: 0.6;
 }
 
-/* ═══ FOOTER ═══ */
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
 .footer {
-  padding: 64px 48px;
+  padding: 72px 48px;
   background: var(--espresso);
-  border-top: 1px solid rgba(250, 248, 244, 0.08);
 }
 .footer-inner {
   max-width: var(--content-max);
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 48px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 64px;
+  align-items: start;
 }
-.footer-brand {
+.footer-brand-name {
   font-family: var(--font-display);
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--cream);
-  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 .footer-tagline {
   font-size: 14px;
   font-weight: 300;
   color: var(--bark);
+  line-height: 1.70;
+  max-width: 280px;
 }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a {
-  font-size: 13px;
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 400;
   color: var(--bark);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+}
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(250, 248, 244, 0.6);
+  margin-bottom: 12px;
   transition: color 200ms ease;
 }
-.footer-links a:hover { color: var(--cream); }
+.footer-col a:hover { color: var(--cream); text-decoration: none; }
 .footer-bottom {
   max-width: var(--content-max);
-  margin: 48px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid rgba(250, 248, 244, 0.08);
-  font-size: 12px;
-  color: rgba(168, 144, 128, 0.6);
-  letter-spacing: 1px;
+  margin: 56px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid rgba(250, 248, 244, 0.06);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(168, 144, 128, 0.5);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-/* ═══ WORDMARK ═══ */
-.wordmark {
-  padding: 80px 48px;
-  text-align: center;
-  background: var(--cream);
-  overflow: hidden;
-}
-.wordmark-text {
-  font-family: var(--font-display);
-  font-size: clamp(60px, 12vw, 180px);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--sand);
-  line-height: 1.0;
-  letter-spacing: 2px;
-  white-space: nowrap;
-}
-
-/* ═══ RESPONSIVE ═══ */
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
 @media (max-width: 768px) {
   .nav { padding: 16px 24px; }
   .nav-links { display: none; }
   .menu-toggle { display: block; }
 
-  .hero { padding: 80px 24px 60px; }
-  .section { padding: clamp(60px, 10vw, 120px) 24px; }
+  .hero { padding: 120px 24px 60px; min-height: 90vh; }
+  .hero-content { max-width: 100%; }
+  .hero-image-frame { display: none; }
+  .hero h1 { font-size: clamp(40px, 10vw, 56px); }
+
+  .section { padding: clamp(64px, 10vw, 100px) 24px; }
+
+  .proof-inner { flex-direction: column; gap: 24px; text-align: left; }
+  .proof-stat { text-align: left; display: flex; align-items: baseline; gap: 16px; }
+  .proof-stat .number { font-size: 40px; }
+  .proof-stat .label { margin-top: 0; }
+  .proof-divider { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-image { aspect-ratio: 4/3; max-height: 400px; }
+  .about-image { aspect-ratio: 4/3; }
+  .about-accent { display: none; }
 
-  .fresh-grid { grid-template-columns: 1fr; gap: 0; }
-  .fresh-card { border-right: none; border-bottom: 1px solid rgba(250, 248, 244, 0.1); padding: 36px 24px; text-align: left; display: flex; gap: 24px; align-items: flex-start; }
-  .fresh-card:last-child { border-bottom: none; }
-  .fresh-letter { font-size: 48px; min-width: 48px; margin-bottom: 0; }
+  .fresh-grid { grid-template-columns: 1fr; gap: 1px; }
+  .fresh-card { text-align: left; display: flex; gap: 28px; align-items: flex-start; padding: 40px 24px; }
+  .fresh-letter { font-size: 48px; min-width: 56px; margin-bottom: 0; }
   .fresh-word { margin-bottom: 8px; }
 
+  .cta-card { grid-template-columns: 1fr; padding: 48px 32px; }
+  .cta-card-image { aspect-ratio: 16/9; }
+
   .pathway-grid { grid-template-columns: 1fr; }
+  .pathway-card::before { font-size: 80px; }
 
   .podcast-grid { grid-template-columns: 1fr; gap: 48px; }
+  .podcast-cover { max-width: 300px; }
 
-  .footer-inner { flex-direction: column; }
-
-  .proof-inner { gap: 24px; }
-  .proof-stat .number { font-size: 36px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
 }
 </style>
 </head>
 <body>
 
-<!-- Mobile menu checkbox -->
+<!-- Mobile menu -->
 <input type="checkbox" id="menu-state">
-
-<!-- Mobile overlay -->
 <div class="mobile-overlay">
   <label for="menu-state" style="position:absolute; top:18px; right:24px; font-size:28px; color:var(--cream); cursor:pointer; z-index:102;">&times;</label>
   <a href="#about" onclick="document.getElementById('menu-state').checked=false">About</a>
@@ -572,7 +841,7 @@ img { max-width: 100%; height: auto; display: block; }
     <li><a href="#fresh">F.R.E.S.H.</a></li>
     <li><a href="#pathway">Work With Me</a></li>
     <li><a href="#podcast">Podcast</a></li>
-    <li><a href="#quiz" class="nav-cta">Take the Quiz</a></li>
+    <li><a href="#quiz" class="nav-cta-link">Take the Quiz</a></li>
   </ul>
   <label class="menu-toggle" for="menu-state">
     <span></span>
@@ -581,213 +850,247 @@ img { max-width: 100%; height: auto; display: block; }
   </label>
 </nav>
 
-<!-- Hero -->
+<!-- ═══ HERO ═══ -->
 <section class="hero">
-  <div class="hero-eyebrow">For women building freedom-filled businesses</div>
-  <h1>Build a business that <em>supports</em> the life you actually want.</h1>
-  <p>I help women create thriving online businesses rooted in self-leadership, strategic growth, and a life that feels as good as it looks.</p>
-  <div class="hero-buttons">
-    <a href="#quiz" class="btn-primary">Take the Free Quiz</a>
-    <a href="#pathway" class="btn-outline">How I Can Help</a>
+  <div class="hero-bg"></div>
+  <div class="hero-image-frame">
+    <div class="placeholder">Tracy Portrait</div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Educator &middot; Speaker &middot; Mentor</div>
+    <h1>Build a business<br>that feels like <em>freedom.</em></h1>
+    <p class="hero-sub">I've helped over 100,000 women create thriving online businesses without sacrificing what matters most. Strategy, self-leadership, and a life by design.</p>
+    <div class="hero-buttons">
+      <a href="#quiz" class="btn-primary">Take the Free Quiz</a>
+      <a href="#pathway" class="btn-outline-light">Work With Me</a>
+    </div>
   </div>
 </section>
 
-<!-- Social Proof -->
+<!-- ═══ PROOF BAR ═══ -->
 <div class="proof-bar">
   <div class="proof-inner">
     <div class="proof-stat">
-      <span class="number">100,000+</span>
+      <span class="number">100K+</span>
       <span class="label">Women Supported</span>
     </div>
+    <div class="proof-divider"></div>
     <div class="proof-stat">
       <span class="number">7+</span>
       <span class="label">Years Running</span>
     </div>
+    <div class="proof-divider"></div>
     <div class="proof-stat">
       <span class="number">500+</span>
       <span class="label">Podcast Episodes</span>
     </div>
+    <div class="proof-divider"></div>
     <div class="proof-stat">
-      <span class="number">Multi 7-Fig</span>
-      <span class="label">Business Built</span>
+      <span class="number">Multi 7</span>
+      <span class="label">Figure Business</span>
     </div>
   </div>
 </div>
 
-<!-- About -->
+<!-- ═══ MONUMENTAL STATEMENT ═══ -->
+<div class="statement">
+  <p class="statement-text">"Your business is only as strong as the level of self-leadership you bring to it."</p>
+  <p class="statement-attr">Tracy Harris</p>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
 <section class="section warm" id="about">
   <div class="section-inner">
     <div class="about-grid">
-      <div class="about-image">
-        <div class="placeholder">Tracy Photo</div>
+      <div class="about-image-wrap">
+        <div class="about-image">
+          <div class="placeholder">Tracy Photo</div>
+        </div>
+        <div class="about-accent"></div>
       </div>
       <div class="about-text">
         <div class="section-eyebrow">About Tracy</div>
-        <h2 class="section-title">I see <em>you.</em></h2>
+        <h2 class="section-title">Former teacher.<br>Founder. <em>Leader.</em></h2>
         <div class="section-body">
-          <p>I'm a former teacher turned entrepreneur, a mum of two boys, and the founder of a multi-seven-figure digital education company.</p>
-          <p>I built this business while living between Australia and Bali. While working four days a week. While prioritising my health, my family, and my faith.</p>
+          <p>I built a multi-seven-figure digital education company while living between Australia and Bali. While working four days a week. While raising two boys. While prioritising my health, my faith, and my marriage.</p>
           <p>I didn't build it fast. I built it <strong>right.</strong></p>
-          <p>And now I help other women do the same. Not with hype. Not with hustle culture. With strategy, self-leadership, and a framework I call F.R.E.S.H.</p>
+          <p>Now I help women do the same. Not with hype. Not with hustle culture. With real strategy, deep self-leadership, and a framework called F.R.E.S.H. that treats your life and your business as one integrated system.</p>
+          <p>Because the women I work with don't want to choose between revenue and rest. They want both. And they should have both.</p>
         </div>
+        <div class="about-signature">Xx Tracy</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FRESH Framework -->
+<!-- ═══ FRESH FRAMEWORK ═══ -->
 <section class="section espresso" id="fresh">
-  <div class="section-inner">
-    <div class="section-eyebrow">The Framework</div>
-    <h2 class="section-title">F.R.E.S.H.</h2>
-    <div class="section-body">My personal operating system for building a business that feeds your life instead of consuming it. Every letter, every day.</div>
+  <div class="section-wide">
+    <div class="fresh-header">
+      <div class="section-eyebrow">The Framework</div>
+      <h2 class="section-title">F.R.E.S.H.</h2>
+      <div class="section-body">My personal operating system for building a business that feeds your life instead of consuming it.</div>
+    </div>
     <div class="fresh-grid">
       <div class="fresh-card">
         <div class="fresh-letter">F</div>
         <div>
           <div class="fresh-word">Fitness</div>
-          <div class="fresh-desc">Moving your body from a place of self-care and energy, not guilt or punishment.</div>
+          <div class="fresh-desc">Move your body from a place of self-care and energy. Not guilt. Not punishment. The foundation of everything.</div>
         </div>
       </div>
       <div class="fresh-card">
         <div class="fresh-letter">R</div>
         <div>
           <div class="fresh-word">Relationships</div>
-          <div class="fresh-desc">Surrounding yourself with people who are aligned with where you're going, not just where you've been.</div>
+          <div class="fresh-desc">Surround yourself with people aligned to where you're going. Not just where you've been.</div>
         </div>
       </div>
       <div class="fresh-card">
         <div class="fresh-letter">E</div>
         <div>
           <div class="fresh-word">Environment</div>
-          <div class="fresh-desc">Creating a workspace and daily life that feels intentional, energising, and aligned.</div>
+          <div class="fresh-desc">Your workspace, your home, your daily rhythm. Make it intentional. Make it energising.</div>
         </div>
       </div>
       <div class="fresh-card">
         <div class="fresh-letter">S</div>
         <div>
           <div class="fresh-word">Self</div>
-          <div class="fresh-desc">Trusting your instincts, investing in personal growth, and leading yourself first.</div>
+          <div class="fresh-desc">Trust your instincts. Invest in your growth. Lead yourself before you lead others.</div>
         </div>
       </div>
       <div class="fresh-card">
         <div class="fresh-letter">H</div>
         <div>
           <div class="fresh-word">Hustle</div>
-          <div class="fresh-desc">Doing the work with purpose and strategy, not burnout and busyness.</div>
+          <div class="fresh-desc">Do the work with strategy and purpose. Not burnout and busyness. Smart hustle, not hard hustle.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonial -->
-<section class="section espresso" style="padding-top:0;">
+<!-- ═══ TESTIMONIAL ═══ -->
+<section class="testimonial">
   <div class="testimonial-inner">
-    <div class="testimonial-quote">
-      [INSERT CLIENT TESTIMONIAL]
+    <div class="testimonial-quote">[INSERT CLIENT TESTIMONIAL: A powerful story of transformation from an FFB or FFM member]</div>
+    <div class="testimonial-attr">[Client Name] &middot; [Her Business]</div>
+  </div>
+</section>
+
+<!-- ═══ QUIZ CTA CARD ═══ -->
+<section class="section cream" id="quiz">
+  <div class="section-inner">
+    <div class="cta-card">
+      <div class="cta-card-image">
+        <div class="placeholder">Tracy Photo</div>
+      </div>
+      <div class="cta-card-content">
+        <div class="section-eyebrow">Free Assessment</div>
+        <h2 class="section-title">Where should you <em>focus</em> right now?</h2>
+        <div class="section-body">Take the 2-minute Business Focus Quiz. Find out which pillar needs your attention first. Build, Sell, Lead, or F.R.E.S.H.</div>
+        <a href="#" class="btn-primary">Take the Quiz</a>
+      </div>
     </div>
-    <div class="testimonial-attr">[Client Name] &middot; [Business Type]</div>
   </div>
 </section>
 
-<!-- Quiz CTA -->
-<section class="section sage-bg" id="quiz">
-  <div class="quiz-cta-inner">
-    <div class="section-eyebrow">Free Assessment</div>
-    <h2 class="section-title">Where should you focus <em>right now?</em></h2>
-    <div class="section-body">Take the 2-minute Business Focus Quiz and find out which pillar of your business needs attention first. Build, Sell, Lead, or F.R.E.S.H.</div>
-    <a href="#" class="btn-primary" style="background:#fff; color:var(--sage); border-color:#fff;">Take the Quiz</a>
-  </div>
-</section>
-
-<!-- Pathway -->
-<section class="section cream" id="pathway">
+<!-- ═══ PATHWAY ═══ -->
+<section class="section warm" id="pathway">
   <div class="section-inner">
     <div class="section-eyebrow">Work With Me</div>
-    <h2 class="section-title">Your pathway to a <em>freedom-filled</em> business.</h2>
-    <div class="section-body" style="margin-bottom:0;">Every woman starts where she is. I meet you there and help you build what's next.</div>
+    <h2 class="section-title">Your pathway to a<br><em>freedom-filled</em> business.</h2>
+    <div class="section-body">Every woman starts where she is. I meet you there and help you build what's next.</div>
     <div class="pathway-grid">
-      <div class="pathway-card">
-        <div class="pathway-step">Step One</div>
-        <div class="pathway-name">Take the Quiz</div>
-        <div class="pathway-desc">Find out where your business needs attention right now. Two minutes. Instant clarity.</div>
-        <a href="#" class="pathway-link">Start Here</a>
+      <div class="pathway-card" data-step="01">
+        <div class="pathway-step">Start Here</div>
+        <div class="pathway-name">The Quiz</div>
+        <div class="pathway-desc">Discover where your business needs attention right now. Two minutes. Instant clarity on your next move.</div>
+        <a href="#" class="btn-ghost">Take the Quiz</a>
       </div>
-      <div class="pathway-card">
-        <div class="pathway-step">Step Two</div>
+      <div class="pathway-card" data-step="02">
+        <div class="pathway-step">Build Your Foundation</div>
         <div class="pathway-name">FFB Mentorship</div>
-        <div class="pathway-desc">12 months of guidance to build your offer, find your audience, and create a business that works without burning out.</div>
-        <a href="#" class="pathway-link">Learn More</a>
+        <div class="pathway-desc">12 months of strategic guidance to build your offer, grow your audience, and create a business that runs without burning you out.</div>
+        <a href="#" class="btn-ghost">Learn More</a>
       </div>
-      <div class="pathway-card">
-        <div class="pathway-step">Step Three</div>
+      <div class="pathway-card" data-step="03">
+        <div class="pathway-step">Scale With Intention</div>
         <div class="pathway-name">FFM Mastermind</div>
-        <div class="pathway-desc">For established business owners ready to scale with intention. Retreats, hot seats, 1:1 access. Application only.</div>
-        <a href="#" class="pathway-link">Apply Now</a>
+        <div class="pathway-desc">For established business owners ready to scale. Retreats, hot seats, 1:1 access to Tracy. Max 20 women. Application only.</div>
+        <a href="#" class="btn-ghost">Apply Now</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Podcast -->
-<section class="section warm" id="podcast">
+<!-- ═══ PODCAST ═══ -->
+<section class="section cream" id="podcast">
   <div class="section-inner">
     <div class="podcast-grid">
-      <div>
-        <div class="section-eyebrow">The Podcast</div>
-        <h2 class="section-title">500+ episodes of real talk.</h2>
-        <div class="section-body">
-          <p>Strategies, stories, and straight talk for women building online businesses. No fluff. Just the stuff that actually moves the needle.</p>
+      <div class="podcast-cover">
+        <div class="podcast-cover-inner">
+          <div class="podcast-cover-title">The Tracy Harris Podcast</div>
+          <div class="podcast-cover-sub">500+ Episodes</div>
         </div>
-        <a href="#" class="btn-primary" style="margin-top:32px;">Listen Now</a>
       </div>
-      <div class="podcast-episodes">
-        <div class="episode">
-          <span class="episode-num">533</span>
-          <span class="episode-title">[Latest Episode Title]</span>
-          <span class="episode-play">Listen</span>
+      <div class="podcast-right">
+        <div class="section-eyebrow">The Podcast</div>
+        <h2 class="section-title">Real talk for<br>real <em>business.</em></h2>
+        <div class="section-body">Strategies, stories, and straight talk for women building online businesses. No fluff. Just the stuff that moves the needle.</div>
+        <div class="episode-list">
+          <div class="episode">
+            <span class="episode-num">533</span>
+            <span class="episode-title">[Latest Episode Title]</span>
+            <a href="#" class="episode-play">Listen</a>
+          </div>
+          <div class="episode">
+            <span class="episode-num">532</span>
+            <span class="episode-title">[Episode Title]</span>
+            <a href="#" class="episode-play">Listen</a>
+          </div>
+          <div class="episode">
+            <span class="episode-num">531</span>
+            <span class="episode-title">[Episode Title]</span>
+            <a href="#" class="episode-play">Listen</a>
+          </div>
         </div>
-        <div class="episode">
-          <span class="episode-num">532</span>
-          <span class="episode-title">[Episode Title]</span>
-          <span class="episode-play">Listen</span>
-        </div>
-        <div class="episode">
-          <span class="episode-num">531</span>
-          <span class="episode-title">[Episode Title]</span>
-          <span class="episode-play">Listen</span>
-        </div>
-        <div class="episode">
-          <span class="episode-num">530</span>
-          <span class="episode-title">[Episode Title]</span>
-          <span class="episode-play">Listen</span>
-        </div>
+        <a href="#" class="btn-dark" style="margin-top:32px;">Listen Now</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Wordmark -->
+<!-- ═══ WORDMARK ═══ -->
 <div class="wordmark">
   <div class="wordmark-text">Tracy Harris</div>
 </div>
 
-<!-- Footer -->
+<!-- ═══ FOOTER ═══ -->
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">Tracy Harris Co</div>
-      <div class="footer-tagline">Freedom-filled business, by design.</div>
+      <div class="footer-brand-name">Tracy Harris</div>
+      <div class="footer-tagline">Freedom-filled business, by design. Australia and Bali.</div>
     </div>
-    <div class="footer-links">
+    <div class="footer-col">
+      <div class="footer-col-title">Navigate</div>
+      <a href="#about">About</a>
+      <a href="#pathway">Work With Me</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#quiz">Quiz</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Connect</div>
       <a href="#">Instagram</a>
-      <a href="#">Podcast</a>
-      <a href="#">Contact</a>
+      <a href="#">YouTube</a>
+      <a href="#">Email</a>
     </div>
   </div>
   <div class="footer-bottom">
-    &copy; 2026 Tracy Harris Co. All rights reserved. &middot; Australia &amp; Bali
+    <span>&copy; 2026 Tracy Harris Co</span>
+    <span>All Rights Reserved</span>
   </div>
 </footer>
 
