@@ -89,6 +89,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav-cta-link:hover { background: var(--espresso); color: #fff !important; }
 
+/* Mobile nav CTA */
+.nav-mobile-cta { display: none; }
+
 /* Hamburger */
 .menu-toggle { display: none; cursor: pointer; width: 28px; height: 20px; position: relative; z-index: 101; }
 .menu-toggle span { display: block; width: 100%; height: 1px; background: var(--charcoal); position: absolute; left: 0; transition: all 0.3s ease; }
@@ -783,6 +786,18 @@ img { max-width: 100%; height: auto; display: block; }
   .nav { padding: 16px 24px; }
   .nav-links { display: none; }
   .menu-toggle { display: block; }
+  .nav-mobile-cta {
+    display: inline-block;
+    background: var(--sage);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-right: 16px;
+  }
 
   .hero { padding: 120px 24px 60px; min-height: 90vh; }
   .hero-content { max-width: 100%; }
@@ -843,11 +858,14 @@ img { max-width: 100%; height: auto; display: block; }
     <li><a href="#podcast">Podcast</a></li>
     <li><a href="#quiz" class="nav-cta-link">Take the Quiz</a></li>
   </ul>
-  <label class="menu-toggle" for="menu-state">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <a href="#quiz" class="nav-mobile-cta">Take the Quiz</a>
+    <label class="menu-toggle" for="menu-state">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
 </nav>
 
 <!-- ═══ HERO ═══ -->
