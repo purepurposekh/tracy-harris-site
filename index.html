@@ -57,13 +57,16 @@ img { max-width: 100%; height: auto; display: block; }
   transition: background 300ms ease;
 }
 .nav-brand {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: var(--charcoal);
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
+.nav-brand img {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) sepia(1) hue-rotate(155deg) saturate(300%) brightness(0.25);
+}
+.nav-brand .logo-full { display: block; }
+.nav-brand .logo-mark { display: none; }
 .nav-links {
   display: flex; gap: 32px; list-style: none; align-items: center;
 }
@@ -732,13 +735,12 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: start;
 }
 .footer-brand-name {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--cream);
-  letter-spacing: 1px;
-  text-transform: uppercase;
   margin-bottom: 16px;
+}
+.footer-brand-name img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 .footer-tagline {
   font-size: 14px;
@@ -786,6 +788,8 @@ img { max-width: 100%; height: auto; display: block; }
   .nav { padding: 16px 24px; }
   .nav-links { display: none; }
   .menu-toggle { display: block; }
+  .nav-brand .logo-full { display: none; }
+  .nav-brand .logo-mark { display: block; height: 32px; }
   .nav-mobile-cta {
     display: inline-block;
     background: var(--sage);
@@ -850,7 +854,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 <!-- Nav -->
 <nav class="nav">
-  <a href="/" class="nav-brand">Tracy Harris</a>
+  <a href="/" class="nav-brand">
+    <img src="logo-full.png" alt="Tracy Harris" class="logo-full">
+    <img src="logo-mark.png" alt="Tracy Harris" class="logo-mark">
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#fresh">F.R.E.S.H.</a></li>
@@ -1089,7 +1096,7 @@ img { max-width: 100%; height: auto; display: block; }
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <div class="footer-brand-name">Tracy Harris</div>
+      <div class="footer-brand-name"><img src="logo-full.png" alt="Tracy Harris"></div>
       <div class="footer-tagline">Freedom-filled business, by design. Australia and Bali.</div>
     </div>
     <div class="footer-col">
