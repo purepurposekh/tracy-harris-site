@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tracy Harris Co | Section Demos (v4b)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="components/tokens.css"/>
+<link rel="stylesheet" href="components/sections-extra.css"/>
+</head>
+
+<body>
+
+
+<!-- ============================================================
+     DEMO 1: FFB HERO (Split Layout)
+     ============================================================ -->
+<div class="section-divider">
+  <p class="section-divider-label">Section 1: FFB Hero</p>
+  <p class="section-divider-sub">Split layout, product nav, monogram, photo right</p>
+</div>
+
+<!-- FFB Product Nav -->
+<nav class="ffb-nav" style="position: relative; z-index: 10;">
+  <div class="ffb-nav-inner">
+    <a href="#" class="nav-logo">Tracy Harris</a>
+    <ul class="ffb-nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Offering</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Investment</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero-ffb" style="padding-top: 72px; min-height: auto;">
+  <div class="hero-ffb-inner">
+    <div class="hero-ffb-content reveal">
+      <div class="hero-ffb-monogram">
+        <svg width="72" height="56" viewBox="0 0 72 56" fill="none">
+          <text x="0" y="44" font-family="'EB Garamond', serif" font-size="52" font-weight="400" font-style="italic" fill="var(--sand)">FFB</text>
+        </svg>
+      </div>
+      <h1 class="hero-ffb-headline">
+        Your Journey to <em>Freedom</em> Begins Here
+      </h1>
+      <p class="hero-ffb-sub">
+        My year-long mentorship and implementation program, Freedom Filled® Business, is designed to help you grow courses and memberships that are freedom filled, give you life, and reward you abundantly.
+      </p>
+      <a href="#apply" class="btn-primary">Apply Now <span class="btn-arrow-icon">&rarr;</span></a>
+    </div>
+    <div class="hero-ffb-photo-wrap reveal reveal-delay-2">
+      <img
+        src="images/tracy/web/hero.jpg"
+        alt="Tracy Harris relaxing on couch"
+        class="hero-ffb-photo"
+      />
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DEMO 2: FULL-PHOTO HERO
+     ============================================================ -->
+<div class="section-divider">
+  <p class="section-divider-label">Section 2: Full-Photo Hero</p>
+  <p class="section-divider-sub">Full viewport photo background, split nav, centred name, social icons</p>
+</div>
+
+<section class="hero-fullphoto" style="min-height: 100vh;">
+  <div class="hero-fullphoto-bg">
+    <img
+      src="images/tracy/web/speaking.jpg"
+      alt="Tracy Harris speaking on stage"
+    />
+  </div>
+
+  <nav class="hero-fullphoto-nav">
+    <div class="hero-fullphoto-nav-group">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+    </div>
+    <div class="hero-fullphoto-nav-group">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero-fullphoto-content reveal">
+    <p class="hero-fullphoto-eyebrow">Educator &middot; Speaker &middot; Author</p>
+    <h1 class="hero-fullphoto-name">Tracy Harris</h1>
+    <div class="hero-fullphoto-socials">
+      <a href="https://instagram.com/tracyharrisco" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Podcast">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DEMO 3: MIXED TYPOGRAPHY BIO
+     ============================================================ -->
+<div class="section-divider">
+  <p class="section-divider-label">Section 3: Mixed Typography Bio</p>
+  <p class="section-divider-sub">Centred layout, mixed serif styles, thin line + eyebrow</p>
+</div>
+
+<section class="bio-mixed">
+  <div class="bio-mixed-inner reveal">
+    <div class="bio-mixed-line"></div>
+    <p class="bio-mixed-eyebrow">Meet Tracy</p>
+    <h2 class="bio-mixed-headline">
+      Business Educator,<br/>
+      <em>Keynote Speaker,</em><br/>
+      Podcast Host,<br/>
+      <strong>Mum</strong> <span class="light-italic">of 2,</span><br/>
+      <em>Freedom Filled® Architect</em>
+    </h2>
+    <p class="bio-mixed-body">
+      I spent years following someone else's blueprint for success. I hit the targets, earned the titles, and still felt like something was missing. That season didn't disqualify me. It refined me. Now I help women build businesses by design, not by default.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DEMO 4: MISSION / QUOTE WITH BACKGROUND
+     ============================================================ -->
+<div class="section-divider">
+  <p class="section-divider-label">Section 4: Mission with Background</p>
+  <p class="section-divider-sub">Full-width, B&amp;W photo background, dark overlay, mixed headline. Video option documented.</p>
+</div>
+
+<section class="mission-bg">
+  <div class="mission-bg-media">
+    <img
+      src="images/tracy/web/event.jpg"
+      alt="Tracy Harris at a live event"
+    />
+    <!-- VIDEO ALTERNATIVE: replace <img> with:
+    <video autoplay muted loop playsinline>
+      <source src="images/tracy/web/mission-reel.mp4" type="video/mp4"/>
+    </video>
+    -->
+  </div>
+  <div class="mission-bg-content reveal">
+    <p class="mission-bg-eyebrow">The Mission</p>
+    <h2 class="mission-bg-headline">
+      Building Freedom Filled® Businesses <em>for</em> Women <em>who</em> Want <em>to</em> Lead.
+    </h2>
+    <p class="mission-bg-body">
+      Every woman has the wisdom, the gifts, and the calling to build something extraordinary. My mission is to help her do it with freedom, integrity, and purpose, so her business gives her life instead of taking it away.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DEMO 5: ABOUT SECTION (Asymmetric, Story-Led)
+     ============================================================ -->
+<div class="section-divider">
+  <p class="section-divider-label">Section 5: About (Story-Led)</p>
+  <p class="section-divider-sub">Asymmetric layout, serif heading, rotating stamp badge on photo, ghost button</p>
+</div>
+
+<section class="about-story">
+  <div class="about-story-inner">
+
+    <!-- Text Column (left, ~55%) -->
+    <div class="about-story-text reveal">
+      <h2 class="about-story-label">ABOUT</h2>
+      <h3 class="about-story-headline">
+        Hi, I'm Tracy, and after a decade building online education businesses, I help women create companies that are <em>Freedom Filled&#174;</em> and built to <em>last.</em>
+      </h3>
+      <div class="about-story-body">
+        <p>
+          I spent years following someone else's blueprint for success. I hit the targets, earned the titles, and still felt like something was missing.
+        </p>
+        <p>
+          That season didn't disqualify me. It refined me. It taught me that building a business by design, not by default, is the only way to create something that gives you life instead of taking it away.
+        </p>
+        <p>
+          Now I help women build coaching businesses, courses, memberships, and digital service businesses that are grounded in freedom, integrity, and purpose.
+        </p>
+      </div>
+      <a href="#" class="btn-outline">Read More <span class="btn-arrow-icon">&rarr;</span></a>
+    </div>
+
+    <!-- Photo Column (right, ~45%) -->
+    <div class="about-story-photo-wrap reveal reveal-delay-2">
+      <img
+        src="images/tracy/web/teaching.jpg"
+        alt="Tracy Harris teaching in a workshop"
+        class="about-story-photo"
+      />
+      <!-- Rotating circular stamp -->
+      <div class="about-story-stamp" aria-hidden="true">
+        <svg viewBox="0 0 140 140" class="about-story-stamp-svg">
+          <defs>
+            <path id="stampCircle" d="M 70,70 m -54,0 a 54,54 0 1,1 108,0 a 54,54 0 1,1 -108,0"/>
+          </defs>
+          <circle cx="70" cy="70" r="60" fill="var(--teal)" opacity="0.92"/>
+          <text fill="#ffffff" font-family="'DM Sans', sans-serif" font-weight="500" font-size="11.5" letter-spacing="4">
+            <textPath href="#stampCircle">THE STORY &bull; THE STORY &bull; THE STORY &bull;</textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DEMO 6: OFFER CALLOUT (Dark Split, Signature Product)
+     ============================================================ -->
+<div class="section-divider">
+  <p class="section-divider-label">Section 6: Offer Callout (Dark Split)</p>
+  <p class="section-divider-sub">50/50 split, lifestyle photo left, dark teal right, outline button</p>
+</div>
+
+<section class="offer-callout">
+  <div class="offer-callout-inner">
+
+    <!-- Photo Column (left, 50%) -->
+    <div class="offer-callout-photo">
+      <img
+        src="images/tracy/web/retreat.jpg"
+        alt="Tracy Harris at a Freedom Filled retreat with her community"
+      />
+    </div>
+
+    <!-- Content Column (right, 50%) -->
+    <div class="offer-callout-content reveal">
+      <p class="offer-callout-eyebrow">Signature Program</p>
+      <h2 class="offer-callout-headline">Freedom Filled&#174; Business</h2>
+      <p class="offer-callout-body">
+        A year-long mentorship and implementation program designed to help you build a business that gives you freedom, impact, and revenue. For coaches, course creators, and membership owners ready to scale without burning out.
+      </p>
+      <a href="#" class="offer-callout-btn">Learn More <span>&rarr;</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ====== END DEMOS ====== -->
+<div class="section-divider" style="padding: 64px 24px;">
+  <p class="section-divider-label">End of Section Demos</p>
+  <p class="section-divider-sub">6 components, all using v4b design tokens. Review above.</p>
+</div>
+
+
+<!-- ====== SCRIPTS ====== -->
+<script src="components/reveal.js"></script>
+</body>
+</html>

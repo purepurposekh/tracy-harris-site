@@ -1,0 +1,58 @@
+<!-- ============================================
+     COMPONENT: Mission/Quote with Photo Background
+     Design: v4b design system
+
+     VARIABLES TO SWAP:
+     - Background image (currently event.jpg)
+     - Eyebrow text (currently "THE MISSION")
+     - Headline text (uppercase serif + italic connectors)
+     - Body text paragraph
+
+     VIDEO BACKGROUND:
+     Replace the <img> inside .mission-bg-media with:
+       <video autoplay muted loop playsinline>
+         <source src="path/to/video.mp4" type="video/mp4"/>
+       </video>
+     The CSS handles both img and video identically.
+
+     DEPENDENCIES:
+     - tokens.css (design tokens, base styles)
+     - sections-extra.css (.mission-bg-* styles)
+     - Google Fonts: EB Garamond, DM Sans
+     - reveal.js (scroll reveal animations)
+
+     NOTES:
+     - Background image is greyscale via CSS filter
+     - Dark overlay for text legibility
+     - Mixed uppercase/italic headline style
+     ============================================ -->
+
+<section class="mission-bg">
+  <!-- Background media -->
+  <div class="mission-bg-media">
+    <!-- Image background (default) -->
+    <img
+      src="images/tracy/web/event.jpg"
+      alt="Tracy Harris at a live event"
+    />
+
+    <!-- VIDEO ALTERNATIVE: uncomment below, remove the <img> above
+    <video autoplay muted loop playsinline>
+      <source src="images/tracy/web/mission-reel.mp4" type="video/mp4"/>
+    </video>
+    -->
+  </div>
+
+  <!-- Content -->
+  <div class="mission-bg-content reveal">
+    <p class="mission-bg-eyebrow">The Mission</p>
+
+    <h2 class="mission-bg-headline">
+      Building Freedom Filled® Businesses <em>for</em> Women <em>who</em> Want <em>to</em> Lead.
+    </h2>
+
+    <p class="mission-bg-body">
+      Every woman has the wisdom, the gifts, and the calling to build something extraordinary. My mission is to help her do it with freedom, integrity, and purpose, so her business gives her life instead of taking it away.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+<!-- ============================================
+     COMPONENT: FFB Hero Section (Split Layout)
+     Design: v4b design system
+
+     VARIABLES TO SWAP:
+     - Monogram text (currently "FFB")
+     - Headline text
+     - Body/description text
+     - CTA button text and link
+     - Hero photo (right side)
+     - Nav links and destinations
+
+     DEPENDENCIES:
+     - tokens.css (design tokens, base styles, buttons)
+     - sections-extra.css (.hero-ffb-* styles)
+     - Google Fonts: EB Garamond, DM Sans
+     - reveal.js (scroll reveal animations)
+     ============================================ -->
+
+<!-- FFB Product Nav -->
+<nav class="ffb-nav">
+  <div class="ffb-nav-inner">
+    <a href="#" class="nav-logo">Tracy Harris</a>
+    <ul class="ffb-nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#offering">Offering</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#investment">Investment</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- FFB Hero -->
+<section class="hero-ffb">
+  <div class="hero-ffb-inner">
+    <div class="hero-ffb-content reveal">
+      <!-- Monogram -->
+      <div class="hero-ffb-monogram">
+        <svg width="72" height="56" viewBox="0 0 72 56" fill="none">
+          <text x="0" y="44" font-family="'EB Garamond', serif" font-size="52" font-weight="400" font-style="italic" fill="var(--sand)">FFB</text>
+        </svg>
+      </div>
+
+      <h1 class="hero-ffb-headline">
+        Your Journey to <em>Freedom</em> Begins Here
+      </h1>
+
+      <p class="hero-ffb-sub">
+        My year-long mentorship and implementation program, Freedom Filled® Business, is designed to help you grow courses and memberships that are freedom filled, give you life, and reward you abundantly.
+      </p>
+
+      <a href="#apply" class="btn-primary">Apply Now <span class="btn-arrow-icon">&rarr;</span></a>
+    </div>
+
+    <div class="hero-ffb-photo-wrap reveal reveal-delay-2">
+      <img
+        src="images/tracy/web/hero.jpg"
+        alt="Tracy Harris relaxing on couch"
+        class="hero-ffb-photo"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,669 @@
+/*
+ * ============================================================
+ * Tracy Harris Co - Section Components (Extra CSS)
+ * ============================================================
+ * Styles for additional section components not in tokens.css.
+ * Load AFTER tokens.css:
+ *   <link rel="stylesheet" href="components/tokens.css"/>
+ *   <link rel="stylesheet" href="components/sections-extra.css"/>
+ * ============================================================
+ */
+
+
+/* ========================================
+   SECTION 1: FFB HERO (Split Layout)
+   ======================================== */
+.hero-ffb {
+  padding-top: 72px; /* nav height */
+  min-height: 100vh;
+  background: var(--canvas);
+  display: flex;
+  align-items: center;
+}
+
+.hero-ffb-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(60px, 10vw, 120px) clamp(24px, 4vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-ffb-content {
+  max-width: 560px;
+}
+
+.hero-ffb-monogram {
+  margin-bottom: 32px;
+}
+
+.hero-ffb-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  color: var(--near-black);
+  margin-bottom: 24px;
+}
+.hero-ffb-headline em {
+  font-style: italic;
+}
+
+.hero-ffb-sub {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: #5a5a5a;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+.hero-ffb-photo-wrap {
+  position: relative;
+  justify-self: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+.hero-ffb-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 16px 48px rgba(30, 55, 53, 0.14);
+}
+
+/* FFB Nav (product-specific) */
+.ffb-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(244, 241, 236, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 206, 198, 0.5);
+  height: 72px;
+}
+
+.ffb-nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 64px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ffb-nav-links {
+  display: none;
+  list-style: none;
+  gap: 36px;
+  align-items: center;
+}
+
+.ffb-nav-links a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--warm-gray);
+  transition: color 0.2s ease;
+}
+.ffb-nav-links a:hover {
+  color: var(--sage);
+}
+
+@media (min-width: 768px) {
+  .hero-ffb-inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+  }
+  .hero-ffb-photo-wrap {
+    max-width: 100%;
+  }
+  .ffb-nav-links {
+    display: flex;
+  }
+}
+
+
+/* ========================================
+   SECTION 2: FULL-PHOTO HERO
+   ======================================== */
+.hero-fullphoto {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hero-fullphoto-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-fullphoto-bg img,
+.hero-fullphoto-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient fade at bottom for text legibility */
+.hero-fullphoto-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    transparent 100%
+  );
+}
+
+/* Top navigation */
+.hero-fullphoto-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 28px clamp(24px, 5vw, 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-fullphoto-nav-group {
+  display: flex;
+  gap: 32px;
+}
+
+.hero-fullphoto-nav a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s ease;
+}
+.hero-fullphoto-nav a:hover {
+  color: #ffffff;
+}
+
+/* Bottom content */
+.hero-fullphoto-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 0 clamp(24px, 5vw, 80px) clamp(48px, 8vw, 100px);
+}
+
+.hero-fullphoto-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+
+.hero-fullphoto-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 10vw, 120px);
+  line-height: 1.0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.hero-fullphoto-socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.hero-fullphoto-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.hero-fullphoto-socials a:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+}
+
+.hero-fullphoto-socials svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* ========================================
+   SECTION 3: MIXED TYPOGRAPHY BIO
+   ======================================== */
+.bio-mixed {
+  padding: clamp(80px, 12vw, 160px) clamp(24px, 4vw, 64px);
+  background: var(--white);
+}
+
+.bio-mixed-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Thin line above eyebrow */
+.bio-mixed-line {
+  width: 40px;
+  height: 1px;
+  background: var(--sand);
+  margin: 0 auto 20px;
+}
+
+.bio-mixed-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.bio-mixed-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(30px, 4.5vw, 52px);
+  line-height: 1.35;
+  color: var(--near-black);
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+/* Mixed typography styles within headline */
+.bio-mixed-headline em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.bio-mixed-headline strong {
+  font-weight: 500;
+}
+
+.bio-mixed-headline .light-italic {
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.bio-mixed-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: #5a5a5a;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTION 4: MISSION / QUOTE WITH BG
+   ======================================== */
+.mission-bg {
+  position: relative;
+  padding: clamp(100px, 16vw, 200px) clamp(24px, 5vw, 80px);
+  overflow: hidden;
+}
+
+.mission-bg-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.mission-bg-media img,
+.mission-bg-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+/* Dark overlay */
+.mission-bg-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.mission-bg-content {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-bg-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 28px;
+}
+
+.mission-bg-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+/* Italic connecting words in headline */
+.mission-bg-headline em {
+  font-style: italic;
+  text-transform: lowercase;
+  letter-spacing: 0;
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+.mission-bg-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   DEMO PAGE: SECTION DIVIDER
+   ======================================== */
+.section-divider {
+  padding: 48px clamp(24px, 4vw, 64px);
+  text-align: center;
+  background: var(--warm-white);
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
+}
+
+.section-divider-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.section-divider-sub {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--warm-gray);
+  margin-top: 8px;
+}
+
+
+/* ========================================
+   SECTION 5: ABOUT (Asymmetric, Story-Led)
+   ======================================== */
+.about-story {
+  padding: clamp(80px, 12vw, 160px) clamp(24px, 4vw, 64px);
+  background: var(--white);
+}
+
+.about-story-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* "ABOUT" heading - large serif, tracked */
+.about-story-label {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 90px);
+  line-height: 1.0;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--near-black);
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+/* Main headline - serif with italic emphasis */
+.about-story-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.8vw, 32px);
+  line-height: 1.45;
+  color: var(--near-black);
+  margin-bottom: clamp(24px, 3vw, 36px);
+}
+
+.about-story-headline em {
+  font-style: italic;
+}
+
+/* Body paragraphs */
+.about-story-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #5a5a5a;
+  margin-bottom: 36px;
+}
+
+.about-story-body p {
+  margin-bottom: 16px;
+}
+
+.about-story-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Photo wrapper with stamp overlay */
+.about-story-photo-wrap {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.about-story-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(30, 55, 53, 0.14);
+}
+
+/* Rotating circular stamp badge */
+.about-story-stamp {
+  position: absolute;
+  bottom: -28px;
+  left: -28px;
+  width: 120px;
+  height: 120px;
+  z-index: 5;
+}
+
+.about-story-stamp-svg {
+  width: 100%;
+  height: 100%;
+  animation: stampSpin 18s linear infinite;
+}
+
+@keyframes stampSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Reduced motion: stop the spin */
+@media (prefers-reduced-motion: reduce) {
+  .about-story-stamp-svg {
+    animation: none;
+  }
+}
+
+/* Desktop: asymmetric 55/45 split */
+@media (min-width: 768px) {
+  .about-story-inner {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 72px;
+  }
+
+  .about-story-photo-wrap {
+    max-width: 100%;
+  }
+
+  .about-story-stamp {
+    width: 140px;
+    height: 140px;
+    bottom: -36px;
+    left: -36px;
+  }
+}
+
+
+/* ========================================
+   SECTION 6: OFFER CALLOUT (Dark Split)
+   ======================================== */
+.offer-callout {
+  background: var(--teal);
+}
+
+.offer-callout-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 600px;
+}
+
+/* Photo fills its half completely */
+.offer-callout-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.offer-callout-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content on dark background */
+.offer-callout-content {
+  padding: clamp(48px, 8vw, 100px) clamp(32px, 5vw, 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tracked uppercase eyebrow */
+.offer-callout-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 24px;
+}
+
+/* Massive serif headline */
+.offer-callout-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 5.5vw, 68px);
+  line-height: 1.08;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+/* Body copy - light on dark */
+.offer-callout-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+/* Outline button on dark bg */
+.offer-callout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 38px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.offer-callout-btn:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+/* Desktop: 50/50 split */
+@media (min-width: 768px) {
+  .offer-callout-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .offer-callout-photo {
+    min-height: auto;
+  }
+}
