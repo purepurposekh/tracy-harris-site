@@ -1,0 +1,44 @@
+<!--
+  COMPONENT: Navigation
+  Header bar (fixed, frosted glass) + mobile overlay.
+
+  VARIABLES TO CHANGE:
+  - Logo text: "Tracy Harris" in .nav-logo
+  - Nav links: href and text inside .nav-links <li> items
+  - CTA button: href and text in .nav-cta
+  - Mobile nav links: must match desktop links
+
+  NOTES:
+  - Fixed position, 72px tall. Hero section needs padding-top: 72px to compensate.
+  - Mobile overlay opens/closes via JS (see reveal.js).
+  - Hamburger hidden at 768px+, desktop links shown instead.
+-->
+
+<!-- Desktop nav -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Tracy Harris</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#fresh">Framework</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+    </ul>
+    <a href="#cta" class="btn-primary nav-cta" style="padding: 12px 28px; font-size: 13px;">Get Started</a>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div id="mobileNav" class="mobile-nav">
+  <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <a href="#about" onclick="document.getElementById('mobileNav').classList.remove('open')">About</a>
+  <a href="#programs" onclick="document.getElementById('mobileNav').classList.remove('open')">Programs</a>
+  <a href="#fresh" onclick="document.getElementById('mobileNav').classList.remove('open')">Framework</a>
+  <a href="#podcast" onclick="document.getElementById('mobileNav').classList.remove('open')">Podcast</a>
+  <a href="#cta" onclick="document.getElementById('mobileNav').classList.remove('open')">Get Started</a>
+</div>

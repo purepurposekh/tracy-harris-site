@@ -1,0 +1,93 @@
+<!--
+  COMPONENT: Programs
+  Two program cards side by side: FFB (light) and FFM (dark).
+
+  VARIABLES TO CHANGE:
+  - Section eyebrow: "Work With Tracy"
+  - Section headline: "Pathways to Freedom"
+  - Section subtext: the <p> below headline
+
+  FFB CARD (light):
+  - Title: "Freedom Filled® Business Mentorship"
+  - Label: "12-Month Mentorship"
+  - Price: "From $6,000"
+  - Features: each <li> item (keep the SVG check icon)
+  - CTA: href and text in .program-btn
+
+  FFM CARD (dark):
+  - Title: "Freedom Filled® Mastermind"
+  - Label: "12-Month Mastery"
+  - Price: "$31,000"
+  - Features: each <li> item (keep the SVG star icon)
+  - CTA: href and text in .program-btn
+
+  NOTES:
+  - Cards stack on mobile, side by side at 768px+.
+  - FFB uses checkmark SVG icons, FFM uses star SVG icons.
+  - Background is --warm-white.
+  - Add id="programs" to the section if used as a scroll target.
+  - Always verify pricing against current sales page before publishing.
+-->
+
+<section class="programs" id="programs">
+  <div class="programs-header reveal">
+    <p class="eyebrow">Work With Tracy</p>
+    <h2 class="headline-section">Pathways to <em>Freedom</em></h2>
+    <p>Two intentional containers designed to meet you where you are and take you where you want to go.</p>
+  </div>
+  <div class="programs-grid">
+
+    <!-- FFB Card -->
+    <div class="program-card program-card-light reveal reveal-delay-1">
+      <div class="program-card-header">
+        <div>
+          <h3 class="program-card-title">Freedom Filled® Business Mentorship</h3>
+          <p class="program-card-label">12-Month Mentorship</p>
+        </div>
+        <span class="program-card-price">From $6,000</span>
+      </div>
+      <ul class="program-features">
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Weekly group coaching calls with Tracy
+        </li>
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Signature frameworks and implementation guides
+        </li>
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Private community of like-minded women
+        </li>
+      </ul>
+      <a href="#" class="program-btn">Apply Now</a>
+    </div>
+
+    <!-- FFM Card -->
+    <div class="program-card program-card-dark reveal reveal-delay-2">
+      <div class="program-card-header">
+        <div>
+          <h3 class="program-card-title">Freedom Filled® Mastermind</h3>
+          <p class="program-card-label">12-Month Mastery</p>
+        </div>
+        <span class="program-card-price">$31,000</span>
+      </div>
+      <ul class="program-features">
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Intimate group of 20 high-calibre women
+        </li>
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          In-person retreats including Bali experience
+        </li>
+        <li>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Direct 1:1 access to Tracy and hot seat coaching
+        </li>
+      </ul>
+      <a href="#" class="program-btn">Apply for the Mastermind</a>
+    </div>
+
+  </div>
+</section>

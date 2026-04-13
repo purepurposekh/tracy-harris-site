@@ -1,0 +1,66 @@
+<!--
+  COMPONENT: Community Photo Gallery
+  Asymmetric photo grid showing community, retreats, lifestyle.
+
+  VARIABLES TO CHANGE:
+  - Header eyebrow: "The Community"
+  - Header headline: "Built on Connection, Not Competition"
+  - Header description paragraph
+  - Main photo: src and alt on first .community-photo
+  - Retreat photo: src and alt on second .community-photo
+  - Speaking photo: src and alt on third .community-photo
+  - Lifestyle photos: src and alt on the bottom row images
+
+  NOTES:
+  - Background is --warm-white.
+  - Main grid: 1 col mobile, asymmetric 1.1fr/0.9fr at 768px+.
+  - Bottom lifestyle row: two images side by side at 768px+, 16:9 aspect ratio.
+  - Photos have hover scale effect.
+  - Add id="community" to the section if used as a scroll target.
+-->
+
+<section class="community" id="community">
+  <div class="community-inner">
+    <div class="community-header reveal">
+      <p class="eyebrow">The Community</p>
+      <h2 class="headline-section">Built on Connection, Not <em>Competition</em></h2>
+      <p>This isn't a Facebook group. It's a curated room of women who lift each other up, celebrate every win, and hold each other to a higher standard.</p>
+    </div>
+
+    <div class="community-grid reveal">
+      <img
+        src="images/tracy/web/community.jpg"
+        alt="Tracy hugging a member at a live event"
+        class="community-photo"
+      />
+      <div class="community-lifestyle-wrap">
+        <img
+          src="images/tracy/web/retreat.jpg"
+          alt="Women gathered at a Freedom Filled® retreat in Bali"
+          class="community-photo"
+        />
+        <img
+          src="images/tracy/web/speaking.jpg"
+          alt="Tracy speaking on stage with a microphone"
+          class="community-photo"
+        />
+      </div>
+    </div>
+
+    <!-- Lifestyle row -->
+    <div style="margin-top: 24px;" class="community-lifestyle-wrap reveal reveal-delay-1">
+      <img
+        src="images/tracy/web/fitness.jpg"
+        alt="Tracy working out, living the Freedom Filled® lifestyle"
+        class="community-photo"
+        style="aspect-ratio: 16/9;"
+      />
+      <img
+        src="images/tracy/web/portrait2.jpg"
+        alt="Tracy Harris portrait"
+        class="community-photo"
+        style="aspect-ratio: 16/9;"
+      />
+    </div>
+  </div>
+</section>

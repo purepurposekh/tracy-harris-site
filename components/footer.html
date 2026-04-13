@@ -1,0 +1,61 @@
+<!--
+  COMPONENT: Footer
+  Brand info, nav links, social icons, copyright.
+
+  VARIABLES TO CHANGE:
+  - Logo text: "Tracy Harris" in .footer-logo
+  - Brand description: the <p> inside .footer-brand
+  - Footer links: href and text in .footer-links <a> tags
+  - Social links: href on each social <a> (Instagram, YouTube, LinkedIn)
+  - Copyright year and text in .footer-copyright
+
+  NOTES:
+  - Background is --teal (dark), continues from CTA section.
+  - Social icons are inline SVGs.
+  - Grid: 1 col mobile, 1.2fr/1fr at 768px+.
+  - Freedom Filled® always includes the registered trademark symbol.
+-->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Tracy Harris</div>
+      <p>Helping women build intentional, Freedom Filled® businesses through education, mentorship, and community.</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Programs</a>
+        <a href="#">Podcast</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width: 1180px; margin: 0 auto;">
+    <div class="footer-bottom">
+      <div class="footer-social">
+        <!-- Instagram -->
+        <a href="https://instagram.com/tracyharrisco" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copyright">&copy; 2026 Tracy Harris Co. All rights reserved. Freedom Filled&reg; is a registered trademark.</p>
+    </div>
+  </div>
+</footer>

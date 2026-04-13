@@ -1,0 +1,47 @@
+<!--
+  COMPONENT: Hero
+  Full-viewport hero with headline left, photo right (stacked on mobile).
+
+  VARIABLES TO CHANGE:
+  - Eyebrow text: "Educator · Speaker · Mentor"
+  - Headline: the h1 content (use <br/> for line breaks, <em> for italic)
+  - Subtext: the .hero-sub paragraph
+  - CTA button: href and text in .btn-primary
+  - Photo: src and alt on .hero-photo
+  - Accent card text: "Excellence by design." in .hero-accent-card
+
+  NOTES:
+  - Requires padding-top: 72px (built in) to clear fixed nav.
+  - Accent card is hidden on mobile, shown at 768px+.
+  - Photo uses 3:4 aspect ratio.
+-->
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content reveal">
+      <p class="eyebrow hero-eyebrow">Educator · Speaker · Mentor</p>
+      <h1 class="headline-hero">
+        Helping Women Build<br/>
+        <em>Freedom Filled</em>®<br/>
+        Businesses They Love
+      </h1>
+      <p class="body-large hero-sub">
+        Moving beyond the hustle to create a business that serves your life, not the other way around.
+      </p>
+      <a href="#programs" class="btn-primary">
+        Start Your Journey
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-photo-wrap reveal reveal-delay-2">
+      <img
+        src="images/tracy/web/hero.jpg"
+        alt="Tracy Harris in a white suit, smiling warmly"
+        class="hero-photo"
+      />
+      <div class="hero-accent-card">
+        <p>Excellence by design.</p>
+      </div>
+    </div>
+  </div>
+</section>

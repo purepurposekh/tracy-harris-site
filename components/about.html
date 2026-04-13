@@ -1,0 +1,40 @@
+<!--
+  COMPONENT: About / Bio
+  Asymmetric two-column layout: photo left, text right (stacked on mobile).
+
+  VARIABLES TO CHANGE:
+  - Photo: src and alt on .about-photo
+  - Eyebrow text: "Meet Tracy"
+  - Headline: the h2 content
+  - Body paragraphs: the <p> tags inside .about-text
+  - Ghost button: href and text in .btn-ghost
+
+  NOTES:
+  - Photo uses 4:5 aspect ratio.
+  - Grid splits 0.9fr / 1.1fr at 768px+.
+  - Add id="about" to the section if used as a scroll target.
+-->
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-photo-wrap reveal">
+      <img
+        src="images/tracy/web/teaching.jpg"
+        alt="Tracy Harris teaching, holding her Launch book"
+        class="about-photo"
+      />
+    </div>
+    <div class="about-content reveal reveal-delay-1">
+      <p class="eyebrow">Meet Tracy</p>
+      <h2 class="headline-section">
+        I Refused to Believe<br/>This Was <em>All</em> There Was
+      </h2>
+      <div class="about-text body-large">
+        <p>I spent years following someone else's blueprint for success. I hit the targets, earned the titles, and still felt like something was missing. I was exhausted, burnt out, and questioning everything.</p>
+        <p>That season didn't disqualify me. It refined me. It taught me that your business should give you freedom, not take it away. And that you can build something profitable, purposeful, and peaceful, all at once.</p>
+        <p>Now I help women do exactly that. Build businesses by design, not by default.</p>
+      </div>
+      <a href="#" class="btn-ghost">My Full Story</a>
+    </div>
+  </div>
+</section>
