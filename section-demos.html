@@ -16,8 +16,9 @@
      DEMO 1: FFB HERO (Split Layout)
      ============================================================ -->
 <div class="section-divider">
-  <p class="section-divider-label">Section 1: FFB Hero</p>
-  <p class="section-divider-sub">Split layout, product nav, monogram, photo right</p>
+  <p class="section-divider-label">Section 1: FFB Hero (Split Layout)</p>
+  <p class="section-divider-sub">Product page hero with asymmetric split. Text left, photo right.</p>
+  <p class="section-divider-notes">Reference: Tracy's current FFB sales page on Showit. Swap: headline, body text, CTA text/link, photo. File: components/hero-ffb.html</p>
 </div>
 
 <!-- FFB Product Nav -->
@@ -68,7 +69,8 @@
      ============================================================ -->
 <div class="section-divider">
   <p class="section-divider-label">Section 2: Full-Photo Hero</p>
-  <p class="section-divider-sub">Full viewport photo background, split nav, centred name, social icons</p>
+  <p class="section-divider-sub">Full-viewport background photo with name overlay. Personal brand homepage style.</p>
+  <p class="section-divider-notes">Reference: Kara Parker homepage. Swap: background photo, eyebrow text, name, social links. The photo covers 100vh with a gradient overlay from bottom. File: components/hero-fullphoto.html</p>
 </div>
 
 <section class="hero-fullphoto" style="min-height: 100vh;">
@@ -124,7 +126,8 @@
      ============================================================ -->
 <div class="section-divider">
   <p class="section-divider-label">Section 3: Mixed Typography Bio</p>
-  <p class="section-divider-sub">Centred layout, mixed serif styles, thin line + eyebrow</p>
+  <p class="section-divider-sub">Centred intro with mixed serif styles. Each descriptor in a different typographic treatment.</p>
+  <p class="section-divider-notes">Reference: Kara Parker "Meet Kara" section. Swap: eyebrow, descriptor list (regular/italic/bold), body paragraph. Uses EB Garamond with regular, italic, bold, and light-italic variants. File: components/bio-mixed.html</p>
 </div>
 
 <section class="bio-mixed">
@@ -149,8 +152,9 @@
      DEMO 4: MISSION / QUOTE WITH BACKGROUND
      ============================================================ -->
 <div class="section-divider">
-  <p class="section-divider-label">Section 4: Mission with Background</p>
-  <p class="section-divider-sub">Full-width, B&amp;W photo background, dark overlay, mixed headline. Video option documented.</p>
+  <p class="section-divider-label">Section 4: Mission / Quote with Background</p>
+  <p class="section-divider-sub">Full-width photo or video background with dark overlay. Mixed uppercase + italic headline.</p>
+  <p class="section-divider-notes">Reference: Kara Parker "The Mission" section. Swap: background image/video, eyebrow, headline, body text. Photo converts to greyscale via CSS filter. Video tag alternative is commented in the HTML. File: components/mission-bg.html</p>
 </div>
 
 <section class="mission-bg">
@@ -182,7 +186,8 @@
      ============================================================ -->
 <div class="section-divider">
   <p class="section-divider-label">Section 5: About (Story-Led)</p>
-  <p class="section-divider-sub">Asymmetric layout, serif heading, rotating stamp badge on photo, ghost button</p>
+  <p class="section-divider-sub">Asymmetric layout with text left (55%) and photo right (45%). Rotating circular stamp badge overlay.</p>
+  <p class="section-divider-notes">Reference: Kara Parker "About" section. Swap: heading, story paragraphs, photo, CTA text/link. The rotating "THE STORY" stamp is a CSS-animated SVG positioned on the photo. File: components/about-story.html</p>
 </div>
 
 <section class="about-story">
@@ -238,7 +243,8 @@
      ============================================================ -->
 <div class="section-divider">
   <p class="section-divider-label">Section 6: Offer Callout (Dark Split)</p>
-  <p class="section-divider-sub">50/50 split, lifestyle photo left, dark teal right, outline button</p>
+  <p class="section-divider-sub">50/50 split section. Lifestyle photo fills left half. Dark teal (#1e3735) right half with headline and CTA.</p>
+  <p class="section-divider-notes">Reference: Kara Parker "Signature Offer" section. Swap: left photo, eyebrow, headline, body text, CTA text/link. Use for featuring any single product prominently. File: components/offer-callout.html</p>
 </div>
 
 <section class="offer-callout">
@@ -269,7 +275,8 @@
 <!-- ====== END DEMOS ====== -->
 <div class="section-divider" style="padding: 64px 24px;">
   <p class="section-divider-label">End of Section Demos</p>
-  <p class="section-divider-sub">6 components, all using v4b design tokens. Review above.</p>
+  <p class="section-divider-sub">6 new components + 12 from v4b = 18 total blocks in the component library</p>
+  <p class="section-divider-notes">All components live in /components/ folder. Each is a standalone HTML fragment. Load tokens.css + sections-extra.css + reveal.js. Assemble pages by picking blocks and swapping copy/images.</p>
 </div>
 
 
