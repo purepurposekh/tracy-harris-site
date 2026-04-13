@@ -54,8 +54,9 @@
 
     .hero-modern__content {
       background: #fff;
-      width: 67%;
-      padding: 80px 80px 60px;
+      width: 67%; /* 803px of 1200px */
+      min-height: 711px;
+      padding: 80px 0 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -63,6 +64,12 @@
       text-align: center;
       position: relative;
       z-index: 1;
+    }
+
+    /* Inner wrapper keeps text away from the photo overlap zone */
+    .hero-modern__content-inner {
+      max-width: 444px;
+      padding: 0 40px;
     }
 
     .hero-modern__monogram {
@@ -91,7 +98,6 @@
       font-weight: 400;
       line-height: 1.5;
       color: #243531;
-      max-width: 444px;
       margin-bottom: 40px;
     }
 
@@ -116,8 +122,9 @@
       position: absolute;
       right: 0;
       top: 130px;
-      width: 578px;
-      height: 564px;
+      width: 48%; /* ~578px of 1200px, scales with container */
+      max-width: 578px;
+      aspect-ratio: 578 / 564;
       z-index: 2;
     }
 
@@ -127,23 +134,42 @@
       object-fit: cover;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1200px) {
+      .hero-modern__content {
+        width: 55%;
+      }
+      .hero-modern__photo {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 768px) {
       .hero-modern__inner {
         flex-direction: column;
         min-height: auto;
       }
       .hero-modern__content {
         width: 100%;
+        min-height: auto;
         padding: 60px 30px;
+      }
+      .hero-modern__content-inner {
+        max-width: 100%;
+        padding: 0;
       }
       .hero-modern__heading {
         font-size: 43px;
+        text-align: left;
+      }
+      .hero-modern__body {
+        text-align: left;
       }
       .hero-modern__photo {
         position: relative;
         top: 0;
         width: 100%;
-        height: 300px;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
       }
     }
 
@@ -296,10 +322,12 @@
   <section class="hero-modern">
     <div class="hero-modern__inner">
       <div class="hero-modern__content">
-        <img class="hero-modern__monogram" src="https://static.showit.co/200/IBXs7NIvn4a1rU1r2lbrLQ/173187/th_logos_t_navy-09.png" alt="FFB monogram">
-        <h2 class="hero-modern__heading">Your Journey to <em>Freedom</em> Begins Here</h2>
-        <p class="hero-modern__body">My year-long mentorship &amp; implementation program, Freedom-Filled™ Business, is designed to help you grow courses and memberships that are freedom-filled, give you life, and reward you abundantly.</p>
-        <a href="#" class="hero-modern__cta">Apply Now →</a>
+        <div class="hero-modern__content-inner">
+          <img class="hero-modern__monogram" src="https://static.showit.co/200/IBXs7NIvn4a1rU1r2lbrLQ/173187/th_logos_t_navy-09.png" alt="FFB monogram">
+          <h2 class="hero-modern__heading">Your Journey to <em>Freedom</em> Begins Here</h2>
+          <p class="hero-modern__body">My year-long mentorship &amp; implementation program, Freedom-Filled™ Business, is designed to help you grow courses and memberships that are freedom-filled, give you life, and reward you abundantly.</p>
+          <a href="#" class="hero-modern__cta">Apply Now →</a>
+        </div>
       </div>
       <div class="hero-modern__photo">
         <img src="https://static.showit.co/800/aHJ_7e00RV-MrsdMdJddaQ/173187/th-pb-2024-outfit1-25.jpg" alt="Tracy Harris">
@@ -330,6 +358,29 @@
       </div>
       <div class="sie-hero_6">
         <img src="https://static.showit.co/200/IBXs7NIvn4a1rU1r2lbrLQ/173187/th_logos_t_navy-09.png" alt="FFB monogram">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <div class="divider">
+    Version C: Templatized Component (Placeholder Content)
+    <p>Same modern CSS layout with placeholder text and images. Ready to swap content for any page. This is what lives in the component library.</p>
+  </div>
+  <!-- ============================================ -->
+
+  <section class="hero-modern">
+    <div class="hero-modern__inner">
+      <div class="hero-modern__content">
+        <div class="hero-modern__content-inner">
+          <img class="hero-modern__monogram" src="https://static.showit.co/200/IBXs7NIvn4a1rU1r2lbrLQ/173187/th_logos_t_navy-09.png" alt="Brand monogram">
+          <h2 class="hero-modern__heading">[Headline Line One] <em>[Italic Word]</em> [Line Three]</h2>
+          <p class="hero-modern__body">[Brief description of the offer, program, or page purpose. Keep to 2-3 sentences that explain the value proposition clearly.]</p>
+          <a href="#" class="hero-modern__cta">[CTA Text] →</a>
+        </div>
+      </div>
+      <div class="hero-modern__photo">
+        <img src="https://placehold.co/578x564/ECE7DE/243531?text=Hero+Photo" alt="[Photo description]">
       </div>
     </div>
   </section>
