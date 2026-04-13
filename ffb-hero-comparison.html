@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FFB Hero: Showit vs Modern CSS Comparison</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600|Poppins:regular|Public+Sans:500" rel="stylesheet">
+  <style>
+    @font-face { font-family: Editors Note Regular; src: url('https://static.showit.co/file/TvhrrI7NQuaBtkycz2Vf9Q/shared/editors_note-regular.woff'); }
+    @font-face { font-family: Editors Note Light Italic; src: url('https://static.showit.co/file/A4oH9ACtQ4OLBZLd7GAE3Q/shared/editor_snote-lightitalic.woff'); }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f4f1ec; color: #243531; }
+
+    /* ============================================
+       SECTION DIVIDER
+       ============================================ */
+    .divider {
+      background: #c0392b;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .divider p { font-size: 14px; font-weight: 400; letter-spacing: 0; text-transform: none; margin-top: 8px; opacity: 0.9; }
+
+    /* ============================================
+       VERSION A: MODERN CSS (Flexbox/Grid)
+       Rebuilt from Showit's absolute positioning
+       into maintainable, responsive CSS.
+       Same fonts, colors, sizes. Editable layout.
+       ============================================ */
+    .hero-modern {
+      background: #ECE7DE;
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-modern__inner {
+      width: 1200px;
+      max-width: 100%;
+      position: relative;
+      min-height: 750px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .hero-modern__content {
+      background: #fff;
+      width: 67%;
+      padding: 80px 80px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-modern__monogram {
+      width: 41px;
+      height: 47px;
+      margin-bottom: 20px;
+    }
+
+    .hero-modern__heading {
+      font-family: 'Editors Note Regular', serif;
+      font-weight: 400;
+      font-size: 65px;
+      line-height: 1;
+      color: #243531;
+      margin-bottom: 30px;
+    }
+
+    .hero-modern__heading em {
+      font-family: 'Editors Note Light Italic', serif;
+      font-style: italic;
+    }
+
+    .hero-modern__body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #243531;
+      max-width: 444px;
+      margin-bottom: 40px;
+    }
+
+    .hero-modern__cta {
+      display: inline-block;
+      background: #788E75;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      padding: 16px 40px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .hero-modern__cta:hover {
+      background: #697e66;
+    }
+
+    .hero-modern__photo {
+      position: absolute;
+      right: 0;
+      top: 130px;
+      width: 578px;
+      height: 564px;
+      z-index: 2;
+    }
+
+    .hero-modern__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 960px) {
+      .hero-modern__inner {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .hero-modern__content {
+        width: 100%;
+        padding: 60px 30px;
+      }
+      .hero-modern__heading {
+        font-size: 43px;
+      }
+      .hero-modern__photo {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    /* ============================================
+       VERSION B: SHOWIT ORIGINAL
+       Exact positioning from production CSS.
+       Pixel-perfect but not maintainable.
+       ============================================ */
+    .hero-showit {
+      background: #ECE7DE;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-showit__inner {
+      width: 1200px;
+      height: 807px;
+      position: relative;
+    }
+
+    /* White panel */
+    .hero-showit .sie-hero_0 {
+      position: absolute;
+      left: 0px;
+      top: 39px;
+      width: 803px;
+      height: 711px;
+    }
+    .hero-showit .sie-hero_0 .se-simple {
+      background: #fff;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Photo */
+    .hero-showit .sie-hero_1 {
+      position: absolute;
+      left: 622px;
+      top: 130px;
+      width: 578px;
+      height: 564px;
+      overflow: hidden;
+    }
+    .hero-showit .sie-hero_1 img {
+      width: 170%;
+      height: 116%;
+      object-fit: cover;
+      margin-left: -35%;
+      margin-top: -8%;
+    }
+
+    /* Button bg */
+    .hero-showit .sie-hero_2 {
+      position: absolute;
+      left: 222px;
+      top: 577px;
+      width: 182px;
+      height: 52px;
+    }
+    .hero-showit .sie-hero_2 .se-simple {
+      background: #788E75;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Button text */
+    .hero-showit .sie-hero_3 {
+      position: absolute;
+      left: 222px;
+      top: 576px;
+      width: 182px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .hero-showit .sie-hero_3 p {
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-align: center;
+      line-height: 3.8;
+    }
+
+    /* Body text */
+    .hero-showit .sie-hero_4 {
+      position: absolute;
+      left: 91px;
+      top: 436px;
+      width: 444px;
+      height: 97px;
+    }
+    .hero-showit .sie-hero_4 p {
+      color: #243531;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* Heading */
+    .hero-showit .sie-hero_5 {
+      position: absolute;
+      left: 111px;
+      top: 219px;
+      width: 404px;
+      height: 211px;
+    }
+    .hero-showit .sie-hero_5 h2 {
+      color: #243531;
+      font-family: 'Editors Note Regular', serif;
+      font-size: 65px;
+      font-weight: 400;
+      line-height: 1;
+      text-align: center;
+    }
+    .hero-showit .sie-hero_5 em {
+      font-family: 'Editors Note Light Italic', serif;
+      font-style: italic;
+    }
+
+    /* Monogram */
+    .hero-showit .sie-hero_6 {
+      position: absolute;
+      left: 293px;
+      top: 151px;
+      width: 41px;
+      height: 58px;
+    }
+    .hero-showit .sie-hero_6 img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <div class="divider">
+    Version A: Modern CSS (Flexbox)
+    <p>Rebuilt from Showit's absolute positioning into responsive, maintainable CSS. Same visual result, but you can edit content without recalculating pixel positions.</p>
+  </div>
+  <!-- ============================================ -->
+
+  <section class="hero-modern">
+    <div class="hero-modern__inner">
+      <div class="hero-modern__content">
+        <img class="hero-modern__monogram" src="https://static.showit.co/200/IBXs7NIvn4a1rU1r2lbrLQ/173187/th_logos_t_navy-09.png" alt="FFB monogram">
+        <h2 class="hero-modern__heading">Your Journey to <em>Freedom</em> Begins Here</h2>
+        <p class="hero-modern__body">My year-long mentorship &amp; implementation program, Freedom-Filled™ Business, is designed to help you grow courses and memberships that are freedom-filled, give you life, and reward you abundantly.</p>
+        <a href="#" class="hero-modern__cta">Apply Now →</a>
+      </div>
+      <div class="hero-modern__photo">
+        <img src="https://static.showit.co/800/aHJ_7e00RV-MrsdMdJddaQ/173187/th-pb-2024-outfit1-25.jpg" alt="Tracy Harris">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <div class="divider">
+    Version B: Showit Original (Absolute Positioning)
+    <p>Exact pixel positions from the production page. Pixel-perfect match, but every content change means recalculating positions. Not responsive without separate mobile CSS.</p>
+  </div>
+  <!-- ============================================ -->
+
+  <section class="hero-showit">
+    <div class="hero-showit__inner">
+      <div class="sie-hero_0"><div class="se-simple"></div></div>
+      <div class="sie-hero_1">
+        <img src="https://static.showit.co/800/aHJ_7e00RV-MrsdMdJddaQ/173187/th-pb-2024-outfit1-25.jpg" alt="Tracy Harris">
+      </div>
+      <div class="sie-hero_2"><div class="se-simple"></div></div>
+      <div class="sie-hero_3"><p>Apply Now →</p></div>
+      <div class="sie-hero_4">
+        <p>My year-long mentorship &amp; implementation program, Freedom-Filled™ Business, is designed to help you grow courses and memberships that are freedom-filled, give you life, and reward you abundantly.</p>
+      </div>
+      <div class="sie-hero_5">
+        <h2>Your Journey to <em>Freedom</em> Begins Here</h2>
+      </div>
+      <div class="sie-hero_6">
+        <img src="https://static.showit.co/200/IBXs7NIvn4a1rU1r2lbrLQ/173187/th_logos_t_navy-09.png" alt="FFB monogram">
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
