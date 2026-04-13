@@ -66,10 +66,14 @@
       z-index: 1;
     }
 
-    /* Inner wrapper keeps text away from the photo overlap zone */
+    /* Inner wrapper: centered between left edge of panel and left edge of photo.
+       Photo starts at ~52% of container (622/1200).
+       Panel is 67% wide. So the "safe zone" is 0 to 52% = ~77% of the panel width.
+       We center text within that zone using padding-right to push content left. */
     .hero-modern__content-inner {
       max-width: 444px;
       padding: 0 40px;
+      margin-right: 25%; /* push content left so it centers between panel-left and photo-left */
     }
 
     .hero-modern__monogram {
@@ -156,6 +160,7 @@
       .hero-modern__content-inner {
         max-width: 100%;
         padding: 0;
+        margin-right: 0;
       }
       .hero-modern__heading {
         font-size: 43px;
