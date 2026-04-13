@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracy Harris | Build Your Freedom Filled&reg; Empire</title>
+  <meta name="description" content="Educator, speaker, and mentor Tracy Harris helps women build Freedom Filled&reg; businesses. 10+ years. Multi-seven figures. 500+ women mentored.">
+
+  <!-- Google Fonts: Instrument Serif + DM Sans + DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================================================
+       DESIGN TOKENS - DESIGN.v4.md (Female Leadership)
+       ======================================================================== */
+    :root {
+      /* Foundation */
+      --deep-teal:   #233635;
+      --mid-teal:    #324b4a;
+      --canvas:      #f6f4f1;
+      --charcoal:    #313131;
+
+      /* Brand Accent */
+      --sage:        #6e8e77;
+      --sage-dark:   #5a7a63;
+      --sage-light:  #8aab92;
+
+      /* Text: opacity-based hierarchy */
+      --text-on-dark:        rgba(246, 244, 241, 1.0);
+      --text-on-dark-muted:  rgba(246, 244, 241, 0.7);
+      --text-on-dark-ghost:  rgba(246, 244, 241, 0.4);
+      --text-on-light:       #313131;
+      --text-on-light-muted: rgba(49, 49, 49, 0.6);
+      --text-on-light-ghost: rgba(49, 49, 49, 0.3);
+
+      /* Structural */
+      --border-dark:  rgba(246, 244, 241, 0.12);
+      --border-light: rgba(49, 49, 49, 0.12);
+
+      /* Content widths */
+      --width-narrow:   680px;
+      --width-standard: 1080px;
+      --width-wide:     1280px;
+
+      /* Spacing */
+      --space-xs:  8px;
+      --space-sm:  16px;
+      --space-md:  24px;
+      --space-lg:  48px;
+      --space-xl:  80px;
+      --space-2xl: 120px;
+      --space-3xl: 160px;
+      --section-pad: clamp(80px, 14vw, 160px);
+
+      /* Typography */
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body:    'DM Sans', -apple-system, sans-serif;
+      --font-mono:    'DM Mono', 'Courier New', monospace;
+
+      /* Transitions: 500ms = luxury */
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --duration: 500ms;
+    }
+
+    /* ========================================================================
+       RESET & BASE
+       ======================================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--charcoal);
+      background: var(--canvas);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--duration) var(--ease);
+    }
+
+    /* ========================================================================
+       UTILITY CLASSES
+       ======================================================================== */
+    .container {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    .container--standard {
+      max-width: var(--width-standard);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    .container--narrow {
+      max-width: var(--width-narrow);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    /* Monospace label: the v4 signature */
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    /* Section heading */
+    .section-heading {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .section-heading--dark {
+      font-size: clamp(34px, 6vw, 64px);
+      color: var(--text-on-dark);
+    }
+
+    .section-heading--light {
+      font-size: clamp(34px, 6vw, 64px);
+      color: var(--text-on-light);
+    }
+
+    /* Pill buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: var(--canvas);
+      padding: 18px 48px;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-on-dark);
+      padding: 17px 46px;
+      border: 1.5px solid rgba(246, 244, 241, 0.3);
+      backdrop-filter: blur(4px);
+    }
+    .btn-ghost:hover {
+      border-color: var(--sage);
+      color: var(--sage-light);
+      background: rgba(110, 142, 119, 0.1);
+    }
+
+    .btn-glass {
+      background: rgba(246, 244, 241, 0.1);
+      color: var(--canvas);
+      padding: 17px 46px;
+      border: 1px solid rgba(246, 244, 241, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .btn-glass:hover {
+      background: rgba(246, 244, 241, 0.2);
+      border-color: rgba(246, 244, 241, 0.4);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--charcoal);
+      padding: 17px 46px;
+      border: 1.5px solid rgba(49, 49, 49, 0.3);
+    }
+    .btn-outline-dark:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========================================================================
+       1. NAVIGATION
+       ======================================================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: background var(--duration) var(--ease),
+                  padding var(--duration) var(--ease),
+                  backdrop-filter var(--duration) var(--ease);
+    }
+
+    .nav.scrolled {
+      background: rgba(35, 54, 53, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 0;
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--canvas);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+    }
+    .nav__links a:hover {
+      color: var(--sage);
+    }
+
+    .nav__cta {
+      padding: 12px 32px;
+      font-size: 12px;
+    }
+
+    /* Mobile nav toggle */
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--canvas);
+      margin: 6px 0;
+      transition: all var(--duration) var(--ease);
+    }
+
+    /* Mobile overlay */
+    .nav__mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--deep-teal);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .nav__mobile-overlay.active {
+      display: flex;
+    }
+
+    .nav__mobile-overlay a {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--canvas);
+      transition: color var(--duration) var(--ease);
+    }
+    .nav__mobile-overlay a:hover {
+      color: var(--sage);
+    }
+
+    .nav__mobile-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--canvas);
+      font-size: 32px;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+
+    /* ========================================================================
+       2. HERO
+       ======================================================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: var(--deep-teal);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero__bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.75;
+      /* Placeholder: replace with real Tracy photo */
+      background: linear-gradient(135deg, var(--mid-teal) 0%, var(--deep-teal) 100%);
+    }
+
+    .hero__bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #233635 5%, transparent 60%);
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      padding-top: 160px;
+      padding-bottom: 160px;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 24px;
+    }
+
+    .hero__headline {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 8vw, 90px);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      color: var(--canvas);
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+
+    .hero__headline em {
+      font-style: italic;
+    }
+
+    .hero__sub {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 2vw, 18px);
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero__buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero__stats {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      border-top: 1px solid var(--border-dark);
+      background: rgba(35, 54, 53, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .hero__stats-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(24px, 5vw, 64px);
+      padding: 20px 24px;
+    }
+
+    .hero__stat {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+      white-space: nowrap;
+    }
+
+    .hero__stat-dot {
+      color: var(--sage);
+      font-size: 8px;
+    }
+
+    /* ========================================================================
+       3. PROGRAM CAROUSEL
+       ======================================================================== */
+    .programs {
+      background: var(--deep-teal);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .programs__header {
+      margin-bottom: var(--space-lg);
+    }
+
+    .programs__carousel-wrapper {
+      position: relative;
+    }
+
+    .programs__carousel {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 8px 0 24px;
+    }
+
+    .programs__carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .programs__card {
+      flex: 0 0 280px;
+      aspect-ratio: 3 / 4;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform var(--duration) var(--ease);
+    }
+    .programs__card:hover {
+      transform: scale(1.03);
+    }
+
+    .programs__card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Placeholder backgrounds for each program */
+    }
+
+    .programs__card--ffb .programs__card-img {
+      background: linear-gradient(160deg, #3a6360 0%, var(--deep-teal) 100%);
+    }
+    .programs__card--ffm .programs__card-img {
+      background: linear-gradient(160deg, var(--sage) 0%, var(--deep-teal) 100%);
+    }
+    .programs__card--workshop .programs__card-img {
+      background: linear-gradient(160deg, #4a6e6c 0%, var(--deep-teal) 100%);
+    }
+    .programs__card--podcast .programs__card-img {
+      background: linear-gradient(160deg, #5a7a63 0%, var(--deep-teal) 100%);
+    }
+
+    .programs__card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(35, 54, 53, 0.95) 0%, rgba(35, 54, 53, 0.1) 50%);
+      transition: background var(--duration) var(--ease);
+    }
+    .programs__card:hover .programs__card-overlay {
+      background: linear-gradient(to top, rgba(35, 54, 53, 0.85) 0%, rgba(35, 54, 53, 0.05) 50%);
+    }
+
+    .programs__card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 24px;
+      z-index: 2;
+    }
+
+    .programs__card-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 8px;
+    }
+
+    .programs__card-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--canvas);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .programs__card-desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      line-height: 1.5;
+    }
+
+    /* Carousel arrows */
+    .programs__arrows {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .programs__arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 100px;
+      border: 1.5px solid var(--text-on-dark-ghost);
+      background: transparent;
+      color: var(--text-on-dark-muted);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--duration) var(--ease);
+      font-family: var(--font-body);
+    }
+    .programs__arrow:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+      background: rgba(110, 142, 119, 0.1);
+    }
+
+    /* ========================================================================
+       4. PILLARS (F.R.E.S.H. Framework)
+       ======================================================================== */
+    .pillars {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+    }
+
+    .pillars__header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .pillars__grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+
+    .pillar-card {
+      background: white;
+      border-radius: 12px;
+      padding: 40px 28px;
+      text-align: center;
+      transition: transform var(--duration) var(--ease),
+                  box-shadow var(--duration) var(--ease);
+    }
+    .pillar-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(35, 54, 53, 0.08);
+    }
+
+    .pillar-card__letter {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 400;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .pillar-card__title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-on-light);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .pillar-card__desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-light-muted);
+      line-height: 1.6;
+    }
+
+    /* ========================================================================
+       5. TESTIMONIAL
+       ======================================================================== */
+    .testimonial {
+      position: relative;
+      background: var(--deep-teal);
+      padding: var(--section-pad) 0;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .testimonial__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .testimonial__bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+      /* Placeholder */
+      background: linear-gradient(135deg, var(--mid-teal) 0%, var(--deep-teal) 100%);
+    }
+
+    .testimonial__bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(35, 54, 53, 0.7) 0%, rgba(35, 54, 53, 0.4) 100%);
+    }
+
+    .testimonial__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .testimonial__quote {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--canvas);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 800px;
+      margin: 0 auto 32px;
+    }
+
+    .testimonial__attribution {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 40px;
+    }
+
+    .testimonial__avatars {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .testimonial__avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color var(--duration) var(--ease);
+      overflow: hidden;
+      background: var(--mid-teal);
+    }
+    .testimonial__avatar.active {
+      border-color: var(--sage);
+    }
+    .testimonial__avatar:hover {
+      border-color: var(--sage-light);
+    }
+
+    .testimonial__avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ========================================================================
+       6. ABOUT / MEET TRACY
+       ======================================================================== */
+    .about {
+      background: var(--deep-teal);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+
+    .about__content {
+      /* Left column: text and stats */
+    }
+
+    .about__text {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 2vw, 18px);
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      line-height: 1.7;
+      max-width: 500px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .about__stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .about__stat {
+      /* Individual stat block */
+    }
+
+    .about__stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 6vw, 72px);
+      font-weight: 400;
+      color: var(--canvas);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .about__stat-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+      margin-top: 8px;
+    }
+
+    .about__image-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+    }
+
+    .about__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Placeholder */
+      background: linear-gradient(160deg, var(--mid-teal) 0%, var(--deep-teal) 100%);
+    }
+
+    .about__image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(35, 54, 53, 0.4) 0%, transparent 40%);
+    }
+
+    /* ========================================================================
+       7. RESULTS
+       ======================================================================== */
+    .results {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+    }
+
+    .results__header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .results__stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(32px, 6vw, 80px);
+      margin-bottom: var(--space-xl);
+      flex-wrap: wrap;
+    }
+
+    .results__stat {
+      text-align: center;
+    }
+
+    .results__stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 6vw, 72px);
+      font-weight: 400;
+      color: var(--text-on-light);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .results__stat-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-top: 8px;
+    }
+
+    .results__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .result-card {
+      background: var(--deep-teal);
+      border-radius: 12px;
+      padding: 40px 32px;
+      transition: transform var(--duration) var(--ease);
+    }
+    .result-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .result-card__icon {
+      font-family: var(--font-display);
+      font-size: 36px;
+      color: var(--sage);
+      margin-bottom: 20px;
+    }
+
+    .result-card__title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--canvas);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .result-card__desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      line-height: 1.6;
+    }
+
+    /* ========================================================================
+       8. COACHING / PROGRAMS DETAIL
+       ======================================================================== */
+    .coaching {
+      background: var(--deep-teal);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .coaching__grid {
+      display: grid;
+      grid-template-columns: 45fr 55fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+
+    .coaching__brand {
+      /* Left column: brand block */
+    }
+
+    .coaching__title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 400;
+      color: var(--canvas);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .coaching__title em {
+      font-style: italic;
+    }
+
+    .coaching__text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 440px;
+    }
+
+    .coaching__stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .coaching__stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .coaching__stat-value {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--canvas);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .coaching__stat-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-ghost);
+      margin-top: 6px;
+    }
+
+    .coaching__buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .coaching__video-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: var(--mid-teal);
+    }
+
+    .coaching__video-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--mid-teal) 0%, var(--deep-teal) 100%);
+    }
+
+    .coaching__play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(246, 244, 241, 0.15);
+      border: 1.5px solid rgba(246, 244, 241, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      backdrop-filter: blur(8px);
+    }
+    .coaching__play-btn:hover {
+      background: rgba(110, 142, 119, 0.3);
+      border-color: var(--sage);
+      transform: scale(1.08);
+    }
+
+    .coaching__play-icon {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent var(--canvas);
+      margin-left: 4px;
+    }
+
+    /* ========================================================================
+       9. PODCAST
+       ======================================================================== */
+    .podcast {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+    }
+
+    .podcast__grid {
+      display: grid;
+      grid-template-columns: 45fr 55fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+    }
+
+    .podcast__featured {
+      /* Left column: featured episode */
+    }
+
+    .podcast__artwork {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--deep-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .podcast__artwork-text {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--canvas);
+      text-align: center;
+      padding: 32px;
+      line-height: 1.2;
+    }
+
+    .podcast__artwork-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .podcast__featured-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--text-on-light);
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+
+    .podcast__featured-desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-light-muted);
+      line-height: 1.6;
+    }
+
+    .podcast__episodes {
+      /* Right column: episode list */
+    }
+
+    .podcast__episodes-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--text-on-light);
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .podcast__episode {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+    }
+    .podcast__episode:first-child {
+      border-top: 1px solid var(--border-light);
+    }
+    .podcast__episode:hover {
+      padding-left: 8px;
+    }
+    .podcast__episode:hover .podcast__episode-title {
+      color: var(--sage);
+    }
+
+    .podcast__episode-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--text-on-light-ghost);
+      min-width: 40px;
+    }
+
+    .podcast__episode-info {
+      flex: 1;
+    }
+
+    .podcast__episode-title {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-on-light);
+      transition: color var(--duration) var(--ease);
+      margin-bottom: 2px;
+    }
+
+    .podcast__episode-meta {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-on-light-ghost);
+    }
+
+    .podcast__episode-play {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-light);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      flex-shrink: 0;
+    }
+    .podcast__episode:hover .podcast__episode-play {
+      border-color: var(--sage);
+      background: rgba(110, 142, 119, 0.1);
+    }
+
+    .podcast__episode-play-icon {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 9px;
+      border-color: transparent transparent transparent var(--text-on-light-muted);
+      margin-left: 2px;
+    }
+    .podcast__episode:hover .podcast__episode-play-icon {
+      border-color: transparent transparent transparent var(--sage);
+    }
+
+    /* ========================================================================
+       10. FOOTER
+       ======================================================================== */
+    .footer {
+      background: var(--deep-teal);
+      padding: var(--space-xl) 0 var(--space-lg);
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: var(--space-xl);
+    }
+
+    .footer__brand {
+      /* Brand column */
+    }
+
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--canvas);
+      margin-bottom: 20px;
+    }
+
+    .footer__brand-text {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .footer__col-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 20px;
+    }
+
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__links a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-dark-muted);
+      transition: color var(--duration) var(--ease);
+    }
+    .footer__links a:hover {
+      color: var(--sage);
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--text-on-dark-ghost);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--duration) var(--ease);
+      color: var(--text-on-dark-muted);
+      font-size: 14px;
+    }
+    .footer__social-link:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+      background: rgba(110, 142, 119, 0.1);
+    }
+
+    .footer__bottom {
+      border-top: 1px solid var(--border-dark);
+      padding-top: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer__copyright {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-ghost);
+    }
+
+    .footer__trademark {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-on-dark-ghost);
+    }
+
+    /* ========================================================================
+       RESPONSIVE
+       ======================================================================== */
+    @media (max-width: 1024px) {
+      .pillars__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .results__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .coaching__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links {
+        display: none;
+      }
+      .nav__cta.desktop-only {
+        display: none;
+      }
+      .nav__toggle {
+        display: block;
+      }
+
+      .hero__content {
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+
+      .hero__stats-inner {
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 24px;
+      }
+
+      .hero__stat-dot {
+        display: none;
+      }
+
+      .programs__card {
+        flex: 0 0 260px;
+      }
+
+      .pillars__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about__image-wrapper {
+        order: -1;
+        aspect-ratio: 4 / 3;
+      }
+
+      .about__stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .results__stats {
+        gap: 24px;
+      }
+
+      .results__cards {
+        grid-template-columns: 1fr;
+      }
+
+      .coaching__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .podcast__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pillars__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__buttons {
+        flex-direction: column;
+      }
+      .hero__buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .coaching__buttons {
+        flex-direction: column;
+      }
+      .coaching__buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================================
+       1. NAVIGATION
+       ================================================================ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">Tracy Harris</a>
+        <ul class="nav__links">
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#podcast">Podcast</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#coaching">Work With Me</a></li>
+        </ul>
+        <a href="#coaching" class="btn btn-primary nav__cta desktop-only">Apply Now</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__mobile-overlay" id="mobileNav">
+    <button class="nav__mobile-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+    <a href="#programs" onclick="closeMobileNav()">Programs</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#podcast" onclick="closeMobileNav()">Podcast</a>
+    <a href="#results" onclick="closeMobileNav()">Results</a>
+    <a href="#coaching" onclick="closeMobileNav()">Work With Me</a>
+    <a href="#coaching" class="btn btn-primary" onclick="closeMobileNav()">Apply Now</a>
+  </div>
+
+  <!-- ================================================================
+       2. HERO
+       ================================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <!-- Replace with real Tracy hero photo -->
+      <div class="hero__bg-img" role="img" aria-label="Tracy Harris portrait"></div>
+      <div class="hero__bg-overlay"></div>
+    </div>
+    <div class="hero__content container">
+      <span class="hero__eyebrow">Educator, Speaker, Mentor</span>
+      <h1 class="hero__headline">Build Your Freedom Filled<sup>&reg;</sup> <em>Empire</em></h1>
+      <p class="hero__sub">Helping women build multi-six and seven-figure businesses they actually love, with the time freedom to live a life by design.</p>
+      <div class="hero__buttons">
+        <a href="#coaching" class="btn btn-primary">Start Your Journey</a>
+        <a href="#programs" class="btn btn-ghost">Explore Programs</a>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stats-inner">
+        <span class="hero__stat">10+ Years</span>
+        <span class="hero__stat-dot">&#9679;</span>
+        <span class="hero__stat">Multi-Seven Figures</span>
+        <span class="hero__stat-dot">&#9679;</span>
+        <span class="hero__stat">500+ Women Mentored</span>
+        <span class="hero__stat-dot">&#9679;</span>
+        <span class="hero__stat">500+ Podcast Episodes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       3. PROGRAM CAROUSEL
+       ================================================================ -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="programs__header reveal">
+        <span class="mono-label">Programs</span>
+        <h2 class="section-heading section-heading--dark">Programs that <em>transform</em></h2>
+      </div>
+      <div class="programs__carousel-wrapper">
+        <div class="programs__carousel" id="programsCarousel">
+
+          <!-- FFB -->
+          <div class="programs__card programs__card--ffb">
+            <div class="programs__card-img"></div>
+            <div class="programs__card-overlay"></div>
+            <div class="programs__card-content">
+              <span class="programs__card-label">12-Month Mentorship</span>
+              <h3 class="programs__card-title">Freedom Filled&reg; Business</h3>
+              <p class="programs__card-desc">Build the foundations of a business you love, with a mentor who has done it before.</p>
+            </div>
+          </div>
+
+          <!-- FFM -->
+          <div class="programs__card programs__card--ffm">
+            <div class="programs__card-img"></div>
+            <div class="programs__card-overlay"></div>
+            <div class="programs__card-content">
+              <span class="programs__card-label">Premium Mastermind</span>
+              <h3 class="programs__card-title">Freedom Filled&reg; Mastermind</h3>
+              <p class="programs__card-desc">For established business owners ready to scale with spaciousness and support.</p>
+            </div>
+          </div>
+
+          <!-- Workshop -->
+          <div class="programs__card programs__card--workshop">
+            <div class="programs__card-img"></div>
+            <div class="programs__card-overlay"></div>
+            <div class="programs__card-content">
+              <span class="programs__card-label">Monthly Workshop</span>
+              <h3 class="programs__card-title">Free Live Training</h3>
+              <p class="programs__card-desc">Join Tracy monthly for a free, no-pitch training on the topic that matters most right now.</p>
+            </div>
+          </div>
+
+          <!-- Podcast -->
+          <div class="programs__card programs__card--podcast">
+            <div class="programs__card-img"></div>
+            <div class="programs__card-overlay"></div>
+            <div class="programs__card-content">
+              <span class="programs__card-label">500+ Episodes</span>
+              <h3 class="programs__card-title">The Tracy Harris Podcast</h3>
+              <p class="programs__card-desc">Weekly conversations on business, life, and building something beautiful.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="programs__arrows">
+          <button class="programs__arrow" onclick="scrollCarousel(-1)" aria-label="Scroll programs left">&larr;</button>
+          <button class="programs__arrow" onclick="scrollCarousel(1)" aria-label="Scroll programs right">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       4. PILLARS (F.R.E.S.H. Framework)
+       ================================================================ -->
+  <section class="pillars" id="pillars">
+    <div class="container--standard">
+      <div class="pillars__header reveal">
+        <span class="mono-label">The Framework</span>
+        <h2 class="section-heading section-heading--light">The F.R.E.S.H. <em>Framework</em></h2>
+      </div>
+      <div class="pillars__grid">
+
+        <div class="pillar-card reveal">
+          <div class="pillar-card__letter">F</div>
+          <h3 class="pillar-card__title">Freedom</h3>
+          <p class="pillar-card__desc">Design a business that gives you time, location, and financial freedom by design, not by accident.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-card__letter">R</div>
+          <h3 class="pillar-card__title">Revenue</h3>
+          <p class="pillar-card__desc">Build clean, predictable revenue streams so your income matches your ambition.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-card__letter">E</div>
+          <h3 class="pillar-card__title">Engagement</h3>
+          <p class="pillar-card__desc">Create connection that converts. Content, community, and conversations that build trust.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-card__letter">S</div>
+          <h3 class="pillar-card__title">Strategy</h3>
+          <p class="pillar-card__desc">Stop guessing. Build with clarity, data, and a plan you can actually follow.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-card__letter">H</div>
+          <h3 class="pillar-card__title">Heart</h3>
+          <p class="pillar-card__desc">Lead with love, integrity, and purpose. Your business is your ministry, treat it that way.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       5. TESTIMONIAL
+       ================================================================ -->
+  <section class="testimonial" id="testimonial">
+    <div class="testimonial__bg">
+      <!-- Replace with real photo -->
+      <div class="testimonial__bg-img" role="img" aria-label="Testimonial background"></div>
+      <div class="testimonial__bg-overlay"></div>
+    </div>
+    <div class="testimonial__content container--narrow">
+      <span class="mono-label" style="text-align: center;">What They Say</span>
+      <blockquote class="testimonial__quote" id="testimonialQuote">
+        &ldquo;Tracy changed the trajectory of my entire business. I went from hustling 60-hour weeks to building a six-figure business in four days. She doesn't just teach strategy, she teaches you how to live.&rdquo;
+      </blockquote>
+      <p class="testimonial__attribution" id="testimonialAttribution">[Client Name], FFM Member</p>
+      <div class="testimonial__avatars">
+        <div class="testimonial__avatar active" data-index="0">
+          <div style="width:100%;height:100%;background:var(--mid-teal);display:flex;align-items:center;justify-content:center;color:var(--text-on-dark-ghost);font-family:var(--font-mono);font-size:11px;">01</div>
+        </div>
+        <div class="testimonial__avatar" data-index="1">
+          <div style="width:100%;height:100%;background:var(--mid-teal);display:flex;align-items:center;justify-content:center;color:var(--text-on-dark-ghost);font-family:var(--font-mono);font-size:11px;">02</div>
+        </div>
+        <div class="testimonial__avatar" data-index="2">
+          <div style="width:100%;height:100%;background:var(--mid-teal);display:flex;align-items:center;justify-content:center;color:var(--text-on-dark-ghost);font-family:var(--font-mono);font-size:11px;">03</div>
+        </div>
+        <div class="testimonial__avatar" data-index="3">
+          <div style="width:100%;height:100%;background:var(--mid-teal);display:flex;align-items:center;justify-content:center;color:var(--text-on-dark-ghost);font-family:var(--font-mono);font-size:11px;">04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       6. ABOUT / MEET TRACY
+       ================================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content reveal">
+          <span class="mono-label">About</span>
+          <h2 class="section-heading section-heading--dark" style="margin-bottom: 24px;">Meet <em>Tracy</em></h2>
+          <p class="about__text">
+            Former teacher turned multi-seven-figure business owner. Tracy Harris has spent 10+ years helping women build businesses that give them freedom, revenue, and a life they don't need to escape from. She works four days a week, lives between Australia and Bali, and believes your business should serve your life, not the other way around.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-number" data-count="10">10+</span>
+              <span class="about__stat-label">Years in Business</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">4</span>
+              <span class="about__stat-label">Day Work Weeks</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">500+</span>
+              <span class="about__stat-label">Podcast Episodes</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">2</span>
+              <span class="about__stat-label">Countries Called Home</span>
+            </div>
+          </div>
+          <a href="#coaching" class="btn btn-primary">Work With Tracy</a>
+        </div>
+        <div class="about__image-wrapper reveal">
+          <!-- Replace with real Tracy portrait -->
+          <div class="about__image" role="img" aria-label="Tracy Harris portrait"></div>
+          <div class="about__image-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       7. RESULTS
+       ================================================================ -->
+  <section class="results" id="results">
+    <div class="container--standard">
+      <div class="results__header reveal">
+        <span class="mono-label">Impact</span>
+        <h2 class="section-heading section-heading--light">What happens inside Freedom Filled<sup>&reg;</sup></h2>
+      </div>
+      <div class="results__stats reveal">
+        <div class="results__stat">
+          <span class="results__stat-number">81%</span>
+          <span class="results__stat-label">Member Retention</span>
+        </div>
+        <div class="results__stat">
+          <span class="results__stat-number">$7M+</span>
+          <span class="results__stat-label">Revenue Generated</span>
+        </div>
+        <div class="results__stat">
+          <span class="results__stat-number">500+</span>
+          <span class="results__stat-label">Women Mentored</span>
+        </div>
+      </div>
+      <div class="results__cards">
+
+        <div class="result-card reveal">
+          <div class="result-card__icon">&check;</div>
+          <h3 class="result-card__title">Clarity on your model</h3>
+          <p class="result-card__desc">Stop guessing which offer to build. Get crystal clear on the business model that fits your life, your skills, and your goals.</p>
+        </div>
+
+        <div class="result-card reveal">
+          <div class="result-card__icon">&check;</div>
+          <h3 class="result-card__title">Revenue that is predictable</h3>
+          <p class="result-card__desc">Build launch and evergreen strategies that create consistent income without burning out every quarter.</p>
+        </div>
+
+        <div class="result-card reveal">
+          <div class="result-card__icon">&check;</div>
+          <h3 class="result-card__title">A life by design</h3>
+          <p class="result-card__desc">Work four days a week. Take a week off each month. Build a business that serves your life, not the other way around.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       8. COACHING / PROGRAMS DETAIL
+       ================================================================ -->
+  <section class="coaching" id="coaching">
+    <div class="container">
+      <div class="coaching__grid">
+        <div class="coaching__brand reveal">
+          <span class="mono-label">Work With Tracy</span>
+          <h2 class="coaching__title">The Freedom Filled&reg; <em>Mastermind</em></h2>
+          <p class="coaching__text">
+            Tracy's premium mentorship for established business owners ready to scale with spaciousness. Max 20 women per cohort. Includes retreats, hot seats, 1:1 access, and a container built for women who are serious about growth.
+          </p>
+          <div class="coaching__stats">
+            <div class="coaching__stat">
+              <span class="coaching__stat-value">81%</span>
+              <span class="coaching__stat-label">Retention Rate</span>
+            </div>
+            <div class="coaching__stat">
+              <span class="coaching__stat-value">7+</span>
+              <span class="coaching__stat-label">Years Running</span>
+            </div>
+            <div class="coaching__stat">
+              <span class="coaching__stat-value">20</span>
+              <span class="coaching__stat-label">Max Per Cohort</span>
+            </div>
+          </div>
+          <div class="coaching__buttons">
+            <a href="#" class="btn btn-primary">Apply for FFM</a>
+            <a href="#" class="btn btn-ghost">Explore FFB</a>
+          </div>
+        </div>
+        <div class="coaching__video-wrapper reveal">
+          <div class="coaching__video-placeholder">
+            <div class="coaching__play-btn" aria-label="Play video">
+              <div class="coaching__play-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       9. PODCAST
+       ================================================================ -->
+  <section class="podcast" id="podcast">
+    <div class="container">
+      <div class="podcast__grid">
+        <div class="podcast__featured reveal">
+          <span class="mono-label">Latest Episode</span>
+          <div class="podcast__artwork">
+            <div>
+              <span class="podcast__artwork-label">The Tracy Harris Podcast</span>
+              <span class="podcast__artwork-text">500+ Episodes of Real Talk for Women in Business</span>
+            </div>
+          </div>
+          <h3 class="podcast__featured-title">How I Built a Multi-Seven Figure Business on 4-Day Weeks</h3>
+          <p class="podcast__featured-desc">Tracy shares the exact model, boundaries, and mindset shifts that allowed her to scale while working less. No fluff, just the truth about what it takes.</p>
+        </div>
+        <div class="podcast__episodes reveal">
+          <h3 class="podcast__episodes-title">Recent <em>Episodes</em></h3>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">523</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">Why Your Offer Isn't Selling (And What To Do Instead)</span>
+              <span class="podcast__episode-meta">42 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 523">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">522</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">The Real Reason I Took a Week Off Every Month</span>
+              <span class="podcast__episode-meta">38 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 522">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">521</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">Building Community That Actually Converts</span>
+              <span class="podcast__episode-meta">45 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 521">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">520</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">Your Million Dollar Message: Finding the Words That Sell</span>
+              <span class="podcast__episode-meta">51 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 520">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">519</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">From Teacher to Multi-Seven Figures: My Full Story</span>
+              <span class="podcast__episode-meta">62 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 519">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       10. FOOTER
+       ================================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">Tracy Harris</div>
+          <p class="footer__brand-text">Helping women build Freedom Filled&reg; businesses they actually love. Educator, speaker, mentor, and mum of two boys living between Australia and Bali.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/tracyharrisco" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">YT</a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">LI</a>
+            <a href="#" class="footer__social-link" aria-label="Podcast">PC</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Programs</div>
+          <ul class="footer__links">
+            <li><a href="#">Freedom Filled&reg; Business</a></li>
+            <li><a href="#">Freedom Filled&reg; Mastermind</a></li>
+            <li><a href="#">Free Workshop</a></li>
+            <li><a href="#">Podcast</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="#">About Tracy</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Connect</div>
+          <ul class="footer__links">
+            <li><a href="https://instagram.com/tracyharrisco" target="_blank" rel="noopener">@tracyharrisco</a></li>
+            <li><a href="#">Email Tracy</a></li>
+            <li><a href="#">Take the FRESH Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Tracy Harris Co. All rights reserved.</span>
+        <span class="footer__trademark">Freedom Filled&reg;, The Social Method&reg;, and Freedom Filled&reg; Business are trademarks of Tracy Harris Co.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileNavClose.addEventListener('click', closeMobileNav);
+
+    function closeMobileNav() {
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Program carousel scroll
+    function scrollCarousel(direction) {
+      const carousel = document.getElementById('programsCarousel');
+      const cardWidth = 280 + 24; // card width + gap
+      carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+    }
+
+    // Scroll reveal (IntersectionObserver)
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Testimonial avatar switcher (placeholder data)
+    const testimonials = [
+      {
+        quote: '\u201cTracy changed the trajectory of my entire business. I went from hustling 60-hour weeks to building a six-figure business in four days. She doesn\u2019t just teach strategy, she teaches you how to live.\u201d',
+        name: '[Client Name], FFM Member'
+      },
+      {
+        quote: '\u201cBefore Tracy, I had a business that ran me. Now I have a business that runs FOR me. The Freedom Filled\u00ae Mastermind was the best investment I have ever made.\u201d',
+        name: '[Client Name], FFM Member'
+      },
+      {
+        quote: '\u201cI doubled my revenue and halved my hours. Tracy showed me what was possible when you stop doing everything and start doing the right things.\u201d',
+        name: '[Client Name], FFB Graduate'
+      },
+      {
+        quote: '\u201cThe clarity I got in one hot seat with Tracy was worth more than a year of online courses. She sees what you can not see about your own business.\u201d',
+        name: '[Client Name], FFM Member'
+      }
+    ];
+
+    const avatars = document.querySelectorAll('.testimonial__avatar');
+    const quoteEl = document.getElementById('testimonialQuote');
+    const attrEl = document.getElementById('testimonialAttribution');
+
+    avatars.forEach(avatar => {
+      avatar.addEventListener('click', () => {
+        const index = parseInt(avatar.dataset.index);
+        avatars.forEach(a => a.classList.remove('active'));
+        avatar.classList.add('active');
+        quoteEl.innerHTML = testimonials[index].quote;
+        attrEl.textContent = testimonials[index].name;
+      });
+    });
+  </script>
+
+</body>
+</html>
