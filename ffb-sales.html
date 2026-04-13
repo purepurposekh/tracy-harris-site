@@ -1,0 +1,2862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freedom Filled Business Mentorship | Tracy Harris Co</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* Editors Note - premium font from Pangram Pangram
+       Add @font-face declarations when font files are available:
+       @font-face { font-family: 'Editors Note'; src: url('fonts/EditorsNote-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+       @font-face { font-family: 'Editors Note'; src: url('fonts/EditorsNote-LightItalic.woff2') format('woff2'); font-weight: 300; font-style: italic; }
+    */
+
+    /* ============================================
+       DESIGN TOKENS / CSS CUSTOM PROPERTIES
+       ============================================ */
+    :root {
+      --color-cream: #ECE7DE;
+      --color-dark: #1E3735;
+      --color-sage: #788E75;
+      --color-white: #FFFFFF;
+      --color-muted-sage: #A3B0A0;
+      --color-coral: #D4744A;
+      --color-sage-light: #8FA38C;
+      --color-cream-dark: #DDD6CA;
+
+      --font-heading: 'Editors Note', 'Inter', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-script: 'Chic Societe Script', cursive;
+
+      --max-width: 1200px;
+      --section-padding: 100px 0;
+      --section-padding-mobile: 60px 0;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 40px;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-dark);
+      background: var(--color-cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================
+       UTILITY CLASSES
+       ============================================ */
+    .btn-sage {
+      display: inline-block;
+      background: var(--color-sage);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 16px 40px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-sage:hover {
+      background: #677D64;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(120, 142, 117, 0.3);
+    }
+
+    .btn-dark {
+      display: inline-block;
+      background: var(--color-dark);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 16px 40px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-dark:hover {
+      background: #2A4C49;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(30, 55, 53, 0.3);
+    }
+
+    .btn-outline-white {
+      display: inline-block;
+      background: transparent;
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 16px 40px;
+      border-radius: 50px;
+      border: 2px solid var(--color-white);
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-outline-white:hover {
+      background: var(--color-white);
+      color: var(--color-dark);
+      transform: translateY(-2px);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      margin-bottom: 16px;
+    }
+
+    .script-text {
+      font-family: 'Inter', serif;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* ============================================
+       1. NAVIGATION (sticky top)
+       ============================================ */
+    #nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-cream);
+      border-bottom: 1px solid rgba(30, 55, 53, 0.08);
+      padding: 16px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    #nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-dark);
+      letter-spacing: 2px;
+    }
+
+    .nav-cta {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-sage);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ============================================
+       2. HERO SECTION
+       ============================================ */
+    #hero {
+      background: var(--color-cream);
+      padding: 60px 0 80px;
+    }
+
+    #hero .split-layout {
+      gap: 40px;
+    }
+
+    .hero-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 60px 48px;
+      position: relative;
+    }
+
+    .hero-monogram {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--color-sage);
+      margin-bottom: 32px;
+    }
+
+    .hero-card h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      color: var(--color-dark);
+    }
+
+    .hero-card h1 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .hero-card p {
+      font-size: 1rem;
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 32px;
+      max-width: 420px;
+    }
+
+    .hero-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 100%;
+      min-height: 564px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       3. THE FFB DIFFERENCE
+       ============================================ */
+    #the-ffb-difference {
+      background: var(--color-white);
+      padding: var(--section-padding);
+      text-align: center;
+    }
+
+    #the-ffb-difference h2 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #the-ffb-difference .body-text {
+      font-size: 1rem;
+      color: #5A6B69;
+      line-height: 1.8;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .stars {
+      color: var(--color-coral);
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+    }
+
+    .testimonial-inline {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--color-dark);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .testimonial-inline .author {
+      display: block;
+      margin-top: 12px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: var(--color-sage);
+    }
+
+    /* ============================================
+       4. TESTIMONIAL BLOCK
+       ============================================ */
+    #testimonial-block {
+      background: var(--color-cream);
+      padding: var(--section-padding);
+    }
+
+    #testimonial-block .split-layout {
+      gap: 80px;
+    }
+
+    #testimonial-block .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    #testimonial-block .photo-side img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    #testimonial-block h2 {
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+    }
+
+    #testimonial-block h2 em {
+      color: var(--color-sage);
+      font-weight: 300;
+    }
+
+    #testimonial-block .text-side p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .mini-testimonial {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .mini-testimonial img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .mini-testimonial .quote {
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--color-dark);
+    }
+
+    .mini-testimonial .quote .name {
+      display: block;
+      margin-top: 8px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      color: var(--color-sage);
+    }
+
+    /* ============================================
+       5. WE BELIEVE IN
+       ============================================ */
+    #we-believe-in {
+      background: var(--color-white);
+      padding: var(--section-padding);
+    }
+
+    #we-believe-in .split-layout {
+      gap: 80px;
+    }
+
+    .believe-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      margin-bottom: 40px;
+    }
+
+    .believe-item {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(30, 55, 53, 0.1);
+    }
+
+    .believe-item:first-of-type {
+      border-top: 1px solid rgba(30, 55, 53, 0.1);
+    }
+
+    .believe-item h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--color-dark);
+    }
+
+    .believe-item p {
+      font-size: 0.95rem;
+      color: #5A6B69;
+      line-height: 1.7;
+    }
+
+    #we-believe-in .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    #we-believe-in .photo-side img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       6. FOR ALMOST A DECADE
+       ============================================ */
+    #for-almost-a-decade {
+      background: var(--color-cream);
+      padding: var(--section-padding);
+    }
+
+    #for-almost-a-decade .split-layout {
+      gap: 80px;
+    }
+
+    #for-almost-a-decade .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    #for-almost-a-decade .photo-side img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    #for-almost-a-decade h2 {
+      font-size: 2.2rem;
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    #for-almost-a-decade p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    #for-almost-a-decade .highlight {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: var(--color-dark);
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    /* ============================================
+       7. REVIEWS BLOCK (Sage background)
+       ============================================ */
+    #reviews2 {
+      background: var(--color-muted-sage);
+      padding: 80px 0;
+    }
+
+    #reviews2 .split-layout {
+      gap: 40px;
+    }
+
+    .review-dark-card {
+      background: var(--color-dark);
+      color: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 400px;
+    }
+
+    .review-dark-card .quote-mark {
+      font-size: 3rem;
+      color: var(--color-sage);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .review-dark-card blockquote {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .review-dark-card .attribution {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-sage-light);
+    }
+
+    #reviews2 .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    #reviews2 .photo-side img {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       8. WHAT YOU'LL ACCESS
+       ============================================ */
+    #what-you-ll-access {
+      background: var(--color-white);
+      padding: var(--section-padding);
+    }
+
+    #what-you-ll-access .split-layout {
+      gap: 60px;
+    }
+
+    .leaf-decoration {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+
+    #what-you-ll-access h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    #what-you-ll-access p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .platform-screenshot {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(30, 55, 53, 0.12);
+    }
+
+    .platform-screenshot img {
+      width: 100%;
+    }
+
+    /* ============================================
+       9-12. OFFERING SECTIONS
+       ============================================ */
+    .offering-section {
+      padding: 80px 0;
+    }
+
+    .offering-section:nth-child(even) {
+      background: var(--color-cream);
+    }
+
+    .offering-section:nth-child(odd) {
+      background: var(--color-white);
+    }
+
+    .offering-section .centered-label {
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      margin-bottom: 48px;
+    }
+
+    .offering-section .split-layout {
+      gap: 60px;
+    }
+
+    .offering-section .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .offering-section .photo-side img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .offering-section h3 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .offering-section p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    /* ============================================
+       13. BONUS
+       ============================================ */
+    #bonus {
+      background: var(--color-cream);
+      padding: var(--section-padding);
+    }
+
+    #bonus .split-layout {
+      gap: 60px;
+    }
+
+    .bonus-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-coral);
+      margin-bottom: 16px;
+    }
+
+    #bonus h2 {
+      font-size: 2.4rem;
+      margin-bottom: 28px;
+    }
+
+    .bonus-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .bonus-list li {
+      padding: 12px 0;
+      font-size: 1rem;
+      color: var(--color-dark);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+
+    .bonus-list li::before {
+      content: "★";
+      color: var(--color-sage);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .bonus-photo {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transform: rotate(-3deg);
+    }
+
+    .bonus-photo img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       14. RESULTS (Dark section)
+       ============================================ */
+    #results {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 120px 0;
+    }
+
+    #results .section-label {
+      color: var(--color-sage-light);
+      text-align: center;
+    }
+
+    #results h2 {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 80px;
+      font-weight: 700;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 80px;
+    }
+
+    .result-item {
+      padding: 32px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .result-item .number {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--color-sage-light);
+      margin-bottom: 12px;
+    }
+
+    .result-item h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .result-item p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+    }
+
+    #results .cta-wrap {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    /* ============================================
+       15. PULL QUOTE
+       ============================================ */
+    .pull-quote-section {
+      background: var(--color-white);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .pull-quote-section blockquote {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--color-dark);
+      max-width: 800px;
+      margin: 0 auto 32px;
+    }
+
+    .pull-quote-section blockquote em {
+      color: var(--color-sage);
+    }
+
+    .pull-quote-section .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      overflow: hidden;
+    }
+
+    .pull-quote-section .attribution {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--color-sage);
+    }
+
+    /* ============================================
+       16. PERSONALISED MENTORSHIP
+       ============================================ */
+    #personalised-mentorship {
+      position: relative;
+      padding: 120px 0;
+      background: url('https://placehold.co/1920x900/A3B0A0/ECE7DE?text=Background') center/cover;
+    }
+
+    #personalised-mentorship::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(236, 231, 222, 0.85);
+    }
+
+    .mentorship-card {
+      position: relative;
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .mentorship-card .avatar-lg {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 32px;
+      overflow: hidden;
+    }
+
+    .mentorship-card .avatar-lg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mentorship-card h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    .mentorship-card > p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .mentorship-features {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .mentorship-feature {
+      padding: 20px 0;
+      border-top: 1px solid rgba(30, 55, 53, 0.1);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-dark);
+    }
+
+    .mentorship-feature:last-child {
+      border-bottom: 1px solid rgba(30, 55, 53, 0.1);
+    }
+
+    /* ============================================
+       17-20. PHILOSOPHY SPLIT SECTIONS
+       ============================================ */
+    .philosophy-section {
+      padding: var(--section-padding);
+    }
+
+    .philosophy-section:nth-child(odd) {
+      background: var(--color-cream);
+    }
+
+    .philosophy-section:nth-child(even) {
+      background: var(--color-white);
+    }
+
+    .philosophy-section .split-layout {
+      gap: 80px;
+    }
+
+    .philosophy-section .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .philosophy-section .photo-side img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .photo-overlay-text {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: var(--color-white);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .philosophy-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    .philosophy-section p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    /* ============================================
+       22. WHO IS FFB FOR (Dark section)
+       ============================================ */
+    #who-is-ffb-for {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 120px 0;
+    }
+
+    #who-is-ffb-for h2 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    #who-is-ffb-for h2 em {
+      font-weight: 300;
+      color: var(--color-sage-light);
+    }
+
+    .fit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 60px;
+      max-width: 900px;
+      margin: 0 auto 80px;
+    }
+
+    .fit-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 0;
+    }
+
+    .fit-item .icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .fit-item .icon.check {
+      background: var(--color-sage);
+      color: var(--color-white);
+    }
+
+    .fit-item .icon.cross {
+      background: rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .fit-item h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .fit-item p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.6;
+    }
+
+    .not-for-section {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 80px;
+    }
+
+    /* ============================================
+       23. ABOUT ME
+       ============================================ */
+    #about-me {
+      background: var(--color-cream);
+      padding: var(--section-padding);
+    }
+
+    #about-me .split-layout {
+      gap: 80px;
+    }
+
+    #about-me .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    #about-me .photo-side img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    #about-me .photo-side .overlay-text {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--color-white);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    #about-me blockquote {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--color-dark);
+      margin-bottom: 24px;
+    }
+
+    #about-me .attribution {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--color-sage);
+    }
+
+    /* ============================================
+       24. POINTS SECTIONS
+       ============================================ */
+    .point-section {
+      padding: 60px 0;
+      border-bottom: 1px solid rgba(30, 55, 53, 0.08);
+    }
+
+    .point-section:nth-child(odd) {
+      background: var(--color-white);
+    }
+
+    .point-section:nth-child(even) {
+      background: var(--color-cream);
+    }
+
+    .point-section .container {
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .point-section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .point-section p {
+      color: #5A6B69;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+       25. WHY THEY JOINED FFB
+       ============================================ */
+    #why-they-joined-ffb {
+      background: var(--color-cream);
+      padding: var(--section-padding);
+    }
+
+    #why-they-joined-ffb .section-label {
+      text-align: center;
+    }
+
+    #why-they-joined-ffb h2 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .quotes-masonry {
+      columns: 3;
+      column-gap: 24px;
+    }
+
+    .quote-card {
+      break-inside: avoid;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .quote-card .quote-mark {
+      font-size: 2.5rem;
+      color: var(--color-sage);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .quote-card p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-dark);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .quote-card .name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-sage);
+    }
+
+    #why-they-joined-ffb .cta-wrap {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ============================================
+       26. PRICING
+       ============================================ */
+    .pricing-section {
+      background: var(--color-cream);
+      padding: 120px 0;
+    }
+
+    .pricing-section h2 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 300;
+      font-style: italic;
+      text-align: center;
+      color: var(--color-sage);
+      margin-bottom: 60px;
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      text-align: center;
+    }
+
+    .pricing-card.monthly {
+      background: var(--color-white);
+    }
+
+    .pricing-card.pif {
+      background: var(--color-dark);
+      color: var(--color-white);
+    }
+
+    .pricing-card .plan-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-sage);
+      margin-bottom: 8px;
+    }
+
+    .pricing-card .best-value {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--color-sage-light);
+      margin-bottom: 8px;
+    }
+
+    .pricing-card h3 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .pricing-card .old-price {
+      color: var(--color-coral);
+      text-decoration: line-through;
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    .pricing-card .price {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .pricing-card .price-detail {
+      font-size: 0.85rem;
+      color: #5A6B69;
+      margin-bottom: 32px;
+    }
+
+    .pricing-card.pif .price-detail {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .pricing-card .inclusions {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .pricing-card .inclusions li {
+      padding: 8px 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .pricing-card .inclusions li::before {
+      content: "✓";
+      color: var(--color-sage);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .pricing-card .bonuses {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 32px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(30, 55, 53, 0.1);
+    }
+
+    .pricing-card.pif .bonuses {
+      border-top-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .pricing-card .bonuses li {
+      padding: 6px 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .pricing-card .bonuses li::before {
+      content: "★";
+      color: var(--color-coral);
+      flex-shrink: 0;
+    }
+
+    .pricing-card.pif .inclusions li {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .pricing-card.pif .bonuses li {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .pricing-card .btn-sage {
+      width: 100%;
+    }
+
+    .pricing-card.pif .btn-sage {
+      background: var(--color-sage);
+    }
+
+    /* ============================================
+       27. GUARANTEE
+       ============================================ */
+    #guarantee {
+      background: var(--color-white);
+      padding: var(--section-padding);
+      text-align: center;
+    }
+
+    .guarantee-badge {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--color-dark);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.3;
+      margin: 0 auto 32px;
+      padding: 16px;
+      /* Starburst effect via box-shadow */
+      box-shadow:
+        0 0 0 6px var(--color-dark),
+        0 0 0 8px var(--color-cream);
+    }
+
+    #guarantee .section-label {
+      text-align: center;
+    }
+
+    #guarantee h2 {
+      font-size: 2.4rem;
+      margin-bottom: 24px;
+    }
+
+    #guarantee p {
+      color: #5A6B69;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       28. TEXT BLOCK (Dark)
+       ============================================ */
+    #text-block {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    #text-block h2 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 16px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #text-block .sub-heading {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-sage-light);
+      margin-bottom: 24px;
+    }
+
+    #text-block p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .device-mockups {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .device-mockup {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    }
+
+    .device-mockup.laptop { width: 400px; }
+    .device-mockup.desktop { width: 280px; }
+    .device-mockup.tablet { width: 180px; }
+    .device-mockup.phone { width: 100px; }
+
+    /* ============================================
+       29. REVIEWS / SUCCESS STORIES
+       ============================================ */
+    #reviews {
+      background: var(--color-white);
+      padding: var(--section-padding);
+    }
+
+    .success-story {
+      margin-bottom: 80px;
+    }
+
+    .success-story:last-child {
+      margin-bottom: 0;
+    }
+
+    .success-story .split-layout {
+      gap: 60px;
+    }
+
+    .success-story .photo-side {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .success-story .photo-side img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .success-story h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .success-story p {
+      color: #5A6B69;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .success-story .quote-text {
+      font-style: italic;
+      color: var(--color-dark);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      border-left: 3px solid var(--color-sage);
+      padding-left: 20px;
+      margin-top: 16px;
+    }
+
+    .success-story .name {
+      font-weight: 600;
+      color: var(--color-sage);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-top: 12px;
+    }
+
+    /* ============================================
+       30. VIDEO REVIEWS
+       ============================================ */
+    .video-reviews {
+      background: var(--color-cream);
+      padding: 80px 0;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .video-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--color-dark);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-card .card-body {
+      padding: 24px;
+    }
+
+    .video-card .stars-sm {
+      color: var(--color-coral);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .video-card .card-name {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .video-card .card-quote {
+      font-size: 0.9rem;
+      color: #5A6B69;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ============================================
+       31. FAQs
+       ============================================ */
+    #faq-s {
+      background: var(--color-white);
+      padding: var(--section-padding);
+    }
+
+    .faq-header {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 48px;
+      height: 300px;
+    }
+
+    .faq-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .faq-header .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 55, 53, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .faq-header .overlay h2 {
+      color: var(--color-white);
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .faq-header .overlay .arrow {
+      color: var(--color-white);
+      font-size: 2rem;
+      margin-top: 16px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(30, 55, 53, 0.1);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--color-sage);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-bottom: 24px;
+    }
+
+    .faq-answer p {
+      color: #5A6B69;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+       33. NEW CANVAS / FINAL CTA
+       ============================================ */
+    #new-canvas {
+      background: var(--color-cream);
+      padding: 80px 0;
+    }
+
+    /* ============================================
+       34. FOOTER
+       ============================================ */
+    #footer {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    #footer .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    #footer p {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.6;
+    }
+
+    #footer a {
+      color: var(--color-sage-light);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 960px) {
+      .split-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-card h1 {
+        font-size: 2.2rem;
+      }
+
+      #the-ffb-difference h2,
+      #results h2,
+      #text-block h2,
+      #who-is-ffb-for h2 {
+        font-size: 2rem;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-cards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+      }
+
+      .quotes-masonry {
+        columns: 2;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .device-mockups {
+        gap: 12px;
+      }
+
+      .device-mockup.laptop { width: 280px; }
+      .device-mockup.desktop { width: 200px; }
+      .device-mockup.tablet { width: 140px; }
+      .device-mockup.phone { width: 80px; }
+
+      .pull-quote-section blockquote {
+        font-size: 1.4rem;
+      }
+
+      .hero-image {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --section-padding: 60px 0;
+      }
+
+      .hero-card {
+        padding: 40px 28px;
+      }
+
+      .hero-card h1 {
+        font-size: 1.8rem;
+      }
+
+      .mentorship-card {
+        padding: 40px 24px;
+      }
+
+      .quotes-masonry {
+        columns: 1;
+      }
+
+      .faq-header {
+        height: 200px;
+      }
+
+      .faq-header .overlay h2 {
+        font-size: 2rem;
+      }
+
+      .review-dark-card {
+        padding: 32px 24px;
+      }
+
+      .review-dark-card blockquote {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       1. NAVIGATION (sticky top)
+       ============================================ -->
+  <nav id="nav">
+    <div class="container">
+      <div class="nav-logo">FFB</div>
+      <a href="#secure-your-spot-pricing-3" class="nav-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       2. HERO
+       ============================================ -->
+  <section id="hero">
+    <div class="container">
+      <div class="split-layout">
+        <div class="hero-card">
+          <div class="hero-monogram">FFB</div>
+          <h1>Your Journey to <em>Freedom</em> Begins Here</h1>
+          <p>A 12-month business mentorship for women ready to build a Freedom Filled&#174; business with clarity, confidence, and community. This isn't another course. This is your pathway.</p>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now &rarr;</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://placehold.co/578x564/ECE7DE/1E3735?text=Tracy+on+Couch" alt="Tracy Harris relaxing on couch">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       3. THE FFB DIFFERENCE
+       ============================================ -->
+  <section id="the-ffb-difference">
+    <div class="container">
+      <h2>The Freedom Filled&#174; Business Difference</h2>
+      <p class="body-text">You didn't start your business to stay stuck in self-employment. You started it for freedom, for flexibility, for something that feels aligned with who you actually are. The Freedom Filled&#174; Business Mentorship is where you stop consuming information and start implementing with intention, guidance, and a sisterhood that gets it.</p>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testimonial-inline">"The accountability, the sisterhood, the way Tracy sees what you can't see in yourself yet. That's the difference. I've never experienced anything like it."
+        <span class="author">SARAH B. | FFB MEMBER</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. TESTIMONIAL BLOCK
+       ============================================ -->
+  <section id="testimonial-block">
+    <div class="container">
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/560x480/A3B0A0/FFFFFF?text=Tracy+Portrait" alt="Tracy Harris portrait">
+        </div>
+        <div class="text-side">
+          <h2>You hold the keys to your own <em>freedom</em></h2>
+          <p>Every woman who steps into FFB already has what she needs inside her. What she's been missing is a trusted mentor who tells her the truth with love, a proven pathway that actually works, and a sisterhood of women who genuinely want to see her win.</p>
+          <p>That's exactly what this space is. No fluff. No cookie-cutter templates. Just real mentorship that meets you where you are and helps you build something extraordinary.</p>
+          <div class="mini-testimonial">
+            <img src="https://placehold.co/48x48/788E75/FFFFFF?text=J" alt="Jess avatar">
+            <div class="quote">"Tracy has been an incredible mentor and my biggest cheerleader. She sees things in you before you see them in yourself."
+              <span class="name">JESS | FFB MEMBER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. WE BELIEVE IN
+       ============================================ -->
+  <section id="we-believe-in">
+    <div class="container">
+      <div class="split-layout">
+        <div class="text-side">
+          <div class="believe-label">WE BELIEVE IN:</div>
+          <div class="believe-item">
+            <h3>Feminine Leadership</h3>
+            <p>Leading your business with warmth, wisdom, and heart. Not hustle culture. Not grinding until you break. A leadership style that honours who you are as a woman, a mother, a creative, a visionary.</p>
+          </div>
+          <div class="believe-item">
+            <h3>Alignment</h3>
+            <p>Your business should fit YOUR life, not the other way around. We build businesses by design, aligned with your values, your strengths, your season, and the life you actually want to live.</p>
+          </div>
+          <div class="believe-item">
+            <h3>Freedom</h3>
+            <p>Real freedom. Short work weeks. Spaciousness. Time with your family. The ability to step away without everything falling apart. A business that serves your life, not one that consumes it.</p>
+          </div>
+        </div>
+        <div class="photo-side">
+          <img src="https://placehold.co/540x600/ECE7DE/1E3735?text=Tracy+Reading" alt="Tracy reading">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. FOR ALMOST A DECADE
+       ============================================ -->
+  <section id="for-almost-a-decade">
+    <div class="container">
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/540x500/1E3735/ECE7DE?text=Tracy+at+Dinner" alt="Tracy at dinner">
+        </div>
+        <div class="text-side">
+          <h2>For almost a decade, I've been growing my own digital business but doing so differently.</h2>
+          <p>I built a multi-seven-figure business while raising two boys, living between Australia and Bali, and taking every Friday off.</p>
+          <p>I didn't follow the "hustle harder" playbook. I created my own. A Freedom Filled&#174; way of building, selling, and leading that honours the woman behind the business.</p>
+          <p>I dreamed of a space where women could learn this way of business, where they could be mentored, challenged, and championed without sacrificing the things that matter most.</p>
+          <div class="highlight">AND NOW I DO!</div>
+          <p>The Freedom Filled&#174; Business Mentorship is that space. It's where I pour everything I've learned into the women who are brave enough to build differently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. REVIEWS BLOCK (Sage background)
+       ============================================ -->
+  <section id="reviews2">
+    <div class="container">
+      <div class="split-layout">
+        <div class="review-dark-card">
+          <div class="quote-mark">&#10077;</div>
+          <blockquote>Having someone guide you gently through these things is priceless.</blockquote>
+          <div class="attribution">JEN BOWERS | JEN BE BRANDS</div>
+        </div>
+        <div class="photo-side">
+          <img src="https://placehold.co/560x440/ECE7DE/1E3735?text=Jen+Bowers" alt="Jen Bowers">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. WHAT YOU'LL ACCESS
+       ============================================ -->
+  <section id="what-you-ll-access">
+    <div class="container">
+      <div class="split-layout">
+        <div class="text-side">
+          <div class="leaf-decoration">&#127807;</div>
+          <h2>Resources Vault</h2>
+          <p>Your private library of frameworks, templates, and training. Everything you need to build your offers, craft your messaging, and launch with confidence. Available 24/7 inside your Circle community.</p>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now!</a>
+        </div>
+        <div class="platform-screenshot">
+          <img src="https://placehold.co/560x400/1E3735/ECE7DE?text=Resources+Platform" alt="FFB Resources Platform">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       9. OFFERING 1 - Monthly Freedom Power Hours
+       ============================================ -->
+  <section id="offering-1" class="offering-section" style="background: var(--color-cream);">
+    <div class="container">
+      <div class="centered-label">HERE'S WHAT YOU'LL RECEIVE:</div>
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/540x440/A3B0A0/FFFFFF?text=Tracy+on+Laptop" alt="Tracy on laptop">
+        </div>
+        <div class="text-side">
+          <h3>Monthly Freedom Power Hours</h3>
+          <p>Live group coaching calls where Tracy mentors you through your biggest challenges, celebrates your wins, and gives you the strategic direction you need to keep moving forward.</p>
+          <p>These aren't generic webinars. They're intimate, high-level coaching sessions where you get Tracy's eyes on YOUR business, your questions answered in real time, and the accountability to follow through.</p>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. OFFERING 2 - Resource Vault
+       ============================================ -->
+  <section id="offering-2" class="offering-section" style="background: var(--color-white);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="text-side">
+          <h3>The Freedom Filled&#174; Resource Vault</h3>
+          <p>A curated library of frameworks, workbooks, and training modules built on Tracy's proven methodology. From offer creation to messaging clarity to launch strategy, everything you need is here.</p>
+          <p>Includes the Freedom Filled&#174; Pathway, Million Dollar Message framework, Signature Model toolkit, and more. Updated regularly with new resources as they're developed.</p>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now!</a>
+        </div>
+        <div class="photo-side">
+          <img src="https://placehold.co/540x440/ECE7DE/1E3735?text=Resource+Library" alt="FFB Resource Library">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       11. OFFERING 3 - Freedom-Maker Circles
+       ============================================ -->
+  <section id="offering-3" class="offering-section" style="background: var(--color-cream);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/540x440/788E75/FFFFFF?text=Circle+Community" alt="Freedom-Maker Circles">
+        </div>
+        <div class="text-side">
+          <h3>Freedom-Maker Circles</h3>
+          <p>Small group mini-mastermind sessions where you connect deeply with other FFB members. These circles create the intimacy and accountability that large group programs simply can't provide.</p>
+          <p>Share wins, work through challenges together, and build relationships with women who truly understand the journey you're on. This is your inner circle.</p>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       12. OFFERING 4 - FFB Pathway Assessment
+       ============================================ -->
+  <section id="offering-4" class="offering-section" style="background: var(--color-white);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="text-side">
+          <h3>FFB Pathway Assessment</h3>
+          <p>No more guessing where to start. Your personalised Pathway Assessment identifies exactly where you are in the Freedom Filled&#174; Pathway and maps out your next steps with precision.</p>
+          <p>Whether you're building your first offer or refining your sales strategy, the assessment ensures you're always working on the thing that will move the needle most.</p>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now!</a>
+        </div>
+        <div class="photo-side">
+          <img src="https://placehold.co/540x440/1E3735/ECE7DE?text=Pathway+Assessment" alt="FFB Pathway Assessment">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       13. BONUS
+       ============================================ -->
+  <section id="bonus">
+    <div class="container">
+      <div class="split-layout">
+        <div class="bonus-photo">
+          <img src="https://placehold.co/520x480/A3B0A0/FFFFFF?text=Tracy+Meditating" alt="Tracy meditating">
+        </div>
+        <div class="text-side">
+          <div class="bonus-label">BONUS ALERT!</div>
+          <h2>Plus these exclusive bonuses</h2>
+          <ul class="bonus-list">
+            <li><strong>Tracy's Take:</strong> Regular audio and video insights from Tracy, dropping wisdom, encouragement, and the truth bombs you need to hear. Delivered straight to your Circle community.</li>
+            <li><strong>Freedom Filled&#174; Offers Process:</strong> Tracy's complete framework for developing, validating, and pricing your signature offer. The same process she's used to build multiple seven-figure offers.</li>
+            <li><strong>Freedom Filled&#174; Business Circle Community:</strong> Your private community of like-minded women. Ask questions, share wins, get feedback, and never feel like you're building alone.</li>
+          </ul>
+          <a href="#secure-your-spot-pricing-3" class="btn-sage">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       14. RESULTS (Dark section)
+       ============================================ -->
+  <section id="results">
+    <div class="container">
+      <div class="section-label">WHAT AWAITS YOU</div>
+      <h2>THE RESULTS</h2>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="number">01</div>
+          <h3>Financial Abundance</h3>
+          <p>Build a business that generates consistent, sustainable revenue. Not feast-or-famine launches. Real financial stability that gives you options and peace of mind.</p>
+        </div>
+        <div class="result-item">
+          <div class="number">02</div>
+          <h3>Short Work Weeks</h3>
+          <p>Design your business around a 20-hour work week. Take Fridays off. Take a week off each month. Build systems that work when you don't.</p>
+        </div>
+        <div class="result-item">
+          <div class="number">03</div>
+          <h3>Streamlined Offers</h3>
+          <p>Ditch the offer buffet. Create one or two signature offers that sell consistently and deliver transformational results for your clients.</p>
+        </div>
+        <div class="result-item">
+          <div class="number">04</div>
+          <h3>Flexible Schedule</h3>
+          <p>School drop-offs, holidays, midweek adventures. Your business flexes around your life, not the other way around.</p>
+        </div>
+        <div class="result-item">
+          <div class="number">05</div>
+          <h3>Empowered Selling</h3>
+          <p>Sell with confidence and without apology. Learn to make offers that feel natural, generous, and aligned. Selling becomes serving.</p>
+        </div>
+        <div class="result-item">
+          <div class="number">06</div>
+          <h3>Personal Growth</h3>
+          <p>Become the woman and the leader your business needs. Grow in confidence, clarity, and courage. The business grows as you grow.</p>
+        </div>
+      </div>
+      <div class="cta-wrap">
+        <a href="#secure-your-spot-pricing-3" class="btn-outline-white">Apply Now &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       15. PULL QUOTE
+       ============================================ -->
+  <section id="pull-quote-2" class="pull-quote-section">
+    <div class="container">
+      <blockquote>"Her combination of heart-centred <em>life by design</em> + no-nonsense coaching is exactly what I need!"</blockquote>
+      <div class="avatar">
+        <img src="https://placehold.co/64x64/788E75/FFFFFF?text=LS" alt="Laura Swain">
+      </div>
+      <div class="attribution">Laura Swain, Course Student</div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       16. PERSONALISED MENTORSHIP
+       ============================================ -->
+  <section id="personalised-mentorship">
+    <div class="container">
+      <div class="mentorship-card">
+        <div class="avatar-lg">
+          <img src="https://placehold.co/120x120/ECE7DE/1E3735?text=Tracy" alt="Tracy Harris">
+        </div>
+        <h2>Personalised Mentorship</h2>
+        <p>This isn't a one-size-fits-all program. Tracy mentors you based on where you are right now, what you're building, and where you want to go. Your journey is unique, and your mentorship should be too.</p>
+        <div class="mentorship-features">
+          <div class="mentorship-feature">EMBRACE YOUR UNIQUE POTENTIAL</div>
+          <div class="mentorship-feature">BUILD A BUSINESS THAT ALIGNS WITH YOUR STRENGTHS AND PASSIONS</div>
+          <div class="mentorship-feature">MOVE BEYOND COOKIE-CUTTER SOLUTIONS AND CREATE YOUR OWN RULES</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       17. IMPLEMENTATION OVER INFORMATION
+       ============================================ -->
+  <section id="implementation-over-information" class="philosophy-section" style="background: var(--color-white);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="text-side">
+          <h2>Embrace Implementation Over Information</h2>
+          <p>You don't need another course sitting in your inbox. You need someone to help you actually DO the thing. FFB is built for implementation. Every framework, every resource, every coaching call is designed to move you from thinking to doing.</p>
+          <p>We celebrate messy action over perfect planning. Progress over perfection. Done over dreaming. Because the women who win are the ones who move.</p>
+        </div>
+        <div class="photo-side">
+          <img src="https://placehold.co/540x480/ECE7DE/1E3735?text=Step+Into+Your+Power" alt="Step into your power">
+          <span class="photo-overlay-text">step into your power!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       18. RELAXED INTEGRATION
+       ============================================ -->
+  <section id="relaxed-integration" class="philosophy-section" style="background: var(--color-cream);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/540x480/A3B0A0/FFFFFF?text=Relaxed+Integration" alt="Relaxed integration">
+        </div>
+        <div class="text-side">
+          <h2>Relaxed Integration</h2>
+          <p>We don't believe in burnout as a business strategy. FFB is designed to integrate into your life, not take it over. The mentorship unfolds at a pace that honours your season, your energy, and your family.</p>
+          <p>Whether you're in a building season or a resting season, there's space for you here. The content is always available. The community is always open. And Tracy meets you exactly where you are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       19. OUR PHILOSOPHY
+       ============================================ -->
+  <section id="our-philosophy" class="philosophy-section" style="background: var(--color-white);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="text-side">
+          <h2>Our Philosophy</h2>
+          <p>We believe that women can build thriving businesses AND live beautiful lives. That revenue and rest can coexist. That you can be ambitious and present at the same time.</p>
+          <p>The Freedom Filled&#174; philosophy is built on integrity, leading with love, radical responsibility, and striving for excellence in everything we do. We don't cut corners. We don't do sleazy. We build businesses we're proud of.</p>
+        </div>
+        <div class="photo-side">
+          <img src="https://placehold.co/540x480/788E75/FFFFFF?text=Philosophy" alt="Our Philosophy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       20. FAMILY FOCUSED
+       ============================================ -->
+  <section id="family-focused" class="philosophy-section" style="background: var(--color-cream);">
+    <div class="container">
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/540x480/ECE7DE/1E3735?text=Family+Focused" alt="Family focused business">
+        </div>
+        <div class="text-side">
+          <h2>Family Focused</h2>
+          <p>Your business exists to serve your family, not compete with it. Inside FFB, we celebrate the women who close the laptop for school pick-up. Who take the holiday. Who protect their boundaries fiercely.</p>
+          <p>Because a Freedom Filled&#174; business isn't just about revenue targets. It's about being present for the moments that matter. That's what we're really building here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       21. PULL QUOTE 2
+       ============================================ -->
+  <section id="pull-quote-2-1" class="pull-quote-section" style="background: var(--color-cream);">
+    <div class="container">
+      <blockquote>"Tracy doesn't just teach you how to build a business. She teaches you how to become the woman who <em>leads</em> one."</blockquote>
+      <div class="avatar">
+        <img src="https://placehold.co/64x64/1E3735/ECE7DE?text=KY" alt="Kerry Yacoumis">
+      </div>
+      <div class="attribution">Kerry Yacoumis, FFB Member</div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       22. WHO IS FFB FOR (Dark section)
+       ============================================ -->
+  <section id="who-is-ffb-for">
+    <div class="container">
+      <h2>FFB <em>is</em> perfect for:</h2>
+      <div class="fit-grid">
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Action Takers</h4>
+            <p>Women ready to stop consuming and start implementing. You're done with the course graveyard.</p>
+          </div>
+        </div>
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Visionaries</h4>
+            <p>You see the big picture. You know you're meant for more. You just need the roadmap and the support.</p>
+          </div>
+        </div>
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Serious Entrepreneurs</h4>
+            <p>You're building a real business. Coaching, courses, memberships, digital services. This is your career.</p>
+          </div>
+        </div>
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Community Seekers</h4>
+            <p>You thrive in supportive environments. You want a sisterhood, not just a syllabus.</p>
+          </div>
+        </div>
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Boundary-Setters</h4>
+            <p>You refuse to sacrifice your health, your family, or your sanity for revenue. Freedom matters.</p>
+          </div>
+        </div>
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Implementation Focused</h4>
+            <p>You want frameworks you can actually use, not theory you'll never apply.</p>
+          </div>
+        </div>
+        <div class="fit-item">
+          <div class="icon check">&#10003;</div>
+          <div>
+            <h4>Lovers of Life</h4>
+            <p>Business is important, but so is joy, rest, adventure, and being present for the people you love.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="not-for-section">
+        <h2>FFB is <em>not</em> for:</h2>
+        <div class="fit-grid">
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Information Hoarders</h4>
+              <p>If you're looking for another course to collect and never finish, this isn't for you.</p>
+            </div>
+          </div>
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Rigid Thinkers</h4>
+              <p>We don't do rigid, linear step-by-step. We do personalised, flexible, meet-you-where-you-are.</p>
+            </div>
+          </div>
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Quick-Fix Seekers</h4>
+              <p>Building a Freedom Filled&#174; business takes time, strategy, and commitment. No shortcuts.</p>
+            </div>
+          </div>
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Solitary Operators</h4>
+              <p>If you don't value community and collaboration, you won't thrive here.</p>
+            </div>
+          </div>
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Complainers and Blamers</h4>
+              <p>We take radical responsibility here. For our results, our mindset, and our next move.</p>
+            </div>
+          </div>
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Excuse-Makers</h4>
+              <p>We celebrate action. We honour progress. We don't make space for excuses.</p>
+            </div>
+          </div>
+          <div class="fit-item">
+            <div class="icon cross">&#10005;</div>
+            <div>
+              <h4>Soul-Sucking Success</h4>
+              <p>If revenue at all costs is your goal, there are other programs for that. We build with integrity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       23. ABOUT ME
+       ============================================ -->
+  <section id="about-me">
+    <div class="container">
+      <div class="split-layout">
+        <div class="photo-side">
+          <img src="https://placehold.co/540x520/A3B0A0/FFFFFF?text=Tracy+on+Laptop" alt="Tracy Harris working">
+          <span class="overlay-text">Your Mentor Tracy Harris</span>
+        </div>
+        <div class="text-side">
+          <blockquote>"I didn't know who I was becoming yet. I only knew I couldn't go back to who I had been. But that experience taught me something I carry with me to this day. New beginnings often look like endings."</blockquote>
+          <div class="attribution">TRACY HARRIS | FOUNDER, TRACY HARRIS CO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       24. POINTS 1-5
+       ============================================ -->
+  <div id="point-1" class="point-section" style="background: var(--color-white);">
+    <div class="container">
+      <h3>Former teacher turned digital CEO</h3>
+      <p>Tracy left a career in education to build something on her own terms. She understands the courage it takes to start over and the patience required to build something real.</p>
+    </div>
+  </div>
+
+  <div id="point-2" class="point-section" style="background: var(--color-cream);">
+    <div class="container">
+      <h3>Multi-seven-figure business built on 20 hours a week</h3>
+      <p>Not a theoretical claim. Tracy works Monday to Thursday, takes Fridays off, and takes a week off every month. The proof is in the way she lives.</p>
+    </div>
+  </div>
+
+  <div id="point-3" class="point-section" style="background: var(--color-white);">
+    <div class="container">
+      <h3>Mum of two boys, living between Australia and Bali</h3>
+      <p>Tracy built her business around her family, not the other way around. She's proof that you don't have to choose between being present and being profitable.</p>
+    </div>
+  </div>
+
+  <div id="point-4" class="point-section" style="background: var(--color-cream);">
+    <div class="container">
+      <h3>500+ podcast episodes and 7+ years of mentoring</h3>
+      <p>Tracy doesn't teach theory. She teaches from lived experience, thousands of conversations, and years of walking alongside women in the trenches of business building.</p>
+    </div>
+  </div>
+
+  <div id="point-5" class="point-section" style="background: var(--color-white);">
+    <div class="container">
+      <h3>Faith-informed, heart-led, no-nonsense</h3>
+      <p>Tracy leads with love and tells you the truth. She'll champion you AND challenge you, because that's what real mentorship looks like.</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       25. WHY THEY JOINED FFB
+       ============================================ -->
+  <section id="why-they-joined-ffb">
+    <div class="container">
+      <div class="section-label">HERE'S WHY THEY'VE ALREADY JOINED FFB</div>
+      <h2>In Their Own Words</h2>
+      <div class="quotes-masonry">
+        <div class="quote-card">
+          <div class="quote-mark">&#10077;</div>
+          <p>I joined because I was tired of piecing together free advice from the internet and never actually implementing anything. FFB gave me a clear pathway and a mentor who genuinely cares.</p>
+          <div class="name">MEGAN MARTIN</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-mark">&#10077;</div>
+          <p>The community alone is worth the investment. These women push me, support me, and celebrate every win. I've never experienced anything like it in a business program.</p>
+          <div class="name">VARSHA MISTRY</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-mark">&#10077;</div>
+          <p>Tracy sees things in your business that you can't see yourself. She helped me simplify my offer suite and I've had my best revenue quarter ever.</p>
+          <div class="name">KERRY YACOUMIS</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-mark">&#10077;</div>
+          <p>I was so burnt out before FFB. Now I work four days a week and earn more than I ever did working six. The Freedom Filled approach actually works.</p>
+          <div class="name">ASHLEY BOSTON</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-mark">&#10077;</div>
+          <p>I needed mentorship, not another course. Tracy's coaching on the Power Hours has been the single biggest game-changer in my business this year.</p>
+          <div class="name">SHY KING</div>
+        </div>
+        <div class="quote-card">
+          <div class="quote-mark">&#10077;</div>
+          <p>The Pathway Assessment was eye-opening. I'd been trying to sell before I even had my message clear. FFB helped me do things in the right order.</p>
+          <div class="name">FELICIA TERLECKI</div>
+        </div>
+      </div>
+      <div class="cta-wrap">
+        <a href="#secure-your-spot-pricing-3" class="btn-dark">Apply Now &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       26. PRICING
+       ============================================ -->
+  <section id="secure-your-spot-pricing-3" class="pricing-section">
+    <div class="container">
+      <h2><em>Secure Your Seat Now</em></h2>
+      <div class="pricing-cards">
+        <!-- Monthly Card -->
+        <div class="pricing-card monthly">
+          <div class="plan-label">ANNUAL ACCESS</div>
+          <h3>Monthly</h3>
+          <div class="old-price">$725 AUD</div>
+          <div class="price">$550 AUD</div>
+          <div class="price-detail">PER MONTH &middot; $6,600 AUD Total</div>
+          <ul class="inclusions">
+            <li>Monthly Freedom Power Hours with Tracy</li>
+            <li>Freedom Filled&#174; Resource Vault access</li>
+            <li>Freedom-Maker Circles (mini masterminds)</li>
+            <li>FFB Pathway Assessment</li>
+            <li>Private Circle Community access</li>
+            <li>12 months of mentorship</li>
+          </ul>
+          <ul class="bonuses">
+            <li>Tracy's Take (regular audio/video insights)</li>
+            <li>Freedom Filled&#174; Offers Process</li>
+            <li>Freedom Filled&#174; Business Circle Community</li>
+          </ul>
+          <a href="#" class="btn-sage">APPLY NOW</a>
+        </div>
+
+        <!-- Pay in Full Card -->
+        <div class="pricing-card pif">
+          <div class="plan-label">ANNUAL ACCESS</div>
+          <div class="best-value">best value!</div>
+          <h3>Pay in Full</h3>
+          <div class="old-price">$8,000 AUD</div>
+          <div class="price" style="color: var(--color-white);">$6,000 AUD</div>
+          <div class="price-detail">One Time Payment (Save $600) Best Value!</div>
+          <ul class="inclusions">
+            <li>Monthly Freedom Power Hours with Tracy</li>
+            <li>Freedom Filled&#174; Resource Vault access</li>
+            <li>Freedom-Maker Circles (mini masterminds)</li>
+            <li>FFB Pathway Assessment</li>
+            <li>Private Circle Community access</li>
+            <li>12 months of mentorship</li>
+          </ul>
+          <ul class="bonuses">
+            <li>Tracy's Take (regular audio/video insights)</li>
+            <li>Freedom Filled&#174; Offers Process</li>
+            <li>Freedom Filled&#174; Business Circle Community</li>
+          </ul>
+          <a href="#" class="btn-sage">APPLY NOW</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       27. GUARANTEE
+       ============================================ -->
+  <section id="guarantee">
+    <div class="container">
+      <div class="guarantee-badge">100%<br>MONEY BACK<br>GUARANTEE</div>
+      <div class="section-label" style="text-align: center;">GET YOUR MONEY BACK IF IT DIDN'T SERVE YOU</div>
+      <h2>Action-based Guarantee</h2>
+      <p>We stand behind the Freedom Filled&#174; Business Mentorship completely. If you show up, do the work, attend the coaching calls, and implement the frameworks for 90 days and it doesn't serve you, we'll refund your investment. No hard feelings. We only ask that you actually participate. This guarantee is for the action takers, the women who show up and try. Because we know when you do, the results will speak for themselves.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       28. TEXT BLOCK (Dark)
+       ============================================ -->
+  <section id="text-block">
+    <div class="container">
+      <h2>A year from now they will have wished they started today</h2>
+      <div class="sub-heading">SO LET'S GET THEM STARTED!</div>
+      <p>Your entire mentorship experience lives inside Circle, our beautifully designed community platform. Access everything on any device, from anywhere in the world. Your resources, your community, your coaching calls, all in one place.</p>
+      <div class="device-mockups">
+        <div class="device-mockup phone">
+          <img src="https://placehold.co/200x400/ECE7DE/1E3735?text=Phone" alt="Phone mockup">
+        </div>
+        <div class="device-mockup tablet">
+          <img src="https://placehold.co/360x480/ECE7DE/1E3735?text=Tablet" alt="Tablet mockup">
+        </div>
+        <div class="device-mockup laptop">
+          <img src="https://placehold.co/800x500/ECE7DE/1E3735?text=Laptop" alt="Laptop mockup">
+        </div>
+        <div class="device-mockup desktop">
+          <img src="https://placehold.co/560x480/ECE7DE/1E3735?text=Desktop" alt="Desktop mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       29. REVIEWS / SUCCESS STORIES
+       ============================================ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-label" style="text-align: center; margin-bottom: 60px;">SUCCESS STORIES</div>
+
+      <!-- Vanya -->
+      <div class="success-story">
+        <div class="split-layout">
+          <div class="photo-side">
+            <img src="https://placehold.co/540x440/ECE7DE/1E3735?text=Vanya" alt="Vanya">
+            <span class="photo-overlay-text" style="font-size: 1.4rem;">success stories</span>
+          </div>
+          <div class="text-side">
+            <h3>From Instagram audience to thriving digital empire</h3>
+            <div class="quote-text">"Tracy taught me how to turn my Instagram audience into a thriving digital business. I have a team now, my husband is retired, I am the author of two best-selling cook books and I have a membership with over 1000 members."</div>
+            <div class="name">VANYA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jess and Elle -->
+      <div class="success-story">
+        <div class="split-layout">
+          <div class="text-side">
+            <h3>Sold out their coaching offer twice in one week</h3>
+            <div class="quote-text">"We sold out our first coaching offer not once, but twice within one week! And have now gone on to launch our handmade business membership."</div>
+            <div class="name">JESS AND ELLE</div>
+          </div>
+          <div class="photo-side">
+            <img src="https://placehold.co/540x440/788E75/FFFFFF?text=Jess+%26+Elle" alt="Jess and Elle">
+            <span class="photo-overlay-text">be bold!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jess -->
+      <div class="success-story">
+        <div class="split-layout">
+          <div class="photo-side">
+            <img src="https://placehold.co/540x440/A3B0A0/FFFFFF?text=Jess" alt="Jess">
+          </div>
+          <div class="text-side">
+            <h3>The best version of herself</h3>
+            <div class="quote-text">"Tracy has been an incredible mentor and my biggest cheerleader. She helped me become the best version of myself, both in business and in life."</div>
+            <div class="name">JESS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       30. VIDEO REVIEWS
+       ============================================ -->
+  <section id="reviews-1" class="video-reviews">
+    <div class="container">
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="https://placehold.co/400x220/1E3735/ECE7DE?text=Sarah+Braybrook" alt="Sarah Braybrook video testimonial">
+            <div class="play-button">&#9654;</div>
+          </div>
+          <div class="card-body">
+            <div class="stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="card-name">Sarah Braybrook</div>
+            <div class="card-quote">"The mentorship completely transformed how I approach my business. I finally have clarity and confidence."</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="https://placehold.co/400x220/788E75/FFFFFF?text=Julianna+Nagy" alt="Julianna Nagy video testimonial">
+            <div class="play-button">&#9654;</div>
+          </div>
+          <div class="card-body">
+            <div class="stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="card-name">Julianna Nagy</div>
+            <div class="card-quote">"Tracy's ability to see the potential in your business and help you unlock it is truly remarkable."</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="https://placehold.co/400x220/A3B0A0/FFFFFF?text=Georgia+Arharidis" alt="Georgia Arharidis video testimonial">
+            <div class="play-button">&#9654;</div>
+          </div>
+          <div class="card-body">
+            <div class="stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="card-name">Georgia Arharidis</div>
+            <div class="card-quote">"I found my people. The community and the mentorship together are unlike anything else out there."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       31. FAQs
+       ============================================ -->
+  <section id="faq-s">
+    <div class="container">
+      <div class="faq-header">
+        <img src="https://placehold.co/1200x300/1E3735/ECE7DE?text=Desk+Workspace" alt="FAQ header">
+        <div class="overlay">
+          <h2>QUESTIONS</h2>
+          <div class="arrow">&#8595;</div>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How long is the program?</button>
+          <div class="faq-answer">
+            <p>FFB is a 12-month mentorship. You get a full year of coaching, community, and resources. This gives you time to build foundations, implement strategies, and see real results without rushing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What if I fall behind?</button>
+          <div class="faq-answer">
+            <p>There's no "behind" in FFB. The content is always available in your Resource Vault. The community is always there. And Tracy meets you where you are. Life happens, seasons change, and FFB is designed to flex with you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How is this different from other business programs?</button>
+          <div class="faq-answer">
+            <p>FFB isn't a course. It's a mentorship. You get personalised guidance, live coaching, a curated community, and a proven pathway. Most programs give you information and leave you to figure it out. FFB walks beside you through implementation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What kind of support can I expect?</button>
+          <div class="faq-answer">
+            <p>Monthly live coaching with Tracy, Freedom-Maker Circles for small group support, a thriving Circle community for daily connection, and a complete Resource Vault. You're never building alone.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What are the investment and payment options?</button>
+          <div class="faq-answer">
+            <p>You can pay in full at $6,000 AUD (best value) or choose the monthly plan at $550 AUD per month for 12 months ($6,600 total). Both options give you full access to everything from day one.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Who is this program for?</button>
+          <div class="faq-answer">
+            <p>FFB is for women building coaching businesses, courses, memberships, or digital service businesses. Whether you're just starting out or already generating revenue, if you want a Freedom Filled&#174; approach to business, this is for you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Who is this program NOT for?</button>
+          <div class="faq-answer">
+            <p>FFB isn't for e-commerce sellers, hobbyists, or anyone looking for a quick fix. It's also not for information hoarders who collect courses and never implement. We celebrate action takers here.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What topics are covered?</button>
+          <div class="faq-answer">
+            <p>The Freedom Filled&#174; Pathway covers three pillars: BUILD (offers, messaging, signature model), SELL (attract, convert, optimise), and LEAD (client experience, facilitation, leadership). Plus the F.R.E.S.H. Foundation for personal operating systems.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How do I join?</button>
+          <div class="faq-answer">
+            <p>Click "Apply Now" to submit your application. FFB is application-based because we want to make sure it's the right fit for you. Once accepted, you'll receive onboarding details and immediate access to your Circle community.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Is there support outside of coaching sessions?</button>
+          <div class="faq-answer">
+            <p>Absolutely. Your Circle community is available 24/7. Post questions, share wins, get feedback from Tracy and fellow members. The Freedom-Maker Circles also provide intimate small-group support between main coaching calls.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       32. PRICING REPEAT
+       ============================================ -->
+  <section id="secure-your-spot-pricing-1" class="pricing-section">
+    <div class="container">
+      <h2><em>Secure Your Seat Now</em></h2>
+      <div class="pricing-cards">
+        <!-- Monthly Card -->
+        <div class="pricing-card monthly">
+          <div class="plan-label">ANNUAL ACCESS</div>
+          <h3>Monthly</h3>
+          <div class="old-price">$725 AUD</div>
+          <div class="price">$550 AUD</div>
+          <div class="price-detail">PER MONTH &middot; $6,600 AUD Total</div>
+          <ul class="inclusions">
+            <li>Monthly Freedom Power Hours with Tracy</li>
+            <li>Freedom Filled&#174; Resource Vault access</li>
+            <li>Freedom-Maker Circles (mini masterminds)</li>
+            <li>FFB Pathway Assessment</li>
+            <li>Private Circle Community access</li>
+            <li>12 months of mentorship</li>
+          </ul>
+          <ul class="bonuses">
+            <li>Tracy's Take (regular audio/video insights)</li>
+            <li>Freedom Filled&#174; Offers Process</li>
+            <li>Freedom Filled&#174; Business Circle Community</li>
+          </ul>
+          <a href="#" class="btn-sage">APPLY NOW</a>
+        </div>
+
+        <!-- Pay in Full Card -->
+        <div class="pricing-card pif">
+          <div class="plan-label">ANNUAL ACCESS</div>
+          <div class="best-value">best value!</div>
+          <h3>Pay in Full</h3>
+          <div class="old-price">$8,000 AUD</div>
+          <div class="price" style="color: var(--color-white);">$6,000 AUD</div>
+          <div class="price-detail">One Time Payment (Save $600) Best Value!</div>
+          <ul class="inclusions">
+            <li>Monthly Freedom Power Hours with Tracy</li>
+            <li>Freedom Filled&#174; Resource Vault access</li>
+            <li>Freedom-Maker Circles (mini masterminds)</li>
+            <li>FFB Pathway Assessment</li>
+            <li>Private Circle Community access</li>
+            <li>12 months of mentorship</li>
+          </ul>
+          <ul class="bonuses">
+            <li>Tracy's Take (regular audio/video insights)</li>
+            <li>Freedom Filled&#174; Offers Process</li>
+            <li>Freedom Filled&#174; Business Circle Community</li>
+          </ul>
+          <a href="#" class="btn-sage">APPLY NOW</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       33. NEW CANVAS / FINAL CTA
+       ============================================ -->
+  <section id="new-canvas">
+    <div class="container">
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="https://placehold.co/400x220/ECE7DE/1E3735?text=Testimonial+1" alt="Video testimonial">
+            <div class="play-button">&#9654;</div>
+          </div>
+          <div class="card-body">
+            <div class="stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="card-name">Member Story</div>
+            <div class="card-quote">"Joining FFB was the best business decision I've ever made."</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="https://placehold.co/400x220/1E3735/ECE7DE?text=Testimonial+2" alt="Video testimonial">
+            <div class="play-button">&#9654;</div>
+          </div>
+          <div class="card-body">
+            <div class="stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="card-name">Member Story</div>
+            <div class="card-quote">"The community and mentorship together are a game-changer."</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <img src="https://placehold.co/400x220/788E75/FFFFFF?text=Testimonial+3" alt="Video testimonial">
+            <div class="play-button">&#9654;</div>
+          </div>
+          <div class="card-body">
+            <div class="stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="card-name">Member Story</div>
+            <div class="card-quote">"Tracy helped me see what I couldn't see in myself."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       34. FOOTER
+       ============================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-logo">TRACY HARRIS CO</div>
+      <p>&copy; 2024 Tracy Harris Co. All rights reserved.<br>
+        Freedom Filled&#174; is a registered trademark of Tracy Harris Co.<br>
+        <a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       FAQ ACCORDION JS
+       ============================================ -->
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+      button.addEventListener('click', function() {
+        var item = this.parentElement;
+        var isActive = item.classList.contains('active');
+
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(function(faqItem) {
+          faqItem.classList.remove('active');
+        });
+
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
