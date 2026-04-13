@@ -406,8 +406,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================ */
 @media (max-width: 768px) {
   .container { padding: 0 24px; }
-  
-  /* Typography mobile */
+
+  /* Typography mobile - base overrides */
   .heading-hero { font-size: 43px; }
   .heading-section { font-size: 34px; }
   .heading-mid { font-size: 34px; }
@@ -419,38 +419,46 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .label-text { font-size: 13px; }
   .eyebrow { font-size: 13px; }
 
-  /* Hero */
+  /* Hero - Showit mobile: 740px height, photo at TOP bleeding edges, content left-aligned below */
   .hero .container { min-height: 740px; flex-direction: column; }
-  .hero-panel { width: 100%; padding: 40px 24px; text-align: left; min-height: auto; }
-  .hero-image { position: relative; right: auto; top: auto; width: 100%; height: 300px; background-size: cover; }
-  .hero-panel .body-text { text-align: left; }
+  .hero-image { position: relative; right: auto; top: auto; width: calc(100% + 48px); margin-left: -24px; height: 195px; background-size: cover; background-position: 50% 50%; order: -1; z-index: 2; }
+  .hero-panel { width: 100%; padding: 32px 24px 40px; text-align: left; min-height: auto; margin-top: 0; align-items: flex-start; }
+  .hero-panel .heading-hero { font-size: 43px; text-align: left; }
+  .hero-panel .body-text { font-size: 14px; text-align: left; line-height: 1.7; max-width: 100%; }
+  .hero-panel .btn { align-self: flex-start; }
 
-  /* FFB Difference */
-  .the-ffb-difference .heading-section { font-size: 40px; }
+  /* FFB Difference - Showit mobile: 40px heading center, 15px body center, line-height 1.4 */
+  .the-ffb-difference .heading-section { font-size: 40px; text-align: center; }
+  .the-ffb-difference .body-text-sm { font-size: 15px; text-align: center; line-height: 1.4; }
 
-  /* Testimonial block */
-  .testimonial-block .container { grid-template-columns: 1fr; }
-  .testimonial-block .image-col img { height: 350px; }
-  .testimonial-block .heading-hero { font-size: 48px; }
-  .testimonial-block .subtitle { font-size: 22px; }
+  /* Testimonial block - Showit mobile: 48px heading left, 22px subtitle left, image below heading, quote card at bottom */
+  .testimonial-block .container { grid-template-columns: 1fr; gap: 24px; }
+  .testimonial-block .text-col { order: -1; }
+  .testimonial-block .heading-hero { font-size: 48px; text-align: left; }
+  .testimonial-block .subtitle { font-size: 22px; text-align: left; }
+  .testimonial-block .image-col img { height: 300px; }
   .testimonial-card { flex-direction: column; align-items: center; text-align: center; }
   .testimonial-card .avatar { width: 92px; height: 88px; }
 
-  /* We believe in */
+  /* We believe in - Showit mobile: image at TOP, 35px headings, 15px body, left-aligned, dividers between */
   .we-believe-in .container { grid-template-columns: 1fr; }
-  .we-believe-in .image-col img { height: 323px; }
-  .value-item .heading-quote { font-size: 35px; }
   .we-believe-in .image-col { order: -1; }
+  .we-believe-in .image-col img { height: 323px; }
+  .value-item .heading-quote { font-size: 35px; text-align: left; }
+  .value-item .body-text-sm { font-size: 15px; text-align: left; }
 
-  /* For almost a decade */
+  /* For almost a decade - Showit mobile: 1149px tall, image at top, 34px heading CENTER, 13px body left */
   .for-almost-a-decade .container { grid-template-columns: 1fr; }
+  .for-almost-a-decade .image-col { order: -1; }
   .for-almost-a-decade .text-col { padding-top: 40px; }
   .for-almost-a-decade .image-col img { height: 352px; }
-  .for-almost-a-decade .heading-mid { font-size: 34px; }
+  .for-almost-a-decade .heading-mid { font-size: 34px; text-align: center; }
+  .for-almost-a-decade .body-text { font-size: 13px; text-align: left; }
 
   /* Reviews2 */
   .reviews2 .container { grid-template-columns: 1fr; }
-  .review-slide .review-card { position: relative; left: auto; top: auto; width: 100%; height: auto; padding: 32px 24px; }
+  .review-slide .review-image { height: 350px; }
+  .review-slide .review-card { position: relative; left: auto; top: auto; right: auto; width: 100%; height: auto; padding: 32px 24px; }
   .review-card .review-quote { font-size: 35px; }
 
   /* What you'll access */
@@ -458,32 +466,43 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .what-you-ll-access .section-subheading { font-size: 13px; }
   .device-mockups { flex-wrap: wrap; }
 
-  /* Offerings */
-  .offering .container { grid-template-columns: 1fr; }
-  .offering .text-col { padding: 32px 24px; }
+  /* Offerings - Showit mobile: single column, image at top, 43px heading left, 14px body left, line-height 1.7, button below */
+  .offering .container { grid-template-columns: 1fr; direction: ltr; }
+  .offering.reversed .container { direction: ltr; }
+  .offering .image-col { order: -1; }
   .offering .image-col img { min-height: 280px; }
+  .offering .text-col { padding: 32px 24px; text-align: left; }
+  .offering .text-col .heading-mid { font-size: 43px; text-align: left; }
+  .offering .text-col .body-text { font-size: 14px; text-align: left; line-height: 1.7; }
 
   /* Bonus */
   .bonus .container { grid-template-columns: 1fr; }
+  .bonus .image-col { order: -1; }
   .bonus .heading-section { font-size: 32px; }
+  .bonus .image-overlay { position: relative; top: auto; left: auto; width: 100%; height: 280px; }
 
-  /* Results */
+  /* Results - Showit mobile: 45px heading, 14px body, line-height 1.3, single column items */
   .results .heading-section { font-size: 45px; }
+  .results .body-text { font-size: 14px; line-height: 1.3; }
   .result-item { flex-direction: column; gap: 8px; }
   .result-item .eyebrow { text-align: left; }
+  .result-item .body-text-sm { font-size: 14px; line-height: 1.3; }
 
   /* Pull quote */
   .pull-quote .heading-quote { font-size: 35px; }
   .pull-quote .avatar { width: 78px; height: 80px; }
 
-  /* Feature sections */
+  /* Feature sections - single column, image on top */
   .feature-section .container { grid-template-columns: 1fr !important; }
   .feature-section .text-col { padding: 32px 24px; }
+  .feature-section .image-col { order: -1; }
   .feature-section .image-col img { min-height: 248px; }
-  .feature-section.img-right .image-col { order: -1; }
 
-  /* Who is FFB for */
+  /* Who is FFB for - Showit mobile: single column, 13px descriptions, letter-spacing 0.05em */
   .who-is-ffb-for .container { grid-template-columns: 1fr; gap: 48px; }
+  .who-is-ffb-for .col-header .heading-mid { font-size: 34px; }
+  .who-is-ffb-for .col-header .script-label { font-size: 40px; }
+  .not-for-item .item-desc, .for-item .item-desc { font-size: 13px; letter-spacing: 0.05em; }
 
   /* About me */
   .about-me .container { grid-template-columns: 1fr; }
@@ -492,14 +511,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   /* Points */
   .point-section .container { grid-template-columns: 1fr !important; }
+  .point-section .image-col { order: -1; }
   .point-section .image-col img { height: 270px; }
 
-  /* Masonry */
+  /* Masonry quotes - single column */
   .masonry-quotes { columns: 1; }
 
-  /* Pricing */
+  /* Pricing - Showit mobile: cards stacked vertically full-width, 38px heading, Pay in Full first */
   .pricing-cards { grid-template-columns: 1fr; }
-  .pricing .heading-section { font-size: 34px; }
+  .pricing .heading-section { font-size: 38px; }
+  .pricing-card.dark { order: -1; }
+  .pricing-card .card-type { font-size: 40px; }
+  .pricing-card .card-price { font-size: 40px; }
+  .pricing-card .script-label, .pricing-card .card-label-script { font-family: 'Chic Societe Script', cursive; font-size: 45px; }
 
   /* Guarantee */
   .guarantee .heading-action { font-size: 50px; }
@@ -508,24 +532,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .text-block .heading-section { font-size: 35px; }
   .text-block .device-row { flex-wrap: wrap; }
 
-  /* Success stories */
+  /* Success stories - single column */
   .success-grid { grid-template-columns: 1fr; }
+  .success-card .card-quote { font-size: 32px; }
+  .success-card .card-text { font-size: 14px; }
 
   /* Video grid */
   .video-grid { grid-template-columns: 1fr; }
   .video-card img { height: 280px; }
 
-  /* FAQ */
+  /* FAQ - Showit mobile: single column, 80-100px heading, 18px questions sage, 15px answers gray line-height 1.4, image smaller at top */
   .faq .container { grid-template-columns: 1fr; }
-  .faq .heading-col .heading-section { font-size: 80px; }
-  .faq .heading-col img { height: 250px; }
-  .faq-item summary { font-size: 20px; }
+  .faq .heading-col { order: -1; }
+  .faq .heading-col .heading-section { font-size: 90px; }
+  .faq .heading-col img { height: 200px; }
+  .faq-item summary { font-family: 'Editors Note Regular', serif; font-size: 18px; color: var(--sage); text-align: left; }
+  .faq-item .faq-answer { font-size: 15px; line-height: 1.4; color: var(--gray); text-align: left; }
 
   /* New canvas */
   .new-canvas .heading-section { font-size: 40px; }
 
-  /* Footer */
+  /* Footer - stacked, centered */
   .footer .container { flex-direction: column; gap: 16px; text-align: center; }
+  .footer .links { justify-content: center; }
 
   /* Nav */
   .top-menu nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
