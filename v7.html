@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracy Harris | Build Your Freedom Filled&reg; Empire</title>
+  <meta name="description" content="Educator, speaker, and mentor Tracy Harris helps women build Freedom Filled&reg; businesses. 10+ years. Multi-seven figures. 500+ women mentored.">
+
+  <!-- Google Fonts: Instrument Serif + DM Sans + DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================================================
+       DESIGN TOKENS - v7 (Vibrant + Elegant)
+       ======================================================================== */
+    :root {
+      /* Foundation */
+      --deep-teal:   #233635;
+      --mid-teal:    #324b4a;
+      --canvas:      #f6f4f1;
+      --charcoal:    #313131;
+      --white:       #ffffff;
+
+      /* Brand Accent - used SPARINGLY */
+      --sage:        #6e8e77;
+      --sage-dark:   #5a7a63;
+      --sage-light:  #8aab92;
+
+      /* Text: opacity-based hierarchy */
+      --text-on-dark:        rgba(246, 244, 241, 1.0);
+      --text-on-dark-muted:  rgba(246, 244, 241, 0.7);
+      --text-on-dark-ghost:  rgba(246, 244, 241, 0.4);
+      --text-on-light:       #313131;
+      --text-on-light-muted: rgba(49, 49, 49, 0.6);
+      --text-on-light-ghost: rgba(49, 49, 49, 0.3);
+
+      /* Structural */
+      --border-dark:  rgba(246, 244, 241, 0.12);
+      --border-light: rgba(49, 49, 49, 0.10);
+
+      /* Content widths */
+      --width-narrow:   680px;
+      --width-standard: 1080px;
+      --width-wide:     1280px;
+
+      /* Spacing */
+      --space-xs:  8px;
+      --space-sm:  16px;
+      --space-md:  24px;
+      --space-lg:  48px;
+      --space-xl:  80px;
+      --space-2xl: 120px;
+      --space-3xl: 160px;
+      --section-pad: clamp(80px, 14vw, 160px);
+
+      /* Typography */
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body:    'DM Sans', -apple-system, sans-serif;
+      --font-mono:    'DM Mono', 'Courier New', monospace;
+
+      /* Transitions */
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --duration: 400ms;
+    }
+
+    /* ========================================================================
+       RESET & BASE
+       ======================================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--charcoal);
+      background: var(--white);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--duration) var(--ease);
+    }
+
+    /* ========================================================================
+       UTILITY CLASSES
+       ======================================================================== */
+    .container {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    .container--standard {
+      max-width: var(--width-standard);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    .container--narrow {
+      max-width: var(--width-narrow);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    /* Monospace label */
+    .mono-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .mono-label--sage { color: var(--sage); }
+    .mono-label--muted { color: var(--text-on-light-muted); }
+
+    /* Section heading */
+    .section-heading {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .section-heading--dark {
+      font-size: clamp(34px, 6vw, 64px);
+      color: var(--text-on-dark);
+    }
+
+    .section-heading--light {
+      font-size: clamp(34px, 6vw, 64px);
+      color: var(--text-on-light);
+    }
+
+    /* Pill buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: var(--white);
+      padding: 18px 48px;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-on-dark);
+      padding: 17px 46px;
+      border: 1.5px solid rgba(246, 244, 241, 0.3);
+    }
+    .btn-ghost:hover {
+      border-color: var(--sage);
+      color: var(--sage-light);
+      background: rgba(110, 142, 119, 0.1);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--charcoal);
+      padding: 17px 46px;
+      border: 1.5px solid rgba(49, 49, 49, 0.25);
+    }
+    .btn-outline-dark:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+    .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.visible > *:nth-child(5) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+
+    /* ========================================================================
+       1. NAVIGATION
+       ======================================================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 22px 0;
+      transition: background var(--duration) var(--ease),
+                  padding var(--duration) var(--ease),
+                  backdrop-filter var(--duration) var(--ease);
+    }
+
+    .nav.scrolled {
+      background: rgba(35, 54, 53, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 14px 0;
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--canvas);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+    }
+    .nav__links a:hover {
+      color: var(--sage-light);
+    }
+
+    .nav__cta {
+      padding: 12px 32px;
+      font-size: 12px;
+    }
+
+    /* Mobile nav toggle */
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--canvas);
+      margin: 6px 0;
+      transition: all var(--duration) var(--ease);
+    }
+
+    /* Mobile overlay */
+    .nav__mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--deep-teal);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .nav__mobile-overlay.active {
+      display: flex;
+    }
+
+    .nav__mobile-overlay a {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--canvas);
+      transition: color var(--duration) var(--ease);
+    }
+    .nav__mobile-overlay a:hover {
+      color: var(--sage);
+    }
+
+    .nav__mobile-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--canvas);
+      font-size: 32px;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+
+    /* ========================================================================
+       2. HERO - DARK
+       ======================================================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background: var(--deep-teal);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero__bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      opacity: 0.7;
+    }
+
+    .hero__bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(35, 54, 53, 1) 0%,
+        rgba(35, 54, 53, 0.6) 40%,
+        rgba(35, 54, 53, 0.3) 70%,
+        rgba(35, 54, 53, 0.4) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      padding-top: 180px;
+      padding-bottom: 180px;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 28px;
+    }
+
+    .hero__headline {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 8.5vw, 96px);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 0.98;
+      color: var(--canvas);
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .hero__headline em {
+      font-style: italic;
+    }
+
+    .hero__sub {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 2vw, 18px);
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+      max-width: 500px;
+      line-height: 1.75;
+      margin-bottom: 44px;
+    }
+
+    .hero__buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero__stats {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      border-top: 1px solid var(--border-dark);
+      background: rgba(35, 54, 53, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .hero__stats-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(24px, 5vw, 64px);
+      padding: 22px 24px;
+    }
+
+    .hero__stat {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+      white-space: nowrap;
+    }
+
+    .hero__stat-dot {
+      color: var(--sage);
+      font-size: 6px;
+    }
+
+    /* ========================================================================
+       3. PROOF BAR - CANVAS
+       ======================================================================== */
+    .proof {
+      background: var(--canvas);
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .proof__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(32px, 5vw, 72px);
+      flex-wrap: wrap;
+    }
+
+    .proof__label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-on-light-ghost);
+      white-space: nowrap;
+    }
+
+    .proof__logos {
+      display: flex;
+      align-items: center;
+      gap: clamp(28px, 4vw, 56px);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .proof__logo {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-on-light-ghost);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      transition: color var(--duration) var(--ease);
+    }
+    .proof__logo:hover {
+      color: var(--text-on-light-muted);
+    }
+
+    /* ========================================================================
+       4. ABOUT - WHITE/CANVAS
+       ======================================================================== */
+    .about {
+      background: var(--white);
+      padding: var(--section-pad) 0;
+    }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 50fr 50fr;
+      gap: clamp(48px, 7vw, 100px);
+      align-items: center;
+    }
+
+    .about__image-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      box-shadow: 0 20px 60px rgba(35, 54, 53, 0.12);
+    }
+
+    .about__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about__content {
+      /* Right column: text */
+    }
+
+    .about__text {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 1.8vw, 17px);
+      font-weight: 300;
+      color: var(--text-on-light-muted);
+      line-height: 1.85;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .about__text strong {
+      font-weight: 500;
+      color: var(--text-on-light);
+    }
+
+    .about__stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .about__stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4.5vw, 52px);
+      font-weight: 400;
+      color: var(--deep-teal);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .about__stat-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-on-light-ghost);
+      margin-top: 6px;
+    }
+
+    /* ========================================================================
+       5. PROGRAMS - CANVAS
+       ======================================================================== */
+    .programs {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+    }
+
+    .programs__header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .programs__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .program-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform var(--duration) var(--ease),
+                  box-shadow var(--duration) var(--ease);
+      box-shadow: 0 4px 24px rgba(35, 54, 53, 0.06);
+    }
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(35, 54, 53, 0.10);
+    }
+
+    .program-card__image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    .program-card__body {
+      padding: 32px 28px 36px;
+    }
+
+    .program-card__label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .program-card__title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--text-on-light);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .program-card__desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-on-light-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .program-card__link {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sage);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap var(--duration) var(--ease), color var(--duration) var(--ease);
+    }
+    .program-card__link:hover {
+      gap: 14px;
+      color: var(--sage-dark);
+    }
+
+    .program-card__arrow {
+      font-size: 16px;
+      transition: transform var(--duration) var(--ease);
+    }
+
+    /* ========================================================================
+       6. F.R.E.S.H. FRAMEWORK - DARK
+       ======================================================================== */
+    .fresh {
+      background: var(--deep-teal);
+      padding: var(--section-pad) 0;
+    }
+
+    .fresh__header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .fresh__grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .fresh-card {
+      background: rgba(246, 244, 241, 0.04);
+      border: 1px solid rgba(246, 244, 241, 0.08);
+      border-radius: 12px;
+      padding: 40px 24px;
+      text-align: center;
+      transition: transform var(--duration) var(--ease),
+                  background var(--duration) var(--ease),
+                  border-color var(--duration) var(--ease);
+    }
+    .fresh-card:hover {
+      transform: translateY(-6px);
+      background: rgba(246, 244, 241, 0.07);
+      border-color: rgba(110, 142, 119, 0.25);
+    }
+
+    .fresh-card__letter {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 400;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .fresh-card__title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--canvas);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .fresh-card__desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+      line-height: 1.65;
+    }
+
+    /* ========================================================================
+       7. TESTIMONIAL - WHITE
+       ======================================================================== */
+    .testimonial {
+      background: var(--white);
+      padding: var(--section-pad) 0;
+    }
+
+    .testimonial__inner {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .testimonial__mark {
+      font-family: var(--font-display);
+      font-size: 72px;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+
+    .testimonial__quote {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--deep-teal);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+    }
+
+    .testimonial__avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 16px;
+      border: 2px solid var(--canvas);
+      box-shadow: 0 4px 16px rgba(35, 54, 53, 0.10);
+    }
+
+    .testimonial__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial__name {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-on-light);
+      margin-bottom: 4px;
+    }
+
+    .testimonial__role {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-on-light-ghost);
+    }
+
+    .testimonial__dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .testimonial__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border-light);
+      border: none;
+      cursor: pointer;
+      transition: background var(--duration) var(--ease);
+      padding: 0;
+    }
+    .testimonial__dot.active {
+      background: var(--sage);
+    }
+    .testimonial__dot:hover {
+      background: var(--sage-light);
+    }
+
+    /* ========================================================================
+       8. COMMUNITY / RESULTS - CANVAS
+       ======================================================================== */
+    .community {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+    }
+
+    .community__header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .community__header-sub {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 1.8vw, 17px);
+      font-weight: 300;
+      color: var(--text-on-light-muted);
+      max-width: 560px;
+      margin: 20px auto 0;
+      line-height: 1.75;
+    }
+
+    .community__photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: var(--space-xl);
+    }
+
+    .community__photo-wrapper {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(35, 54, 53, 0.08);
+    }
+
+    .community__photo {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: transform 600ms var(--ease);
+    }
+    .community__photo-wrapper:hover .community__photo {
+      transform: scale(1.03);
+    }
+
+    .community__stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(40px, 7vw, 96px);
+      flex-wrap: wrap;
+    }
+
+    .community__stat {
+      text-align: center;
+    }
+
+    .community__stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 400;
+      color: var(--deep-teal);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .community__stat-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-on-light-ghost);
+      margin-top: 8px;
+    }
+
+    /* ========================================================================
+       9. PODCAST - WHITE
+       ======================================================================== */
+    .podcast {
+      background: var(--white);
+      padding: var(--section-pad) 0;
+    }
+
+    .podcast__grid {
+      display: grid;
+      grid-template-columns: 40fr 60fr;
+      gap: clamp(48px, 7vw, 96px);
+      align-items: start;
+    }
+
+    .podcast__artwork {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--deep-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(35, 54, 53, 0.12);
+      position: relative;
+    }
+
+    .podcast__artwork-inner {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .podcast__artwork-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .podcast__artwork-text {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--canvas);
+      line-height: 1.2;
+    }
+
+    .podcast__content {
+      /* Right column */
+    }
+
+    .podcast__episodes-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--text-on-light);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .podcast__episodes-sub {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text-on-light-muted);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .podcast__episode {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+    }
+    .podcast__episode:first-child {
+      border-top: 1px solid var(--border-light);
+    }
+    .podcast__episode:hover {
+      padding-left: 8px;
+    }
+    .podcast__episode:hover .podcast__episode-title {
+      color: var(--sage);
+    }
+
+    .podcast__episode-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--text-on-light-ghost);
+      min-width: 36px;
+    }
+
+    .podcast__episode-info {
+      flex: 1;
+    }
+
+    .podcast__episode-title {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-on-light);
+      transition: color var(--duration) var(--ease);
+      margin-bottom: 2px;
+    }
+
+    .podcast__episode-meta {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-on-light-ghost);
+    }
+
+    .podcast__episode-play {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border-light);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      flex-shrink: 0;
+    }
+    .podcast__episode:hover .podcast__episode-play {
+      border-color: var(--sage);
+      background: rgba(110, 142, 119, 0.08);
+    }
+
+    .podcast__episode-play-icon {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 9px;
+      border-color: transparent transparent transparent var(--text-on-light-muted);
+      margin-left: 2px;
+    }
+    .podcast__episode:hover .podcast__episode-play-icon {
+      border-color: transparent transparent transparent var(--sage);
+    }
+
+    .podcast__cta {
+      margin-top: 32px;
+    }
+
+    /* ========================================================================
+       10. CTA - DARK
+       ======================================================================== */
+    .cta {
+      background: var(--deep-teal);
+      padding: var(--section-pad) 0;
+      text-align: center;
+    }
+
+    .cta__headline {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 400;
+      color: var(--canvas);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .cta__headline em {
+      font-style: italic;
+    }
+
+    .cta__sub {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 1.8vw, 18px);
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+
+    /* ========================================================================
+       11. FOOTER - DARK
+       ======================================================================== */
+    .footer {
+      background: var(--deep-teal);
+      padding: var(--space-xl) 0 var(--space-lg);
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: var(--space-xl);
+    }
+
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--canvas);
+      margin-bottom: 20px;
+    }
+
+    .footer__brand-text {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+
+    .footer__col-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 20px;
+    }
+
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__links a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+      transition: color var(--duration) var(--ease);
+    }
+    .footer__links a:hover {
+      color: var(--sage-light);
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .footer__social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--text-on-dark-ghost);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--duration) var(--ease);
+      color: var(--text-on-dark-muted);
+      font-size: 13px;
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+    .footer__social-link:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+      background: rgba(110, 142, 119, 0.1);
+    }
+
+    .footer__bottom {
+      border-top: 1px solid var(--border-dark);
+      padding-top: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer__copyright {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-ghost);
+    }
+
+    .footer__trademark {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--text-on-dark-ghost);
+    }
+
+    /* ========================================================================
+       RESPONSIVE
+       ======================================================================== */
+    @media (max-width: 1024px) {
+      .fresh__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .programs__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links {
+        display: none;
+      }
+      .nav__cta.desktop-only {
+        display: none;
+      }
+      .nav__toggle {
+        display: block;
+      }
+
+      .hero__content {
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
+
+      .hero__stats-inner {
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px 24px;
+      }
+
+      .hero__stat-dot {
+        display: none;
+      }
+
+      .proof__inner {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .about__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about__image-wrapper {
+        order: -1;
+        aspect-ratio: 4 / 3;
+      }
+
+      .programs__grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .fresh__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .community__photos {
+        grid-template-columns: 1fr;
+      }
+
+      .community__stats {
+        gap: 32px;
+      }
+
+      .podcast__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .podcast__artwork {
+        max-width: 320px;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fresh__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about__stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero__buttons {
+        flex-direction: column;
+      }
+      .hero__buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal-stagger > * {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================================
+       1. NAVIGATION
+       ================================================================ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">Tracy Harris</a>
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#podcast">Podcast</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+        <a href="#cta" class="btn btn-primary nav__cta desktop-only">Apply Now</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__mobile-overlay" id="mobileNav">
+    <button class="nav__mobile-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#programs" onclick="closeMobileNav()">Programs</a>
+    <a href="#podcast" onclick="closeMobileNav()">Podcast</a>
+    <a href="#community" onclick="closeMobileNav()">Community</a>
+    <a href="#cta" class="btn btn-primary" onclick="closeMobileNav()">Apply Now</a>
+  </div>
+
+  <!-- ================================================================
+       2. HERO - DARK
+       ================================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="images/tracy/web/hero.jpg" alt="Tracy Harris in white suit" class="hero__bg-img">
+      <div class="hero__bg-overlay"></div>
+    </div>
+    <div class="hero__content container">
+      <span class="hero__eyebrow">Educator &middot; Speaker &middot; Mentor</span>
+      <h1 class="hero__headline">Build Your Freedom Filled<sup>&reg;</sup> <em>Empire</em></h1>
+      <p class="hero__sub">Helping women build multi-six and seven-figure businesses they actually love, with the time freedom to live a life by design.</p>
+      <div class="hero__buttons">
+        <a href="#cta" class="btn btn-primary">Start Your Journey</a>
+        <a href="#programs" class="btn btn-ghost">Explore Programs</a>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stats-inner">
+        <span class="hero__stat">10+ Years</span>
+        <span class="hero__stat-dot">&#9679;</span>
+        <span class="hero__stat">Multi-Seven Figures</span>
+        <span class="hero__stat-dot">&#9679;</span>
+        <span class="hero__stat">500+ Women Mentored</span>
+        <span class="hero__stat-dot">&#9679;</span>
+        <span class="hero__stat">500+ Podcast Episodes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       3. PROOF BAR - CANVAS
+       ================================================================ -->
+  <section class="proof reveal">
+    <div class="container">
+      <div class="proof__inner">
+        <span class="proof__label">As Featured In</span>
+        <div class="proof__logos">
+          <span class="proof__logo">Huffington Post</span>
+          <span class="proof__logo">Smart Company</span>
+          <span class="proof__logo">Collective Hub</span>
+          <span class="proof__logo">Flying Solo</span>
+          <span class="proof__logo">She Business</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       4. ABOUT - WHITE
+       ================================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrapper reveal">
+          <img src="images/tracy/web/teaching.jpg" alt="Tracy Harris teaching with Launch book" class="about__image">
+        </div>
+        <div class="about__content reveal">
+          <span class="mono-label mono-label--muted">About Tracy</span>
+          <h2 class="section-heading section-heading--light" style="margin-bottom: 24px;">I Refused to Believe <em>Burnout</em> Was the Price of Success</h2>
+          <p class="about__text">
+            Former teacher. Mum of two boys. Living between Australia and Bali. I spent 10+ years building a multi-seven-figure business on <strong>four-day weeks</strong>, taking a week off every month, and proving that freedom and revenue are not opposites.
+          </p>
+          <p class="about__text">
+            Now I help women build businesses that serve their lives, not the other way around. No hustle culture. No burnout badges. Just clean strategy, deep support, and a life you actually love.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-number">10+</span>
+              <span class="about__stat-label">Years in Business</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">4</span>
+              <span class="about__stat-label">Day Work Weeks</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">500+</span>
+              <span class="about__stat-label">Podcast Episodes</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">2</span>
+              <span class="about__stat-label">Countries Called Home</span>
+            </div>
+          </div>
+          <a href="#cta" class="btn btn-outline-dark">Work With Tracy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       5. PROGRAMS - CANVAS
+       ================================================================ -->
+  <section class="programs" id="programs">
+    <div class="container--standard">
+      <div class="programs__header reveal">
+        <span class="mono-label mono-label--muted">Programs</span>
+        <h2 class="section-heading section-heading--light">Programs That <em>Transform</em></h2>
+      </div>
+      <div class="programs__grid">
+
+        <!-- FFB -->
+        <div class="program-card reveal">
+          <img src="images/tracy/web/speaking.jpg" alt="Tracy Harris on stage" class="program-card__image">
+          <div class="program-card__body">
+            <span class="program-card__label">12-Month Mentorship</span>
+            <h3 class="program-card__title">Freedom Filled&reg; Business</h3>
+            <p class="program-card__desc">Build the foundations of a business you love, with a mentor who has done it before. Strategy, community, and the clarity to move forward.</p>
+            <a href="#" class="program-card__link">Learn More <span class="program-card__arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- FFM -->
+        <div class="program-card reveal">
+          <img src="images/tracy/web/retreat.jpg" alt="Tracy Harris retreat" class="program-card__image">
+          <div class="program-card__body">
+            <span class="program-card__label">Premium Mastermind</span>
+            <h3 class="program-card__title">Freedom Filled&reg; Mastermind</h3>
+            <p class="program-card__desc">For established business owners ready to scale with spaciousness. Max 20 women per cohort. Retreats, hot seats, and 1:1 access to Tracy.</p>
+            <a href="#" class="program-card__link">Apply Now <span class="program-card__arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- Workshop -->
+        <div class="program-card reveal">
+          <img src="images/tracy/web/fitness.jpg" alt="Tracy Harris lifestyle" class="program-card__image">
+          <div class="program-card__body">
+            <span class="program-card__label">Monthly Workshop</span>
+            <h3 class="program-card__title">Free Live Training</h3>
+            <p class="program-card__desc">Join Tracy monthly for a free, no-pitch training on the topic that matters most right now. Real strategy, no fluff.</p>
+            <a href="#" class="program-card__link">Register Free <span class="program-card__arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       6. F.R.E.S.H. FRAMEWORK - DARK
+       ================================================================ -->
+  <section class="fresh" id="fresh">
+    <div class="container--standard">
+      <div class="fresh__header reveal">
+        <span class="mono-label mono-label--sage">The Framework</span>
+        <h2 class="section-heading section-heading--dark">The F.R.E.S.H. <em>Framework</em></h2>
+      </div>
+      <div class="fresh__grid reveal-stagger">
+
+        <div class="fresh-card">
+          <div class="fresh-card__letter">F</div>
+          <h3 class="fresh-card__title">Freedom</h3>
+          <p class="fresh-card__desc">Design a business that gives you time, location, and financial freedom by design, not by accident.</p>
+        </div>
+
+        <div class="fresh-card">
+          <div class="fresh-card__letter">R</div>
+          <h3 class="fresh-card__title">Revenue</h3>
+          <p class="fresh-card__desc">Build clean, predictable revenue streams so your income matches your ambition.</p>
+        </div>
+
+        <div class="fresh-card">
+          <div class="fresh-card__letter">E</div>
+          <h3 class="fresh-card__title">Engagement</h3>
+          <p class="fresh-card__desc">Create connection that converts. Content, community, and conversations that build trust.</p>
+        </div>
+
+        <div class="fresh-card">
+          <div class="fresh-card__letter">S</div>
+          <h3 class="fresh-card__title">Strategy</h3>
+          <p class="fresh-card__desc">Stop guessing. Build with clarity, data, and a plan you can actually follow.</p>
+        </div>
+
+        <div class="fresh-card">
+          <div class="fresh-card__letter">H</div>
+          <h3 class="fresh-card__title">Heart</h3>
+          <p class="fresh-card__desc">Lead with love, integrity, and purpose. Your business is your ministry, treat it that way.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       7. TESTIMONIAL - WHITE
+       ================================================================ -->
+  <section class="testimonial" id="testimonial">
+    <div class="container--narrow">
+      <div class="testimonial__inner reveal">
+        <div class="testimonial__mark">&ldquo;</div>
+        <blockquote class="testimonial__quote" id="testimonialQuote">
+          Tracy changed the trajectory of my entire business. I went from hustling 60-hour weeks to building a six-figure business in four days. She doesn't just teach strategy, she teaches you how to live.
+        </blockquote>
+        <div class="testimonial__avatar">
+          <img src="images/tracy/web/portrait2.jpg" alt="Client portrait" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <p class="testimonial__name" id="testimonialName">[Client Name]</p>
+        <p class="testimonial__role" id="testimonialRole">FFM Member</p>
+        <div class="testimonial__dots">
+          <button class="testimonial__dot active" data-index="0" aria-label="Testimonial 1"></button>
+          <button class="testimonial__dot" data-index="1" aria-label="Testimonial 2"></button>
+          <button class="testimonial__dot" data-index="2" aria-label="Testimonial 3"></button>
+          <button class="testimonial__dot" data-index="3" aria-label="Testimonial 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       8. COMMUNITY / RESULTS - CANVAS
+       ================================================================ -->
+  <section class="community" id="community">
+    <div class="container--standard">
+      <div class="community__header reveal">
+        <span class="mono-label mono-label--muted">Community</span>
+        <h2 class="section-heading section-heading--light">What Happens Inside Freedom Filled<sup>&reg;</sup></h2>
+        <p class="community__header-sub">Real women, real results, real community. This is what it looks like when you stop doing it alone.</p>
+      </div>
+
+      <div class="community__photos reveal">
+        <div class="community__photo-wrapper">
+          <img src="images/tracy/web/community.jpg" alt="Tracy hugging a community member" class="community__photo">
+        </div>
+        <div class="community__photo-wrapper">
+          <img src="images/tracy/web/event.jpg" alt="Conference audience" class="community__photo">
+        </div>
+      </div>
+
+      <div class="community__stats reveal">
+        <div class="community__stat">
+          <span class="community__stat-number">81%</span>
+          <span class="community__stat-label">Member Retention</span>
+        </div>
+        <div class="community__stat">
+          <span class="community__stat-number">$7M+</span>
+          <span class="community__stat-label">Revenue Generated</span>
+        </div>
+        <div class="community__stat">
+          <span class="community__stat-number">500+</span>
+          <span class="community__stat-label">Women Mentored</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       9. PODCAST - WHITE
+       ================================================================ -->
+  <section class="podcast" id="podcast">
+    <div class="container">
+      <div class="podcast__grid">
+        <div class="podcast__content reveal">
+          <span class="mono-label mono-label--muted">Podcast</span>
+          <div class="podcast__artwork">
+            <div class="podcast__artwork-inner">
+              <span class="podcast__artwork-label">The Tracy Harris Podcast</span>
+              <span class="podcast__artwork-text">500+ Episodes of Real Talk for Women in Business</span>
+            </div>
+          </div>
+        </div>
+        <div class="podcast__content reveal">
+          <h3 class="podcast__episodes-title">Recent <em>Episodes</em></h3>
+          <p class="podcast__episodes-sub">Weekly conversations on business, life, and building something beautiful. Available everywhere you listen.</p>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">523</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">Why Your Offer Isn't Selling (And What To Do Instead)</span>
+              <span class="podcast__episode-meta">42 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 523">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">522</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">The Real Reason I Took a Week Off Every Month</span>
+              <span class="podcast__episode-meta">38 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 522">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">521</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">Building Community That Actually Converts</span>
+              <span class="podcast__episode-meta">45 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 521">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">520</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">Your Million Dollar Message: Finding the Words That Sell</span>
+              <span class="podcast__episode-meta">51 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 520">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__episode">
+            <span class="podcast__episode-num">519</span>
+            <div class="podcast__episode-info">
+              <span class="podcast__episode-title">From Teacher to Multi-Seven Figures: My Full Story</span>
+              <span class="podcast__episode-meta">62 min</span>
+            </div>
+            <button class="podcast__episode-play" aria-label="Play episode 519">
+              <span class="podcast__episode-play-icon"></span>
+            </button>
+          </div>
+
+          <div class="podcast__cta">
+            <a href="#" class="btn btn-outline-dark">Listen to All Episodes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       10. CTA - DARK
+       ================================================================ -->
+  <section class="cta" id="cta">
+    <div class="container--narrow">
+      <div class="reveal">
+        <span class="mono-label mono-label--sage" style="text-align: center;">Your Next Step</span>
+        <h2 class="cta__headline">Ready to Build Something <em>Freedom Filled<sup>&reg;</sup></em>?</h2>
+        <p class="cta__sub">Whether you're just getting started or ready to scale, there's a place for you here. Let's find the right path forward.</p>
+        <a href="#" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       11. FOOTER - DARK
+       ================================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">Tracy Harris</div>
+          <p class="footer__brand-text">Helping women build Freedom Filled&reg; businesses they actually love. Educator, speaker, mentor, and mum of two boys living between Australia and Bali.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/tracyharrisco" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">YT</a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">LI</a>
+            <a href="#" class="footer__social-link" aria-label="Podcast">PC</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Programs</div>
+          <ul class="footer__links">
+            <li><a href="#">Freedom Filled&reg; Business</a></li>
+            <li><a href="#">Freedom Filled&reg; Mastermind</a></li>
+            <li><a href="#">Free Workshop</a></li>
+            <li><a href="#">Podcast</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="#">About Tracy</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Connect</div>
+          <ul class="footer__links">
+            <li><a href="https://instagram.com/tracyharrisco" target="_blank" rel="noopener">@tracyharrisco</a></li>
+            <li><a href="#">Email Tracy</a></li>
+            <li><a href="#">Take the FRESH Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Tracy Harris Co. All rights reserved.</span>
+        <span class="footer__trademark">Freedom Filled&reg;, The Social Method&reg;, and Freedom Filled&reg; Business are trademarks of Tracy Harris Co.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileNavClose.addEventListener('click', closeMobileNav);
+
+    function closeMobileNav() {
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Scroll reveal (IntersectionObserver)
+    const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Testimonial switcher
+    const testimonials = [
+      {
+        quote: 'Tracy changed the trajectory of my entire business. I went from hustling 60-hour weeks to building a six-figure business in four days. She doesn\u2019t just teach strategy, she teaches you how to live.',
+        name: '[Client Name]',
+        role: 'FFM Member'
+      },
+      {
+        quote: 'Before Tracy, I had a business that ran me. Now I have a business that runs FOR me. The Freedom Filled\u00ae Mastermind was the best investment I have ever made.',
+        name: '[Client Name]',
+        role: 'FFM Member'
+      },
+      {
+        quote: 'I doubled my revenue and halved my hours. Tracy showed me what was possible when you stop doing everything and start doing the right things.',
+        name: '[Client Name]',
+        role: 'FFB Graduate'
+      },
+      {
+        quote: 'The clarity I got in one hot seat with Tracy was worth more than a year of online courses. She sees what you cannot see about your own business.',
+        name: '[Client Name]',
+        role: 'FFM Member'
+      }
+    ];
+
+    const dots = document.querySelectorAll('.testimonial__dot');
+    const quoteEl = document.getElementById('testimonialQuote');
+    const nameEl = document.getElementById('testimonialName');
+    const roleEl = document.getElementById('testimonialRole');
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+        quoteEl.textContent = testimonials[index].quote;
+        nameEl.textContent = testimonials[index].name;
+        roleEl.textContent = testimonials[index].role;
+      });
+    });
+  </script>
+
+</body>
+</html>
