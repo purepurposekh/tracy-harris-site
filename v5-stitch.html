@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tracy Harris | Build a Freedom Filled® Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .font-serif { font-family: 'Instrument Serif', serif; }
+        .font-sans { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1c1c19",
+                      "surface-tint": "#476550",
+                      "surface-container-high": "#ebe8e3",
+                      "tertiary-fixed-dim": "#b2ceaa",
+                      "tertiary": "#496245",
+                      "on-secondary-fixed-variant": "#324b49",
+                      "on-secondary-fixed": "#051f1e",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#f7fff0",
+                      "surface-variant": "#e5e2dd",
+                      "on-primary-container": "#f6fff5",
+                      "tertiary-container": "#627b5c",
+                      "inverse-on-surface": "#f3f0eb",
+                      "on-primary-fixed": "#022110",
+                      "secondary-fixed-dim": "#b1ccc9",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#424843",
+                      "outline-variant": "#c2c8c1",
+                      "outline": "#727972",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#fcf9f4",
+                      "on-secondary-container": "#506967",
+                      "secondary-container": "#cce8e5",
+                      "surface-dim": "#dcdad5",
+                      "surface-container-low": "#f6f3ee",
+                      "surface-container": "#f0ede8",
+                      "surface-container-highest": "#e5e2dd",
+                      "error": "#ba1a1a",
+                      "background": "#fcf9f4",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#5c7c66",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#354d31",
+                      "inverse-primary": "#adcfb5",
+                      "inverse-surface": "#31302d",
+                      "on-tertiary-fixed": "#092009",
+                      "surface-bright": "#fcf9f4",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1c1c19",
+                      "tertiary-fixed": "#ceebc5",
+                      "primary-fixed-dim": "#adcfb5",
+                      "secondary-fixed": "#cce8e5",
+                      "on-primary-fixed-variant": "#2f4d3a",
+                      "primary": "#44634e",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#c8ebd0",
+                      "secondary": "#4a6361"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Instrument Serif"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface font-sans selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<a class="text-2xl font-serif italic text-stone-900 dark:text-stone-50" href="/">Tracy Harris</a>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Experience</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Framework</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Programs</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Journal</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-medium hover:opacity-80 transition-all active:scale-95 duration-200">Get Started</button>
+</div>
+</nav>
+<main>
+<!-- Section 1: HERO -->
+<section class="relative h-[921px] bg-[#1a1a1a] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="Sophisticated portrait of a female entrepreneur in a minimalist studio setting with dramatic soft lighting and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKF3WHxH29R1SLibRRi8eP0oWAJDb4eiEi21WHKxQtQIoGZ8tnT_vE2VwJd1KssVWs9BKgVG4TuicSiD6oKKA2aXoutlcGsIIrNJ1YFsLjvEpvev0DhATGZ8jj6LPeK2isY-k6zz6MkRbYw0zbcxyX6LJFfmyILtypOkkaBm_PFJShEH_w7TX77RtEfL8XS5kpvMb1aI103WYEjMrYAs6kvlNCOeqKLwi0PAlyFrNt-XE5gN4SL7X14hIaWWiY3aZKRfCvL_dnJBMv"/>
+</div>
+<div class="relative z-10 px-12 max-w-7xl mx-auto text-center">
+<span class="block text-[#6e8e77] font-sans font-medium tracking-[0.3em] text-sm mb-6 uppercase">EDUCATOR · SPEAKER · AUTHOR</span>
+<h1 class="font-serif text-6xl md:text-[90px] leading-[0.95] text-stone-50 mb-8 max-w-4xl mx-auto">
+                    Build a Freedom Filled® Business You Actually <i class="italic font-serif">Love</i>
+</h1>
+<p class="font-sans text-stone-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                    The strategic blueprint for high-achieving women who want to scale their impact without sacrificing their soul.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-[#44634e] text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-[#5c7c66] transition-all">Start the Experience</button>
+</div>
+</div>
+</section>
+<!-- Section 2: MARQUEE -->
+<div class="bg-[#1a1a1a] py-4 overflow-hidden border-t border-stone-800/50">
+<div class="flex whitespace-nowrap animate-marquee">
+<div class="flex items-center space-x-12 px-6">
+<span class="text-[#6e8e77] text-sm font-bold tracking-[0.4em] uppercase">NOW ENROLLING · FREEDOM FILLED® BUSINESS</span>
+<span class="text-stone-600 text-2xl material-symbols-outlined">star</span>
+<span class="text-[#6e8e77] text-sm font-bold tracking-[0.4em] uppercase">NOW ENROLLING · FREEDOM FILLED® BUSINESS</span>
+<span class="text-stone-600 text-2xl material-symbols-outlined">star</span>
+<span class="text-[#6e8e77] text-sm font-bold tracking-[0.4em] uppercase">NOW ENROLLING · FREEDOM FILLED® BUSINESS</span>
+<span class="text-stone-600 text-2xl material-symbols-outlined">star</span>
+</div>
+<div class="flex items-center space-x-12 px-6">
+<span class="text-[#6e8e77] text-sm font-bold tracking-[0.4em] uppercase">NOW ENROLLING · FREEDOM FILLED® BUSINESS</span>
+<span class="text-stone-600 text-2xl material-symbols-outlined">star</span>
+<span class="text-[#6e8e77] text-sm font-bold tracking-[0.4em] uppercase">NOW ENROLLING · FREEDOM FILLED® BUSINESS</span>
+<span class="text-stone-600 text-2xl material-symbols-outlined">star</span>
+<span class="text-[#6e8e77] text-sm font-bold tracking-[0.4em] uppercase">NOW ENROLLING · FREEDOM FILLED® BUSINESS</span>
+<span class="text-stone-600 text-2xl material-symbols-outlined">star</span>
+</div>
+</div>
+</div>
+<!-- Section 3: ABOUT -->
+<section class="bg-[#1a1a1a] py-32 px-12">
+<div class="max-w-[1920px] mx-auto flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-[40%]">
+<div class="relative group">
+<img class="rounded-xl grayscale opacity-90 group-hover:grayscale-0 transition-all duration-700 aspect-[4/5] object-cover" data-alt="Editorial portrait of a woman looking away, dramatic cinematic lighting, deep shadows, high-end fashion aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaXVATqnUMTpvHVrYiFPuTEdP-FKMc67-xvw0oPs8KBQWP9GY5J4md3fmfo2aF2tF1da3fOKECuFx3nXXJyfJFue-_uU9uVdQOJwiONZETaNnMojEPlv5DeCe7EziUL9R86WkHEGIMkq4mjYJRmLzfOjp1RM_TG8ybr6ipfaglUgIx6tiGc6S-nptSLSHEdxspU-jB_4tNAMjx8D7DFGfXPO8Ha5VKYBRex2sdGudvGNR7d63aVTgEItjlMI8GN41yumxVEn0mpK5w"/>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border border-stone-800 rounded-full hidden lg:flex items-center justify-center text-stone-400">
+<span class="text-xs tracking-widest uppercase">The Curator</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-[60%] text-stone-50">
+<h2 class="font-serif text-5xl md:text-[72px] leading-[1.1] mb-10 max-w-2xl">
+                        I Refused to Believe <i class="italic text-[#6e8e77]">Burnout</i> Was the Price of Success
+                    </h2>
+<div class="space-y-8 max-w-xl">
+<p class="font-sans text-stone-400 text-lg leading-relaxed font-light">
+                            For years, I was told that building a 7-figure empire meant sacrificing my peace, my health, and my time. I decided to rewrite the rules of modern entrepreneurship.
+                        </p>
+<p class="font-sans text-stone-400 text-lg leading-relaxed font-light">
+                            Today, I help visionary women build systems that support their lives, not consume them. This is about more than profit; it's about absolute agency.
+                        </p>
+<a class="inline-flex items-center gap-4 group mt-6" href="#">
+<span class="text-sm font-bold tracking-[0.2em] uppercase group-hover:mr-2 transition-all">Read My Manifesto</span>
+<span class="material-symbols-outlined text-[#6e8e77]">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: PROGRAMS -->
+<section class="bg-[#f4f1ec] py-32 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<span class="block text-[#44634e] font-sans font-bold tracking-[0.3em] text-xs mb-4 uppercase">Curated Learning</span>
+<h2 class="font-serif text-5xl md:text-[72px] text-stone-900">Courses + Programs</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-white p-12 rounded-lg transition-all hover:bg-[#ebe8e3] duration-500 overflow-hidden flex flex-col justify-between min-h-[500px]">
+<span class="font-serif text-8xl text-stone-100 group-hover:text-stone-200 transition-colors absolute top-4 left-4 z-0">01</span>
+<div class="relative z-10">
+<h3 class="font-serif text-4xl text-stone-900 mb-6">Freedom Foundations</h3>
+<p class="font-sans text-stone-600 leading-relaxed mb-8">Master the essential infrastructure needed to move from solo-operator to CEO of your destiny.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-[#44634e] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#5c7c66] transition-all">Learn More</button>
+</div>
+</div>
+<!-- Card 2 (Staggered) -->
+<div class="group relative bg-white p-12 rounded-lg transition-all hover:bg-[#ebe8e3] duration-500 overflow-hidden flex flex-col justify-between min-h-[500px] md:translate-y-12">
+<span class="font-serif text-8xl text-stone-100 group-hover:text-stone-200 transition-colors absolute top-4 left-4 z-0">02</span>
+<div class="relative z-10">
+<h3 class="font-serif text-4xl text-stone-900 mb-6">The High-Value Vault</h3>
+<p class="font-sans text-stone-600 leading-relaxed mb-8">A comprehensive repository of frameworks and assets designed for rapid business scaling.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-[#44634e] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#5c7c66] transition-all">Learn More</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-white p-12 rounded-lg transition-all hover:bg-[#ebe8e3] duration-500 overflow-hidden flex flex-col justify-between min-h-[500px]">
+<span class="font-serif text-8xl text-stone-100 group-hover:text-stone-200 transition-colors absolute top-4 left-4 z-0">03</span>
+<div class="relative z-10">
+<h3 class="font-serif text-4xl text-stone-900 mb-6">Scale &amp; Soul Elite</h3>
+<p class="font-sans text-stone-600 leading-relaxed mb-8">Exclusive 6-month mentorship for established founders ready to reach multiple 7-figures.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-[#44634e] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#5c7c66] transition-all">Learn More</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: FEATURED -->
+<section class="bg-[#eae7e1] py-32 px-12 mt-12 md:mt-0">
+<div class="max-w-[1920px] mx-auto flex flex-col md:flex-row-reverse gap-20 items-center">
+<div class="w-full md:w-1/2">
+<img class="rounded-lg shadow-2xl object-cover aspect-[4/3]" data-alt="Modern high-end home office interior with a clean minimalist desk, organic textures, and soft evening sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYID0eJetIzbGvUODbGNOe5PuVtQbil7HzbhpxFHl2O3BB0WGJHM2A0RwLpNyyWyRM07r0j-pOvEyQSIlre7l-mJwOj0VkHex0mImbOoXcMJN6fQUE9AFWAb9sWZg8jQByeivS8uMME2da0EJXQRw9NbwXyGXSTMRb_ndhAlIholv-Kc9kWNrmvVAlzkiLMu7ZNr5IHJ1RSjUrapdmfItYisdYl1e_lMUZwifFrpmwkIiaCPEzR_XvN1KIc7Hobi5TLueiuco2rv6I"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-serif text-5xl md:text-[72px] text-stone-900 leading-tight mb-12">Where Women Build Empires</h2>
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<span class="font-serif text-3xl text-[#44634e]">01</span>
+<div>
+<h4 class="font-sans font-bold text-lg mb-2 uppercase tracking-wide">Autonomous Operations</h4>
+<p class="text-stone-600 leading-relaxed max-w-md">Design systems that run your daily operations so you can focus on the vision.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<span class="font-serif text-3xl text-[#44634e]">02</span>
+<div>
+<h4 class="font-sans font-bold text-lg mb-2 uppercase tracking-wide">Signature Positioning</h4>
+<p class="text-stone-600 leading-relaxed max-w-md">Elevate your brand into the premium category to attract high-intent clients effortlessly.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<span class="font-serif text-3xl text-[#44634e]">03</span>
+<div>
+<h4 class="font-sans font-bold text-lg mb-2 uppercase tracking-wide">Sustainable Scaling</h4>
+<p class="text-stone-600 leading-relaxed max-w-md">Increase your revenue without increasing your work hours through smart leverage.</p>
+</div>
+</div>
+</div>
+<button class="bg-[#1c1c19] text-white px-10 py-5 rounded-full text-sm font-bold tracking-widest uppercase mt-16 hover:bg-stone-800 transition-all">Join the Community</button>
+</div>
+</div>
+</section>
+<!-- Section 6: TESTIMONIAL -->
+<section class="bg-[#f4f1ec] py-40 px-12 text-center relative overflow-hidden">
+<span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-[400px] text-stone-900/5 leading-none pointer-events-none">“</span>
+<div class="max-w-4xl mx-auto relative z-10">
+<blockquote class="font-serif text-4xl md:text-[52px] italic text-stone-900 leading-tight mb-12">
+                    "Tracy doesn't just teach business; she teaches freedom. My revenue doubled while my working hours halved. It feels like magic, but it’s actually pure strategy."
+                </blockquote>
+<div class="flex flex-col items-center">
+<div class="w-16 h-[1px] bg-[#44634e] mb-6"></div>
+<cite class="not-italic font-sans text-sm font-bold tracking-[0.3em] uppercase text-[#44634e]">Alexandra Thorne — CEO of Thorne Digital</cite>
+</div>
+</div>
+</section>
+<!-- Section 7: PODCAST -->
+<section class="bg-[#1a1a1a] py-32 px-12 overflow-hidden">
+<div class="max-w-4xl mx-auto text-center mb-20">
+<span class="block text-[#6e8e77] font-sans font-bold tracking-[0.3em] text-xs mb-6 uppercase">Weekly Strategy</span>
+<h2 class="font-serif text-5xl md:text-6xl text-white mb-12">The Freedom Filled® Podcast</h2>
+<div class="relative inline-block group">
+<div class="absolute -inset-4 bg-[#44634e]/20 blur-2xl group-hover:bg-[#44634e]/30 transition-all"></div>
+<img class="w-80 h-80 object-cover rounded-2xl relative z-10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" data-alt="Top view of high-end podcast equipment, studio microphone, and silk fabric on a dark textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtQBK2ZtgHNWz5YV70xf4eCamtZosxcLi8GgoCJDKPNSfLi_DaWoP57g6IbdBqjjgQ6zKCF5gndK3lCBnMTiDr0Ly2GL3TS4WP6Ozcwy_a7HJ0i81ZeThFLVWD1VqlbVgzJeNyVkr__bBpaQ1PxmD6bU0E7KxCXaZCVtVqKZmrxcFPMd6AkUl5EFFLaTK4YFBRwquY7SmVFnHKubucDs1VutJDIWm-z6KcNEVitUuxX-SOSjLaNM5iU5a2o87F57Soj6N3g8kRJ49l"/>
+<div class="absolute inset-0 flex items-center justify-center z-20">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center cursor-pointer shadow-xl transform transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-[#1a1a1a] text-3xl">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="mt-16 flex flex-wrap justify-center gap-6">
+<button class="border border-stone-700/50 text-stone-300 px-8 py-3 rounded-full text-sm font-medium hover:bg-stone-800 transition-all flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">podcasts</span> Apple Podcasts
+                    </button>
+<button class="border border-stone-700/50 text-stone-300 px-8 py-3 rounded-full text-sm font-medium hover:bg-stone-800 transition-all flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">music_note</span> Spotify
+                    </button>
+<button class="border border-stone-700/50 text-stone-300 px-8 py-3 rounded-full text-sm font-medium hover:bg-stone-800 transition-all flex items-center gap-3">
+<span class="material-symbols-outlined text-lg">rss_feed</span> RSS Feed
+                    </button>
+</div>
+</div>
+<!-- Bottom Marquee for Podcast -->
+<div class="flex whitespace-nowrap opacity-5 animate-marquee mt-12">
+<span class="text-stone-50 text-[120px] font-bold tracking-tighter uppercase mr-20">LISTEN NOW</span>
+<span class="text-stone-50 text-[120px] font-bold tracking-tighter uppercase mr-20">LISTEN NOW</span>
+<span class="text-stone-50 text-[120px] font-bold tracking-tighter uppercase mr-20">LISTEN NOW</span>
+</div>
+</section>
+<!-- Section 8: LEAD MAGNET -->
+<section class="bg-[#eae7e1] py-32 px-12">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="bg-stone-200 p-8 rounded-lg rotate-2 relative shadow-lg">
+<img class="w-full h-full object-cover rounded shadow-md" data-alt="Digital mockup of an editorial business planner on an iPad propped up on a clean linen surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwWYJaBUMYOID0uPlrWJnnEkEM_ulLmvwecrkpanqUjz_GBjq9QVXsZWi14ZGcTQ3DQRLjsYVjZfLrDOCfs30hKzWh4cmHMBgqrYHmVzAw0QOqLyrXtS0rsPtSaedqDribEX3r4PiaJyZ38WhA3yTQGLzjp8pm7-xer2tKA3HWV_I1gDZzmi8WgyLYY3sYbylLkxtxOhzBcADyQXNvZGw_VIpHWG_6w6zvL_bRPgsnBr3AQliu7pUAe36S4wFoZXk-yBFwZQ-a8XRB"/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-[#44634e] font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Free Resource</span>
+<h2 class="font-serif text-5xl text-stone-900 mb-6">The Freedom Roadmap</h2>
+<p class="text-stone-600 text-lg mb-10 leading-relaxed">Download my signature 5-step framework to audit your business and reclaim 10 hours of your week without losing a single cent in revenue.</p>
+<div class="flex flex-col gap-4">
+<input class="bg-transparent border-b border-stone-400 py-4 focus:outline-none focus:border-[#44634e] text-stone-800 transition-all" placeholder="Your primary email address" type="email"/>
+<button class="bg-[#44634e] text-white px-10 py-5 rounded-full text-sm font-bold tracking-widest uppercase mt-4 self-start hover:bg-[#5c7c66] transition-all">Get the Guide</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1e3735] dark:bg-[#0f1b1a] relative w-full py-20 px-12">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<span class="text-3xl font-serif text-stone-50 mb-8 block">Tracy Harris</span>
+<p class="text-stone-300/70 text-base max-w-sm font-light leading-relaxed mb-8">
+                    Empowering visionary founders to lead with intention, scale with systems, and live with absolute freedom.
+                </p>
+<div class="flex gap-6">
+<a class="text-stone-300/70 hover:text-stone-50 transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-stone-300/70 hover:text-stone-50 transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-stone-50 font-sans text-sm tracking-widest uppercase mb-8">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">The Experience</a></li>
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">Program Catalog</a></li>
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">Success Stories</a></li>
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">The Journal</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-stone-50 font-sans text-sm tracking-widest uppercase mb-8">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">Terms of Service</a></li>
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">Contact</a></li>
+<li><a class="text-stone-300/70 hover:text-stone-50 transition-colors text-sm font-sans tracking-widest uppercase" href="#">Press</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1920px] mx-auto mt-20 pt-8 border-t border-stone-50/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-stone-300/70 text-xs tracking-widest uppercase">© 2024 Tracy Harris. All Rights Reserved.</span>
+<span class="text-stone-300/30 text-[10px] tracking-[0.5em] uppercase">Built for Freedom</span>
+</div>
+</footer>
+</body></html>

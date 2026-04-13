@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracy Harris | Build a Freedom Filled® Business You Actually Love</title>
+  <meta name="description" content="Educator, speaker, and author Tracy Harris helps women build Freedom Filled® businesses they love. 10+ years. Multi-seven figures. Four-day work weeks.">
+
+  <!-- Google Fonts: Instrument Serif 400/400i + DM Sans 300/400/500/600 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================================================
+       DESIGN TOKENS - DESIGN.v3.md source of truth
+       ======================================================================== */
+    :root {
+      /* Foundation */
+      --black:       #1a1a1a;
+      --canvas:      #f4f1ec;
+      --warm-stone:  #eae7e1;
+      --white:       #ffffff;
+
+      /* Brand Accent */
+      --sage:        #6e8e77;
+      --sage-dark:   #5a7a63;
+      --sage-light:  #a8c4a0;
+
+      /* Text */
+      --text-dark:   #1a1a1a;
+      --text-light:  #ffffff;
+      --text-muted:  #8a8a8a;
+      --text-cream:  rgba(244, 241, 236, 0.8);
+
+      /* Structural */
+      --sand:        #d4cec6;
+      --teal-deep:   #1e3735;
+
+      /* Content widths */
+      --width-narrow:   680px;
+      --width-standard: 1080px;
+      --width-wide:     1200px;
+
+      /* Spacing scale */
+      --space-xs:  8px;
+      --space-sm:  16px;
+      --space-md:  24px;
+      --space-lg:  48px;
+      --space-xl:  80px;
+      --space-2xl: 120px;
+      --space-3xl: 160px;
+
+      /* Section padding */
+      --section-pad: clamp(80px, 14vw, 160px);
+
+      /* Typography */
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body:    'DM Sans', -apple-system, sans-serif;
+
+      /* Transitions */
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --duration: 0.4s;
+    }
+
+    /* ========================================================================
+       RESET & BASE
+       ======================================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.80;
+      color: var(--text-dark);
+      background: var(--canvas);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--duration) var(--ease);
+    }
+
+    /* ========================================================================
+       TYPOGRAPHY
+       ======================================================================== */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      line-height: 1.70;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 20px;
+    }
+
+    .eyebrow--light {
+      color: var(--sage-light);
+    }
+
+    .heading-hero {
+      font-family: var(--font-display);
+      font-size: 90px;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: 0;
+      color: var(--white);
+    }
+
+    .heading-section {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 1.10;
+      letter-spacing: 0;
+    }
+
+    .heading-card {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .heading-quote {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .body-lead {
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .caption {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.40;
+      text-transform: uppercase;
+    }
+
+    /* ========================================================================
+       BUTTONS
+       ======================================================================== */
+    .btn-primary {
+      display: inline-block;
+      background: var(--sage);
+      color: var(--white);
+      font: 500 13px/1 var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.4s ease, transform 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      padding: 18px 44px;
+      border-radius: 100px;
+      border: none;
+      font: 500 13px/1 var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.4s ease, transform 0.2s ease;
+    }
+    .btn-dark:hover {
+      background: #2a2a2a;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      padding: 17px 42px;
+      border-radius: 100px;
+      border: 1.5px solid rgba(244, 241, 236, 0.4);
+      font: 500 13px/1 var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 0.4s ease, color 0.4s ease;
+    }
+    .btn-ghost:hover {
+      border-color: var(--sage-light);
+      color: var(--sage-light);
+    }
+
+    .btn-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--sage);
+      font: 500 13px/1 var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .btn-arrow span {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+    .btn-arrow:hover {
+      color: var(--sage-dark);
+    }
+    .btn-arrow:hover span {
+      transform: translateX(6px);
+    }
+
+    /* ========================================================================
+       SCROLL REVEAL
+       ======================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ========================================================================
+       1. HEADER / NAV
+       ======================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 clamp(24px, 4vw, 60px);
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.5s var(--ease), backdrop-filter 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    }
+
+    .site-header.scrolled {
+      background: rgba(26, 26, 26, 0.85);
+      backdrop-filter: blur(20px) saturate(1.2);
+      -webkit-backdrop-filter: blur(20px) saturate(1.2);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    .header-logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .header-nav a {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--white);
+      transition: color var(--duration) var(--ease);
+    }
+    .header-nav a:hover {
+      color: var(--sage);
+    }
+
+    .header-cta {
+      font: 500 13px/1 var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--sage);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.4s ease;
+    }
+    .header-cta:hover {
+      background: var(--sage-dark);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1010;
+    }
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 1.5px;
+      background: var(--white);
+      transition: transform 0.4s var(--ease), opacity 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile overlay */
+    .mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 26, 0.97);
+      z-index: 1005;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s var(--ease);
+    }
+    .mobile-nav-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-nav-overlay a {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--white);
+      transition: color 0.3s ease;
+    }
+    .mobile-nav-overlay a:hover {
+      color: var(--sage);
+    }
+
+    /* ========================================================================
+       2. HERO
+       ======================================================================== */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      opacity: 0.8;
+    }
+
+    /* Placeholder for when no real image */
+    .hero-image-placeholder {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #222 100%);
+      opacity: 0.8;
+    }
+    .hero-image-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('tracy-hero.jpg') center 20% / cover no-repeat;
+      opacity: 0.8;
+    }
+
+    /* Dark gradient overlay for text legibility */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(26, 26, 26, 0.75) 0%,
+        rgba(26, 26, 26, 0.45) 50%,
+        rgba(26, 26, 26, 0.15) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 160px clamp(24px, 4vw, 60px) var(--section-pad);
+      width: 100%;
+    }
+
+    .hero-content .eyebrow {
+      color: var(--sage-light);
+      margin-bottom: 28px;
+    }
+
+    .hero-content .heading-hero {
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .hero-content .heading-hero em {
+      font-style: italic;
+    }
+
+    .hero-subtext {
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-cream);
+      max-width: 500px;
+      margin-bottom: 48px;
+    }
+
+    /* ========================================================================
+       3. MARQUEE BAND
+       ======================================================================== */
+    .marquee-band {
+      background: var(--black);
+      height: 55px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-top: 1px solid rgba(110, 142, 119, 0.15);
+      border-bottom: 1px solid rgba(110, 142, 119, 0.15);
+    }
+
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 30s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sage);
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+    }
+
+    /* ========================================================================
+       4. ABOUT / INTRO
+       ======================================================================== */
+    .about {
+      background: var(--black);
+      padding: var(--section-pad) 0;
+      overflow: hidden;
+    }
+
+    .about-inner {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+      display: grid;
+      grid-template-columns: 40% 1fr;
+      gap: 80px;
+      align-items: center;
+      min-height: 600px;
+    }
+
+    .about-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+    }
+
+    .about-image-placeholder {
+      position: absolute;
+      inset: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #2a2a2a;
+    }
+    .about-image-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('tracy-about.jpg') center / cover no-repeat;
+      opacity: 0.8;
+    }
+
+    .about-text .heading-section {
+      color: var(--white);
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .about-text .heading-section em {
+      font-style: italic;
+    }
+
+    .about-text .heading-section .sage-word {
+      color: var(--sage-light);
+    }
+
+    .about-body {
+      color: var(--text-cream);
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.80;
+      max-width: 480px;
+      margin-bottom: 40px;
+    }
+
+    .about-text .btn-arrow {
+      color: var(--sage-light);
+    }
+    .about-text .btn-arrow:hover {
+      color: var(--sage);
+    }
+
+    /* ========================================================================
+       5. PROGRAMS
+       ======================================================================== */
+    .programs {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+    }
+
+    .programs-inner {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .programs-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .programs-header .heading-section {
+      color: var(--text-dark);
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .program-card {
+      position: relative;
+      transition: transform 0.5s var(--ease);
+    }
+    .program-card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Staggered vertical offset */
+    .program-card:nth-child(1) {
+      margin-top: 60px;
+    }
+    .program-card:nth-child(2) {
+      margin-top: 0;
+    }
+    .program-card:nth-child(3) {
+      margin-top: 80px;
+    }
+
+    .program-card-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--warm-stone);
+      margin-bottom: 28px;
+    }
+
+    .program-card-image .img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease;
+    }
+    .program-card-image .img-placeholder span {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* Hover reveal overlay */
+    .program-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 26, 0.88);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.5s var(--ease);
+      border-radius: 8px;
+      padding: 32px;
+    }
+    .program-card-image:hover .program-card-overlay {
+      opacity: 1;
+    }
+    .program-card-overlay p {
+      color: var(--text-cream);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.70;
+      text-align: center;
+    }
+
+    /* Decorative numbers */
+    .program-card-number {
+      position: absolute;
+      top: -20px;
+      left: -10px;
+      font-family: var(--font-body);
+      font-size: 100px;
+      font-weight: 600;
+      color: var(--text-dark);
+      opacity: 0.08;
+      line-height: 1;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .program-card-title {
+      font-family: var(--font-display);
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .program-card-desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .programs-cta {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    /* ========================================================================
+       6. FEATURED - FFM SPOTLIGHT
+       ======================================================================== */
+    .featured {
+      background: var(--warm-stone);
+      padding: var(--section-pad) 0;
+      overflow: hidden;
+    }
+
+    .featured-inner {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+      display: grid;
+      grid-template-columns: 45% 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .featured-text .eyebrow {
+      color: var(--sage);
+    }
+
+    .featured-text .heading-section {
+      color: var(--text-dark);
+      margin-bottom: 48px;
+      max-width: 500px;
+    }
+
+    .featured-text .heading-section em {
+      font-style: italic;
+    }
+
+    .featured-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .featured-benefit {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .featured-benefit-number {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      padding-top: 2px;
+    }
+
+    .featured-benefit-title {
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .featured-benefit-desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+
+    .featured-image {
+      position: relative;
+      width: 100%;
+      min-height: 580px;
+    }
+
+    .featured-image-placeholder {
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--sand);
+      box-shadow: 12px 16px 40px rgba(26, 26, 26, 0.12);
+    }
+    .featured-image-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('tracy-speaker.jpg') center / cover no-repeat;
+    }
+
+    /* ========================================================================
+       7. TESTIMONIAL
+       ======================================================================== */
+    .testimonial {
+      background: var(--canvas);
+      padding: var(--section-pad) 0;
+      overflow: hidden;
+    }
+
+    .testimonial-inner {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .testimonial-portrait {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--sand);
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-portrait span {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .testimonial-content {
+      position: relative;
+    }
+
+    /* Decorative quote mark */
+    .testimonial-quote-mark {
+      position: absolute;
+      top: -40px;
+      left: -20px;
+      width: 120px;
+      height: 120px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .testimonial-text {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .testimonial-divider {
+      width: 80px;
+      height: 1px;
+      background: var(--sand);
+      margin-bottom: 24px;
+    }
+
+    .testimonial-attribution {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    /* ========================================================================
+       8. PODCAST
+       ======================================================================== */
+    .podcast {
+      background: var(--black);
+      padding: var(--section-pad) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .podcast-inner {
+      max-width: var(--width-standard);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .podcast-artwork {
+      width: 280px;
+      height: 280px;
+      border-radius: 16px;
+      background: #2a2a2a;
+      margin: 0 auto 48px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    }
+    .podcast-artwork::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('tracy-podcast.jpg') center / cover no-repeat;
+      opacity: 0.85;
+    }
+    .podcast-artwork span {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .podcast-title {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1.10;
+      color: var(--sage-light);
+      margin-bottom: 16px;
+    }
+
+    .podcast-subtitle {
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--white);
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .podcast-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Scrolling "LISTEN NOW" marquee at bottom */
+    .podcast-marquee {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      z-index: 1;
+      height: 120px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .podcast-marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+
+    .podcast-marquee-track span {
+      font-family: var(--font-body);
+      font-size: 100px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      opacity: 0.03;
+      padding: 0 40px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* ========================================================================
+       9. LEAD MAGNET CTA
+       ======================================================================== */
+    .lead-magnet {
+      background: var(--warm-stone);
+      padding: clamp(60px, 8vw, 100px) 0;
+    }
+
+    .lead-magnet-inner {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+      display: grid;
+      grid-template-columns: 200px 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .lead-magnet-cover {
+      width: 200px;
+      height: 260px;
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 8px 12px 32px rgba(26, 26, 26, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .lead-magnet-cover span {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .lead-magnet-text .eyebrow {
+      color: var(--sage);
+      margin-bottom: 12px;
+    }
+
+    .lead-magnet-heading {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .lead-magnet-desc {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-muted);
+      max-width: 420px;
+    }
+
+    /* ========================================================================
+       10. FOOTER
+       ======================================================================== */
+    .site-footer {
+      background: var(--teal-deep);
+      padding: 80px 0 40px;
+    }
+
+    .footer-inner {
+      max-width: var(--width-wide);
+      margin: 0 auto;
+      padding: 0 clamp(24px, 4vw, 60px);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-brand .header-logo {
+      font-size: 22px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .footer-brand-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.55);
+      max-width: 260px;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--sage-light);
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.55);
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: var(--sage-light);
+    }
+
+    /* Social icons */
+    .footer-social {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .footer-social a:hover {
+      border-color: var(--sage-light);
+      background: rgba(168, 196, 160, 0.1);
+    }
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      fill: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Subscribe */
+    .footer-subscribe {
+      display: flex;
+      gap: 0;
+      margin-top: 16px;
+    }
+    .footer-subscribe input {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-right: none;
+      border-radius: 100px 0 0 100px;
+      color: var(--white);
+      outline: none;
+      flex: 1;
+      transition: border-color 0.3s ease;
+    }
+    .footer-subscribe input::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+    .footer-subscribe input:focus {
+      border-color: var(--sage);
+    }
+    .footer-subscribe button {
+      font: 500 12px/1 var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--sage);
+      color: var(--white);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 0 100px 100px 0;
+      cursor: pointer;
+      transition: background 0.4s ease;
+    }
+    .footer-subscribe button:hover {
+      background: var(--sage-dark);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-trademark {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ========================================================================
+       RESPONSIVE - MOBILE (<768px)
+       ======================================================================== */
+    @media (max-width: 768px) {
+
+      /* Header */
+      .header-nav { display: none; }
+      .hamburger { display: flex; }
+
+      /* Hero */
+      .heading-hero {
+        font-size: 44px;
+      }
+      .hero-subtext {
+        font-size: 16px;
+      }
+      .hero-content {
+        padding-top: 140px;
+      }
+
+      /* Marquee */
+      .marquee-track span {
+        font-size: 14px;
+      }
+
+      /* About */
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .about-image {
+        min-height: 400px;
+      }
+      .heading-section {
+        font-size: 36px;
+      }
+
+      /* Programs */
+      .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+      .program-card:nth-child(1),
+      .program-card:nth-child(2),
+      .program-card:nth-child(3) {
+        margin-top: 0;
+      }
+      .program-card-number {
+        font-size: 80px;
+      }
+      .programs-header .heading-section {
+        font-size: 36px;
+      }
+
+      /* Featured */
+      .featured-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .featured-image {
+        min-height: 400px;
+        order: -1;
+      }
+
+      /* Testimonial */
+      .testimonial-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .testimonial-portrait {
+        margin: 0 auto;
+        width: 140px;
+        height: 140px;
+      }
+      .testimonial-text {
+        font-size: 30px;
+      }
+      .testimonial-divider {
+        margin: 0 auto 24px;
+      }
+
+      /* Podcast */
+      .podcast-title {
+        font-size: 32px;
+      }
+      .podcast-artwork {
+        width: 220px;
+        height: 220px;
+      }
+      .podcast-marquee-track span {
+        font-size: 60px;
+      }
+
+      /* Lead Magnet */
+      .lead-magnet-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+      .lead-magnet-cover {
+        margin: 0 auto;
+        width: 160px;
+        height: 210px;
+      }
+      .lead-magnet-heading {
+        font-size: 30px;
+      }
+      .lead-magnet-desc {
+        max-width: 100%;
+      }
+      .lead-magnet-inner .btn-primary {
+        margin: 0 auto;
+      }
+
+      /* Footer */
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========================================================================
+       TABLET (768-1024px)
+       ======================================================================== */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .heading-hero {
+        font-size: 64px;
+      }
+      .heading-section {
+        font-size: 52px;
+      }
+      .testimonial-text {
+        font-size: 38px;
+      }
+      .about-inner {
+        grid-template-columns: 35% 1fr;
+        gap: 48px;
+      }
+      .featured-inner {
+        grid-template-columns: 50% 1fr;
+        gap: 48px;
+      }
+      .footer-top {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================================================================
+       1. HEADER / NAV
+       ================================================================ -->
+  <header class="site-header" id="siteHeader">
+    <a href="/" class="header-logo">Tracy Harris</a>
+    <nav class="header-nav">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#contact">Contact</a>
+      <a href="#apply" class="header-cta">Apply Now</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#programs" class="mobile-nav-link">Programs</a>
+    <a href="#podcast" class="mobile-nav-link">Podcast</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="#apply" class="btn-primary" style="margin-top: 20px;">Apply Now</a>
+  </div>
+
+  <!-- ================================================================
+       2. HERO
+       ================================================================ -->
+  <section class="hero">
+    <div class="hero-image-placeholder" role="img" aria-label="Tracy Harris portrait"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow eyebrow--light reveal">Educator &middot; Speaker &middot; Author</p>
+      <h1 class="heading-hero reveal">Build a Freedom Filled&reg; Business You Actually <em>Love</em></h1>
+      <p class="hero-subtext reveal">Helping women create thriving online businesses with the freedom, revenue, and spaciousness to live a life they designed on purpose.</p>
+      <a href="#apply" class="btn-primary reveal">Begin Your Journey</a>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       3. MARQUEE BAND
+       ================================================================ -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+      <span>Now Enrolling &middot; Freedom Filled&reg; Business &middot;</span>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       4. ABOUT / INTRO
+       ================================================================ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-image reveal">
+        <div class="about-image-placeholder" role="img" aria-label="Tracy Harris portrait"></div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow eyebrow--light reveal">My Story</p>
+        <h2 class="heading-section reveal">I Refused to Believe <em class="sage-word"><em>Burnout</em></em> Was the Price of Success</h2>
+        <p class="about-body reveal">
+          I built a multi-seven-figure business while raising two boys, prioritising my health, and living between Australia and Bali. I work four days a week, take a full week off each month, and my business keeps growing.
+        </p>
+        <p class="about-body reveal">
+          It did not happen by accident. It happened by design. And I can show you how to do the same.
+        </p>
+        <a href="#" class="btn-arrow reveal">Read My Full Story <span>&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       5. PROGRAMS
+       ================================================================ -->
+  <section class="programs" id="programs">
+    <div class="programs-inner">
+      <div class="programs-header">
+        <p class="eyebrow reveal">What We Offer</p>
+        <h2 class="heading-section reveal">Courses + Programs</h2>
+      </div>
+      <div class="programs-grid">
+
+        <!-- Card 1: FFB -->
+        <div class="program-card reveal">
+          <span class="program-card-number">01</span>
+          <div class="program-card-image">
+            <div class="img-placeholder"><span>FFB Image</span></div>
+            <div class="program-card-overlay">
+              <p>12 months of mentorship, community, and proven frameworks to build a Freedom Filled&reg; business from the ground up.</p>
+            </div>
+          </div>
+          <h3 class="program-card-title">Freedom Filled&reg; Business Mentorship</h3>
+          <p class="program-card-desc">Your entry point. Build the foundations of a thriving online business with structure, strategy, and support.</p>
+          <a href="#" class="btn-arrow">Learn More <span>&rarr;</span></a>
+        </div>
+
+        <!-- Card 2: FFM -->
+        <div class="program-card reveal">
+          <span class="program-card-number">02</span>
+          <div class="program-card-image">
+            <div class="img-placeholder"><span>FFM Image</span></div>
+            <div class="program-card-overlay">
+              <p>For established business owners ready to scale. Retreats, hot seats, 1:1 access. Application only. Max 20 women.</p>
+            </div>
+          </div>
+          <h3 class="program-card-title">Freedom Filled&reg; Mastermind</h3>
+          <p class="program-card-desc">The premium experience. Intimate, high-touch, and designed for women building something extraordinary.</p>
+          <a href="#" class="btn-arrow">Apply Now <span>&rarr;</span></a>
+        </div>
+
+        <!-- Card 3: Workshop -->
+        <div class="program-card reveal">
+          <span class="program-card-number">03</span>
+          <div class="program-card-image">
+            <div class="img-placeholder"><span>Workshop Image</span></div>
+            <div class="program-card-overlay">
+              <p>Free monthly workshops packed with actionable strategy. A taste of what working with Tracy is like.</p>
+            </div>
+          </div>
+          <h3 class="program-card-title">Monthly Workshops</h3>
+          <p class="program-card-desc">Free, live trainings each month. Real strategy, real results, zero fluff. Your first step into this world.</p>
+          <a href="#" class="btn-arrow">Register Free <span>&rarr;</span></a>
+        </div>
+
+      </div>
+      <div class="programs-cta reveal">
+        <a href="#" class="btn-primary">Explore All Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       6. FEATURED - FFM SPOTLIGHT
+       ================================================================ -->
+  <section class="featured">
+    <div class="featured-inner">
+      <div class="featured-text">
+        <p class="eyebrow reveal">The Mastermind</p>
+        <h2 class="heading-section reveal">Where Women Build <em>Empires</em></h2>
+        <ul class="featured-benefits">
+          <li class="featured-benefit reveal">
+            <span class="featured-benefit-number">01</span>
+            <div>
+              <p class="featured-benefit-title">Intimate, High-Touch Container</p>
+              <p class="featured-benefit-desc">Maximum 20 women per cohort. Not a course. A partnership. Tracy knows your business inside and out.</p>
+            </div>
+          </li>
+          <li class="featured-benefit reveal">
+            <span class="featured-benefit-number">02</span>
+            <div>
+              <p class="featured-benefit-title">Retreats, Hot Seats, 1:1 Access</p>
+              <p class="featured-benefit-desc">Bali retreats, weekly calls, real-time feedback. The kind of support that changes everything.</p>
+            </div>
+          </li>
+          <li class="featured-benefit reveal">
+            <span class="featured-benefit-number">03</span>
+            <div>
+              <p class="featured-benefit-title">Proven Results Over 7+ Years</p>
+              <p class="featured-benefit-desc">This is not new. Tracy has run the mastermind for over seven years, refining it season after season.</p>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="btn-dark reveal">Apply for FFM</a>
+      </div>
+      <div class="featured-image reveal">
+        <div class="featured-image-placeholder" role="img" aria-label="Tracy Harris at FFM retreat"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       7. TESTIMONIAL
+       ================================================================ -->
+  <section class="testimonial">
+    <div class="testimonial-inner">
+      <div class="testimonial-portrait reveal">
+        <span>Portrait</span>
+      </div>
+      <div class="testimonial-content reveal">
+        <!-- Decorative quote mark -->
+        <svg class="testimonial-quote-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="90" font-family="Instrument Serif, Georgia, serif" font-size="140" fill="#1a1a1a">"</text>
+        </svg>
+        <p class="testimonial-text">[INSERT CLIENT TESTIMONIAL] She helped me see what was possible when I stopped playing small and started building with intention.</p>
+        <div class="testimonial-divider"></div>
+        <p class="testimonial-attribution">[Client Name] &middot; [Business Name]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       8. PODCAST
+       ================================================================ -->
+  <section class="podcast" id="podcast">
+    <div class="podcast-inner">
+      <div class="podcast-artwork reveal">
+        <span>Podcast Art</span>
+      </div>
+      <h2 class="podcast-title reveal">Mums With Hustle Podcast</h2>
+      <p class="podcast-subtitle reveal">500+ episodes of real talk on building a business that fits your life. Strategy, stories, and the occasional pep talk from a friend who gets it.</p>
+      <div class="podcast-buttons reveal">
+        <a href="#" class="btn-ghost">Spotify</a>
+        <a href="#" class="btn-ghost">Apple Podcasts</a>
+        <a href="#" class="btn-ghost">Amazon Music</a>
+      </div>
+    </div>
+    <div class="podcast-marquee" aria-hidden="true">
+      <div class="podcast-marquee-track">
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+        <span>Listen Now</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       9. LEAD MAGNET CTA
+       ================================================================ -->
+  <section class="lead-magnet">
+    <div class="lead-magnet-inner">
+      <div class="lead-magnet-cover reveal">
+        <span>Free Guide Cover</span>
+      </div>
+      <div class="lead-magnet-text reveal">
+        <p class="eyebrow">Free Resource</p>
+        <h2 class="lead-magnet-heading">The F.R.E.S.H. Framework Guide</h2>
+        <p class="lead-magnet-desc">Five pillars to build a business that gives you freedom, revenue, and the spaciousness to enjoy it all. Yours free, instantly.</p>
+      </div>
+      <div class="reveal">
+        <a href="#" class="btn-primary">Download Free Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       10. FOOTER
+       ================================================================ -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <span class="header-logo">Tracy Harris</span>
+          <p class="footer-brand-desc">Helping women build Freedom Filled&reg; businesses by design. Educator, speaker, author, and mum of two.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/tracyharrisco" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554v-11.452h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zm-15.11-13.019c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019h-3.564v-11.452h3.564v11.452zm15.106-20.452h-20.454c-.979 0-1.771.774-1.771 1.729v20.542c0 .956.792 1.729 1.771 1.729h20.451c.978 0 1.778-.773 1.778-1.729v-20.542c0-.955-.8-1.729-1.778-1.729z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- About column -->
+        <div class="footer-col">
+          <p class="footer-col-title">About</p>
+          <ul class="footer-links">
+            <li><a href="#">My Story</a></li>
+            <li><a href="#">Philosophy</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Speaking</a></li>
+          </ul>
+        </div>
+
+        <!-- Pages column -->
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Free Resources</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs column -->
+        <div class="footer-col">
+          <p class="footer-col-title">Programs</p>
+          <ul class="footer-links">
+            <li><a href="#">FFB Mentorship</a></li>
+            <li><a href="#">FFM Mastermind</a></li>
+            <li><a href="#">Workshops</a></li>
+            <li><a href="#">FRESH Quiz</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect column -->
+        <div class="footer-col">
+          <p class="footer-col-title">Connect</p>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/tracyharrisco">@tracyharrisco</a></li>
+            <li><a href="#">hello@tracyharris.co</a></li>
+          </ul>
+          <p class="footer-col-title" style="margin-top: 28px;">Subscribe</p>
+          <div class="footer-subscribe">
+            <input type="email" placeholder="Your email" aria-label="Email address">
+            <button type="button">Join</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Tracy Harris Co. All rights reserved.</p>
+        <p class="footer-trademark">Freedom Filled&reg; is a registered trademark of Tracy Harris Co.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+     SCRIPTS
+     ================================================================ -->
+  <script>
+    // ---- Header scroll effect ----
+    const header = document.getElementById('siteHeader');
+    let lastScroll = 0;
+
+    function onScroll() {
+      const scrollY = window.scrollY;
+      if (scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      lastScroll = scrollY;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // ---- Mobile nav ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ---- Scroll reveal ----
+    const revealElements = document.querySelectorAll('.reveal');
+
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            // Stagger children slightly
+            const delay = entry.target.dataset.delay || 0;
+            setTimeout(function() {
+              entry.target.classList.add('visible');
+            }, delay);
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(function(el, index) {
+        // Add stagger delay to sibling reveals
+        const parent = el.parentElement;
+        const siblings = parent.querySelectorAll(':scope > .reveal');
+        if (siblings.length > 1) {
+          const siblingIndex = Array.from(siblings).indexOf(el);
+          el.dataset.delay = siblingIndex * 100;
+        }
+        revealObserver.observe(el);
+      });
+    } else {
+      // If reduced motion, show everything immediately
+      revealElements.forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
+  </script>
+
+</body>
+</html>
