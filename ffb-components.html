@@ -83,6 +83,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .top-menu nav a:first-child { font-weight: 600; }
 .top-menu nav a:hover { opacity: 0.7; }
 .top-menu .mobile-toggle { display: none; color: var(--dark-teal); }
+.top-menu .mobile-login { display: none; }
 
 /* ============================================
    2. HERO
@@ -420,10 +421,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .label-text { font-size: 13px; }
   .eyebrow { font-size: 13px; }
 
-  /* Hero - Showit mobile: 740px height, photo at TOP bleeding edges, content left-aligned below */
-  .hero .container { min-height: 740px; flex-direction: column; }
-  .hero-image { position: relative; right: auto; top: auto; width: calc(100% + 48px); margin-left: -24px; height: 195px; background-size: cover; background-position: 50% 50%; order: -1; z-index: 2; }
-  .hero-panel { width: 100%; padding: 32px 24px 40px; text-align: left; min-height: auto; margin-top: 0; align-items: flex-start; }
+  /* Hero - matches original mobile: full-width photo at top (tall), content left-aligned below */
+  .hero .container { min-height: auto; flex-direction: column; }
+  .hero-image { position: relative; right: auto; top: auto; width: calc(100% + 48px); margin-left: -24px; height: 55vw; background-size: cover; background-position: 50% 50%; order: -1; z-index: 2; }
+  .hero-panel { width: 100%; padding: 40px 24px 48px; text-align: left; min-height: auto; margin-top: 0; align-items: flex-start; }
   .hero-panel .heading-hero { font-size: 43px; text-align: left; }
   .hero-panel .body-text { font-size: 14px; text-align: left; line-height: 1.7; max-width: 100%; }
   .hero-panel .btn { align-self: flex-start; }
@@ -557,12 +558,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .footer .container { flex-direction: column; gap: 16px; text-align: center; }
   .footer .links { justify-content: center; }
 
-  /* Nav - hamburger menu on mobile */
-  .top-menu .container { flex-wrap: wrap; }
+  /* Nav - minimal on mobile: just logo + LOGIN (matches original Showit mobile) */
+  .top-menu .container { flex-wrap: nowrap; }
   .top-menu nav { display: none; }
-  .top-menu .mobile-toggle { display: block; }
-  .top-menu.open nav { display: flex; flex-direction: column; width: 100%; gap: 16px; padding: 16px 0; align-items: flex-start; }
-  .top-menu.open nav a { font-size: 13px; }
+  .top-menu .mobile-toggle { display: none; }
+  .top-menu .mobile-login { display: block; font-family: 'Poppins', sans-serif; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--dark-teal); font-weight: 400; }
 
   /* Personalised mentorship + feature sections - prevent overflow */
   .feature-section .text-col .heading-mid,
@@ -597,6 +597,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <button class="mobile-toggle" onclick="this.closest('.top-menu').classList.toggle('open')" aria-label="Menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
+    <a href="#" class="mobile-login">LOGIN</a>
     <nav>
       <a href="#">LOGIN</a>
       <a href="#faq-s">FAQ</a>
