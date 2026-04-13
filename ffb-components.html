@@ -204,11 +204,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================ */
 .results { background: var(--dark-teal); padding: 100px 0; color: var(--white); }
 .results .container { max-width: 960px; }
-.results .heading-section { font-size: 75px; color: var(--white); text-align: center; margin-bottom: 60px; }
+.results .heading-section { font-family: 'Editors Note Regular', serif; font-size: 75px; color: var(--white); text-align: center; margin-bottom: 60px; font-weight: 400; }
 .result-item { border-top: 1px solid rgba(255,255,255,0.5); padding: 24px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
-.result-item .heading-small { color: var(--white); margin-bottom: 8px; }
-.result-item .body-text-sm { color: var(--white); }
-.result-item .eyebrow { color: var(--white); text-align: right; white-space: nowrap; padding-top: 4px; }
+.result-item .heading-small { font-family: 'Editors Note Regular', serif; font-size: 32px; color: var(--white); margin-bottom: 8px; font-weight: 400; }
+.result-item .body-text-sm { font-size: 15px; color: var(--white); }
+.result-item .eyebrow { font-family: 'Public Sans', sans-serif; font-weight: 500; color: var(--white); text-align: right; white-space: nowrap; padding-top: 4px; }
 .results .btn { margin-top: 48px; display: block; width: 182px; margin-left: auto; margin-right: auto; }
 
 /* ============================================
@@ -262,8 +262,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .about-me .image-col img { width: 100%; height: 502px; object-fit: cover; object-position: 100% 100%; }
 .about-me .script-label { font-size: 60px; color: #101010; margin-bottom: -12px; }
 .about-me .heading-mid { font-size: 48px; color: #101010; margin-bottom: 20px; line-height: 1; }
-.about-me .body-text { font-family: 'Public Sans', sans-serif; color: #101010; margin-bottom: 12px; }
-.about-me .eyebrow { color: #101010; font-size: 15px; }
+.about-me .body-text { font-family: 'Public Sans', sans-serif; font-size: 16px; color: #101010; margin-bottom: 12px; line-height: 1.5; }
+.about-me .eyebrow { font-family: 'Public Sans', sans-serif; font-weight: 500; color: #101010; font-size: 15px; }
 
 /* ============================================
    24. POINTS (1-5)
@@ -274,14 +274,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .point-section .container { display: grid; grid-template-columns: 1fr 31%; gap: 60px; align-items: start; }
 .point-section.img-left .container { grid-template-columns: 31% 1fr; }
 .point-section .text-col { padding-top: 40px; }
-.point-section .heading-small { font-size: 28px; color: var(--dark-teal); margin-bottom: 16px; }
+.point-section .heading-small { font-family: 'Poppins', sans-serif; font-size: 15px; color: var(--near-black); margin-bottom: 16px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.25em; }
 .point-section .body-text { color: var(--gray); }
 .point-section .image-col img { width: 100%; height: 413px; object-fit: cover; object-position: 70% 70%; }
 
 /* ============================================
    25. WHY THEY JOINED FFB (Masonry Quotes)
    ============================================ */
-.why-they-joined { background: var(--cream); padding: 80px 0; }
+.why-they-joined { background: var(--white); padding: 80px 0; }
 .why-they-joined .container { text-align: center; }
 .why-they-joined .heading-section { margin-bottom: 48px; }
 .masonry-quotes { columns: 3; column-gap: 24px; }
@@ -317,17 +317,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================ */
 .guarantee { background: var(--white); padding: 80px 0; text-align: center; }
 .guarantee .container { max-width: 700px; }
-.guarantee .big-number { font-family: 'Editors Note Regular', serif; font-size: 85px; line-height: 1; color: var(--dark-teal); margin-bottom: 0; }
-.guarantee .percent-label { font-family: 'Editors Note Regular', serif; font-size: 32px; color: var(--dark-teal); margin-bottom: 24px; }
-.guarantee .heading-section { font-size: 48px; margin-bottom: 16px; }
-.guarantee .heading-small { color: var(--sage); margin-bottom: 24px; }
-.guarantee .body-text { margin-bottom: 0; }
+.guarantee .big-number { font-size: 30px; line-height: 1; color: var(--white); margin-bottom: 0; }
+.guarantee .percent-label { font-family: 'Poppins', sans-serif; font-size: 12px; color: var(--white); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px; }
+.guarantee .guarantee-badge { width: 190px; height: 168px; background: var(--sage); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 24px; }
+.guarantee .heading-label { font-family: 'Poppins', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--near-black); margin-bottom: 16px; }
+.guarantee .heading-action { font-family: 'Editors Note Regular', serif; font-size: 85px; line-height: 1; color: var(--dark-teal); margin-bottom: 24px; font-weight: 400; }
+.guarantee .body-text { margin-bottom: 0; color: var(--gray); font-size: 16px; }
 
 /* ============================================
    28. TEXT BLOCK (DARK with device mockups)
    ============================================ */
 .text-block { background: #000000; padding: 80px 0; color: var(--white); text-align: center; overflow: hidden; }
-.text-block .heading-section { font-size: 65px; color: var(--white); margin-bottom: 40px; }
+.text-block .heading-section { font-size: 75px; color: var(--white); margin-bottom: 40px; text-transform: uppercase; }
 .text-block .heading-section em { font-family: 'Editors Note Light Italic', serif; font-style: italic; }
 .text-block .device-row { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-top: 40px; }
 .text-block .device-row img { border-radius: 8px; }
@@ -338,19 +339,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ============================================
    29. REVIEWS (Success Stories)
    ============================================ */
-.reviews-success { background: var(--cream); padding: 80px 0; }
+.reviews-success { background: var(--white); padding: 80px 0; }
 .reviews-success .container { text-align: center; }
-.reviews-success .label-text { margin-bottom: 48px; display: block; }
 .success-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .success-card { background: var(--white); border-radius: 10px; overflow: hidden; text-align: left; }
 .success-card .card-image { height: 280px; overflow: hidden; }
 .success-card .card-image img { width: 100%; height: 100%; object-fit: cover; }
 .success-card .card-body { padding: 24px; }
-.success-card .card-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 8px; }
+.success-card .card-eyebrow { font-size: 15px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--near-black); font-weight: 400; margin-bottom: 8px; }
 .success-card .card-quote { font-family: 'Editors Note Regular', serif; font-size: 42px; line-height: 1.1; color: var(--dark-teal); margin-bottom: 12px; }
-.success-card .script-overlay { font-family: 'Chic Societe Script', cursive; font-size: 60px; color: var(--sage); position: absolute; top: 16px; left: 24px; z-index: 2; opacity: 0.9; }
+.success-card .script-overlay { font-family: 'Chic Societe Script', cursive; font-size: 60px; color: var(--dark-teal); position: absolute; top: 16px; left: 24px; z-index: 2; opacity: 0.9; }
 .success-card { position: relative; }
-.success-card .card-text { font-size: 14px; line-height: 1.5; color: var(--gray); }
+.success-card .card-text { font-size: 16px; line-height: 1.5; color: var(--gray); }
 
 /* ============================================
    30. REVIEWS-1 (Video Testimonials)
@@ -361,7 +361,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .video-card { position: relative; overflow: hidden; border-radius: 10px; }
 .video-card img { width: 100%; height: 400px; object-fit: cover; }
 .video-card .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: var(--white); }
-.video-card .overlay .eyebrow { font-size: 11px; color: var(--sage); margin-bottom: 4px; }
+.video-card .overlay .eyebrow { font-size: 15px; letter-spacing: 0.25em; color: var(--near-black); margin-bottom: 4px; }
 .video-card .script-overlay { font-family: 'Chic Societe Script', cursive; font-size: 60px; color: var(--white); position: absolute; top: 16px; right: 24px; z-index: 2; opacity: 0.9; }
 .video-card .overlay p { font-size: 14px; line-height: 1.4; }
 
@@ -370,7 +370,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================ */
 .faq { background: var(--white); padding: 80px 0; }
 .faq .container { display: grid; grid-template-columns: 35% 1fr; gap: 60px; align-items: start; }
-.faq .heading-col .heading-section { font-size: 180px; line-height: 0.9; }
+.faq .heading-col .heading-section { font-size: 230px; line-height: 1; }
 .faq .heading-col img { width: 100%; height: 350px; object-fit: cover; margin-top: 32px; }
 .faq-list { }
 .faq-item { border-bottom: 1px solid rgba(36,53,49,0.2); }
@@ -387,7 +387,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ============================================
    33. NEW CANVAS (CTA)
    ============================================ */
-.new-canvas { background: var(--cream); padding: 100px 0; text-align: center; }
+.new-canvas { background: var(--white); padding: 100px 0; text-align: center; }
 .new-canvas .heading-section { font-size: 65px; margin-bottom: 24px; }
 .new-canvas .body-text { max-width: 500px; margin: 0 auto 32px; }
 
@@ -502,8 +502,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .pricing .heading-section { font-size: 34px; }
 
   /* Guarantee */
-  .guarantee .big-number { font-size: 80px; }
-  .guarantee .heading-section { font-size: 34px; }
+  .guarantee .heading-action { font-size: 50px; }
 
   /* Text block */
   .text-block .heading-section { font-size: 35px; }
@@ -625,7 +624,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <section class="we-believe-in" id="we-believe-in">
   <div class="container">
     <div class="values-list">
-      <span class="label-text">we believe in:</span>
+      <span class="label-text" style="color:var(--dark-teal);">we believe in:</span>
       <div class="value-item">
         <h3 class="heading-quote" style="font-size:55px;">Freedom</h3>
         <p class="body-text-sm" style="color:var(--dark-teal);line-height:1.7;">Building a business that allows you to work as little as you like, from wherever you like, without compromising growth.</p>
@@ -657,8 +656,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="text-col">
       <h2 class="heading-mid" style="font-size:50px;">For almost a decade, I've been growing my own digital business but doing so differently.</h2>
       <p class="label-text" style="color:var(--gray);">AND NOW I DO!</p>
-      <p class="body-text">I've been building and growing it my Freedom-Filled&trade; way and for the past 5 years, I have been working within my $30,000+ per year Mastermind, helping women to grow and scale their businesses using my proven methods.</p>
-      <p class="body-text" style="margin-top:16px;">Inside of the Freedom Filled Business Mentorship we are going to work together to unlock the freedom to be uniquely you and to get your digital business growing sustainably and in harmony with your life.</p>
+      <p class="body-text" style="color:var(--gray);">I've been building and growing it my Freedom-Filled&trade; way and for the past 5 years, I have been working within my $30,000+ per year Mastermind, helping women to grow and scale their businesses using my proven methods.</p>
+      <p class="body-text" style="margin-top:16px; color:var(--gray);">Inside of the Freedom Filled Business Mentorship we are going to work together to unlock the freedom to be uniquely you and to get your digital business growing sustainably and in harmony with your life.</p>
     </div>
   </div>
 </section>
@@ -679,8 +678,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="review-slide">
       <img class="review-image" src="https://static.showit.co/800/HadpA7bhTha9rV7wmuGDLw/shared/pexels-nataliya-vaitkevich-7615247.jpg" alt="Katie">
       <div class="review-card muted">
-        <p class="review-author">FROM KATIE</p>
-        <p class="review-quote">"This course gave me the courage to finally quit my job, and start my biz!"</p>
+        <p class="review-author" style="letter-spacing:0.05em;">FROM KATIE</p>
+        <p class="review-quote" style="font-size:50px; line-height:1;">"This course gave me the courage to finally quit my job, and start my biz!"</p>
       </div>
     </div>
   </div>
@@ -717,7 +716,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       <p class="label-text" style="font-size:30px; letter-spacing:0.25em;">Here's what you'll receive:</p>
       <h3 class="heading-mid">Monthly Freedom Power Hours</h3>
       <p class="body-text" style="color:var(--dark-teal);">Dynamic coaching sessions with Tracy, her team and/or guest experts where you get personalised guidance and answers to your burning questions, and with a dash of tough love! Calls run Jan-Nov because December is for resting.</p>
-      <a href="#pricing" class="btn btn-sage" style="margin-top:16px;">Apply Now &rarr;</a>
+      <a href="#pricing" class="btn btn-sage" style="margin-top:16px;">Apply Now!</a>
     </div>
   </div>
 </section>
@@ -734,7 +733,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="text-col">
       <h3 class="heading-mid">Resources Vault</h3>
       <p class="body-text" style="color:var(--dark-teal);">Including my community manager hiring process, launch strategies, email swipes, and video scripts to help you grow your business faster. I'll be adding to this over time and it's value is going to go up substantially.</p>
-      <a href="#pricing" class="btn btn-white" style="margin-top:16px; border: 1px solid var(--dark-teal);">Apply Now &rarr;</a>
+      <a href="#pricing" class="btn btn-white" style="margin-top:16px; border: 1px solid #2b2b2b;">Apply Now!</a>
     </div>
   </div>
 </section>
@@ -751,7 +750,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="text-col">
       <h3 class="heading-mid">Peer Mini-Masterminds</h3>
       <p class="body-text" style="color:var(--dark-teal);">This is for women who are doers, not dreamers. It's for entrepreneurs NOT want-repreneurs because I know how important it is to sit alongside seriously committed and values-aligned women. This is why we run peer mini-masterminds.</p>
-      <a href="#pricing" class="btn btn-sage" style="margin-top:16px;">Apply Now &rarr;</a>
+      <a href="#pricing" class="btn btn-sage" style="margin-top:16px;">Apply Now!</a>
     </div>
   </div>
 </section>
@@ -768,7 +767,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="text-col">
       <h3 class="heading-mid">Access to my FRESH Framework</h3>
       <p class="body-text" style="color:var(--dark-teal);">My secret weapon and transformational body of work, developed over 20 years, to ensure I maintain work-life harmony. Get ready to become the woman who creates her Freedom! It's my ultimate secret to a Freedom-Filled life.</p>
-      <a href="#pricing" class="btn btn-white" style="margin-top:16px; border: 1px solid var(--dark-teal);">Apply Now &rarr;</a>
+      <a href="#pricing" class="btn btn-white" style="margin-top:16px; border: 1px solid #2b2b2b;">Apply Now!</a>
     </div>
   </div>
 </section>
@@ -787,7 +786,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       <p class="label-text" style="font-size:14px;">BONUS ALERT!</p>
       <h3 class="heading-section" style="font-size:60px; line-height:1;">Plus these exclusive bonuses</h3>
       <p class="body-text" style="color:var(--dark-teal);">Tracy's Take: unfiltered, unscheduled space where Tracy shares what's sparking her interest and what's shaping her decisions as a founder and leader. My Freedom-Filled Offers Process: My proven framework for creating offers that sell. Plus my entire launch strategy playbook, email templates, and more.</p>
-      <a href="#pricing" class="btn btn-sage" style="margin-top:16px;">Apply Now &rarr;</a>
+      <a href="#pricing" class="btn btn-sage" style="margin-top:16px;">Apply Now</a>
     </div>
   </div>
 </section>
@@ -837,7 +836,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="result-item">
       <div>
         <h3 class="heading-small">Empowered Selling</h3>
-        <p class="body-text-sm">Develop confidence in your offers and sales approach, making the process of attracting and converting ideal clients feel natural and rewarding.</p>
+        <p class="body-text-sm">Develop confidence in your offers and sales approach, making the process of attracting and converting clients seamless and stress-free.</p>
       </div>
       <span class="eyebrow">06</span>
     </div>
@@ -953,7 +952,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="avatar">
       <img src="https://static.showit.co/200/Lmt5hFTWFevZgf0gbWDShQ/173187/gdfggf.jpg" alt="Charmaine Miranda">
     </div>
-    <p class="attribution">Charmaine Miranda, Course Student</p>
+    <p class="attribution" style="font-size:13px;">Charmaine Miranda, Course Student</p>
   </div>
 </section>
 
@@ -1077,7 +1076,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     <div class="text-col">
       <p class="script-label" style="color:#101010; font-size:60px;">Your mentor</p>
       <h2 class="heading-mid" style="color:#101010; font-size:48px;">TRACY HARRIS</h2>
-      <p class="body-text" style="font-family: 'Editors Note Regular', serif; font-size:48px; line-height:1; color:#101010;">"I help women create and scale digital businesses that feel abundant and rewarding, whilst designing a life that prioritises what matters to them most, health, family and true freedom."</p>
+      <p class="body-text">"I help women create and scale digital businesses that feel abundant and rewarding, whilst designing a life that prioritises what matters to them most - health, family and true freedom."</p>
       <p class="eyebrow" style="color:#101010; margin-top:24px;">Tracy Harris</p>
       <div style="margin-top:48px; padding-top:32px; border-top:1px solid rgba(0,0,0,0.1);">
         <p class="label-text" style="font-size:12px; margin-bottom:16px; color:#727272;">KIND WORDS</p>
@@ -1162,37 +1161,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <div class="section-divider">Section: why-they-joined-ffb</div>
 <section class="why-they-joined" id="why-they-joined-ffb">
   <div class="container">
-    <h2 class="heading-section" style="font-size:55px;">Here's why they've already joined FFB - hint: they are Freedom Makers!</h2>
+    <span class="label-text" style="font-size:13px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gray); display:block; text-align:left; margin-bottom:32px;">Here's why they've already joined FFB &nbsp; hint: they are Freedom Makers!</span>
     <div class="masonry-quotes">
       <div class="masonry-quote">
         <div class="quote-mark" style="color:var(--sage);">&#x275D;</div>
         <p class="quote-text">I need guidance and support in creating the business of my dreams, that will encourage me to keep moving forward.</p>
-        <p class="quote-author">Megan Martin</p>
+        <p class="quote-author">- Megan martin</p>
       </div>
       <div class="masonry-quote">
         <div class="quote-mark" style="color:var(--sage);">&#x275D;</div>
         <p class="quote-text">I am ready to take my business to the next level where I am guided by Tracy to create a freedom filled business.</p>
-        <p class="quote-author">Varsha Mistry</p>
+        <p class="quote-author">- varsha mistry</p>
       </div>
       <div class="masonry-quote">
         <div class="quote-mark" style="color:var(--sage);">&#x275D;</div>
         <p class="quote-text">I want to create a space for female led agency owners and it's time to create my own freedom filled life for our family.</p>
-        <p class="quote-author">Ashley Boston</p>
+        <p class="quote-author">- ashley boston</p>
       </div>
       <div class="masonry-quote">
         <div class="quote-mark" style="color:var(--sage);">&#x275D;</div>
         <p class="quote-text">Every point Tracy mentioned that her program offered matched every point of challenge/struggle I was experiencing.</p>
-        <p class="quote-author">Kerry Yacoumis</p>
+        <p class="quote-author">- Kerry Yacoumis</p>
       </div>
       <div class="masonry-quote">
         <div class="quote-mark" style="color:var(--sage);">&#x275D;</div>
         <p class="quote-text">I align with the values that Tracy has, and the way that she shows up.</p>
-        <p class="quote-author">Shy King</p>
+        <p class="quote-author">- shy king</p>
       </div>
       <div class="masonry-quote">
         <div class="quote-mark" style="color:var(--sage);">&#x275D;</div>
-        <p class="quote-text">I joined FFB because of Tracy! We have the same thought process on life... to enjoy it!</p>
-        <p class="quote-author">Felicia Terlecki</p>
+        <p class="quote-text">I joined FFB because of Tracy! We have the same thought process on life&#x2026;to enjoy it!</p>
+        <p class="quote-author">- Felicia terlecki</p>
       </div>
     </div>
     <a href="#pricing" class="btn btn-sage" style="margin-top:32px;">Apply Now &rarr;</a>
@@ -1210,19 +1209,46 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
       <!-- Pay in Full Card -->
       <div class="pricing-card dark">
         <p class="card-label" style="font-family:'Chic Societe Script', cursive; font-size:38px; letter-spacing:0; text-transform:none; font-weight:400;">best value!</p>
+        <p class="card-label" style="font-size:11px;">ANNUAL ACCESS</p>
         <h3 class="card-type">Pay in Full</h3>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em;">BE THE WOMAN WHO PAYS IN FULL</p>
+        <p class="card-price-strike">$8,000 AUD</p>
         <p class="card-price">$6,000 AUD</p>
-        <p class="card-desc">One Time Payment (Save $600)</p>
-        <a href="#" class="btn btn-white">Apply Now &rarr;</a>
+        <p class="card-desc">One Time Payment(Save $600)</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px;">INCLUSIONS</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">12 Months Program Access</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">11 x Freedom Power Hours</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">20 x FreedomMaker Circles</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Resources Vault</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Business Circle Community</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px;">BONUSES</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">F.R.E.S.H Framework&trade;</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Meditation Library*</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Offers Process*</p>
+        <a href="#" class="btn btn-white" style="margin-top:20px;">APPLY NOW</a>
       </div>
       <!-- Monthly Card -->
       <div class="pricing-card light">
-        <p class="card-label" style="color:var(--dark-teal);">Flexible</p>
+        <p class="card-label" style="color:var(--dark-teal);">Best Value!</p>
+        <p class="card-label" style="font-size:11px; color:var(--dark-teal);">ANNUAL ACCESS</p>
         <h3 class="card-type">Monthly</h3>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em;">MONTHLY PAYMENT PLAN</p>
+        <p class="card-price-strike">$725 AUD</p>
         <p class="card-price">$550 AUD</p>
         <p class="card-desc" style="font-size:15px; text-transform:uppercase; letter-spacing:0.1em;">PER MONTH</p>
         <p class="card-desc">$6,600 AUD Total Payment Over 12 Months</p>
-        <a href="#" class="btn btn-sage">Apply Now &rarr;</a>
+        <p class="card-desc" style="font-size:13px;">Flexible payments&nbsp; Spread the cost over 12 months for manageable payments.</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px;">INCLUSIONS</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">12 Months Program Access</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">11 x Freedom Power Hours</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">20 x FreedomMaker Circles</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Resources Vault</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Business Circle Community</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px;">BONUSES</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">F.R.E.S.H Framework&trade;</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Meditation Library*</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Offers Process*</p>
+        <a href="#" class="btn btn-sage" style="margin-top:20px;">APPLY NOW</a>
       </div>
     </div>
   </div>
@@ -1234,10 +1260,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <div class="section-divider">Section: guarantee</div>
 <section class="guarantee" id="guarantee">
   <div class="container">
-    <p class="big-number">100%</p>
-    <p class="percent-label">money back guarantee</p>
-    <h2 class="heading-section">Get your money back if it didn't serve you</h2>
-    <h3 class="heading-small" style="color:var(--sage);">Action-based Guarantee</h3>
+    <div class="guarantee-badge">
+      <p class="big-number">100%</p>
+      <p class="percent-label">money back guarantee</p>
+    </div>
+    <p class="heading-label">Get your money back if it didn't serve you</p>
+    <h2 class="heading-action">Action-based Guarantee</h2>
     <p class="body-text">If you keep the promises you make to yourself by completing all action tasks, participate fully for the 12 months and don't see progress in your self, life and or business, and you don't believe that this investment was worthwhile, I will refund your investment.</p>
   </div>
 </section>
@@ -1248,7 +1276,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <div class="section-divider">Section: text-block (DARK)</div>
 <section class="text-block" id="text-block">
   <div class="container">
-    <h2 class="heading-section">This program includes <em>everything</em> you need to CREATE YOUR FREEDOM-FILLED BUSINESS</h2>
+    <h2 class="heading-section" style="text-transform:uppercase;">This program includes</h2>
+    <p class="heading-section" style="text-transform:uppercase;"><em>everything</em></p>
+    <p class="heading-section" style="text-transform:uppercase;">you need</p>
+    <p class="heading-section" style="text-transform:uppercase;">to CREATE YOUR&nbsp;</p>
+    <p class="heading-section" style="text-transform:uppercase;">FREEDOM-FILLED BUSINESS</p>
     <div class="device-row">
       <img class="laptop" src="https://static.showit.co/1200/SuR2yuuaQ6ensYxumLEphg/shared/tonicdigitalmockup_laptop.png" alt="Laptop">
       <img class="ipad" src="https://static.showit.co/400/yJFePKk5RAiMEoxiy4z7QQ/shared/tonicdigitalmockup_ipad.png" alt="iPad">
@@ -1263,7 +1295,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <div class="section-divider">Section: reviews (success stories)</div>
 <section class="reviews-success" id="reviews">
   <div class="container">
-    <span class="label-text">SUCCESS STORIES</span>
     <div class="success-grid">
       <div class="success-card">
         <span class="script-overlay">success stories</span>
@@ -1273,7 +1304,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <div class="card-body">
           <p class="card-eyebrow">VANYA'S MEMBERSHIP HAS OVER 1000 MEMBERS</p>
           <p class="card-quote">"Tracy taught me how to turn my Instagram audience into a thriving digital business."</p>
-          <p class="card-text">I have a team now, my husband is retired, I am the author of two best-selling cook books and I have a membership with over 1000 members.</p>
+          <p class="card-text">I have a team now, my husband is retired, I am the author of two best-selling cook books and I have a membership with over 1000 members. I'm so grateful for everything you taught me Tracy. I had no idea about any of this stuff.</p>
         </div>
       </div>
       <div class="success-card">
@@ -1284,7 +1315,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <div class="card-body">
           <p class="card-eyebrow">JESS AND ELLE'S OFFER SOLD OUT TWICE</p>
           <p class="card-quote">"We went from overwhelmed to having a clear idea and simple plan to launch."</p>
-          <p class="card-text">Astonishingly, we sold out our first coaching offer not once, but twice within one week!</p>
+          <p class="card-text">Astonishingly, we sold out our first coaching offer not once, but twice within one week! And have now gone on to launch our handmade business membership using the same easy, freedom filled method.</p>
         </div>
       </div>
       <div class="success-card">
@@ -1295,7 +1326,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <div class="card-body">
           <p class="card-eyebrow">JESS IS THE BEST VERSION OF HERSELF</p>
           <p class="card-quote">"Tracy has been an incredible mentor and my biggest cheerleader."</p>
-          <p class="card-text">She's a one of a kind business coach who helps nurture and guide you to become the best version of yourself.</p>
+          <p class="card-text">She's a one of a kind business coach who helps nurture and guide you to become the best version of yourself in life and in business. Her golden nuggets of wisdom throughout our calls has helped transform my business.</p>
         </div>
       </div>
     </div>
@@ -1313,15 +1344,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <span class="script-overlay">it's possible!</span>
         <img src="https://static.showit.co/800/thKMuayblMcYw80l4ZyKqA/173187/img_2574.jpg" alt="Video testimonial">
         <div class="overlay">
-          <p class="eyebrow" style="color:var(--sage);">THIS HOMESCHOOLING FAMILY IS LIVING THEIR LIFE BY DESIGN</p>
-          <p>Her membership just turned 4 years old and her husband is at home with them. Tracy is the most genuine, and most heart-centred mentor.</p>
+          <p class="eyebrow" style="color:var(--sage);">this homeschooling family is living their life by design</p>
+          <p>Her membership just turned 4 years old and her husband is at home with them</p>
+          <p style="margin-top:8px; font-size:13px; opacity:0.9;">Tracy is the most genuine, and most heart-centred mentor. I love that she truly embodies creating a life and business by design. She goes first. She doesn't just tell us, but she leads by example and show us how to do what she does. And she holds nothing back.</p>
         </div>
       </div>
       <div class="video-card">
         <img src="https://static.showit.co/800/ikYuHvPPDV3l04etkC_3eQ/173187/040a3275_-_01.jpg" alt="Video testimonial">
         <div class="overlay">
-          <p class="eyebrow" style="color:var(--sage);">SHE'S NOW LIVING HER PURPOSE</p>
-          <p>She quit her 25 year career in corporate financial services to grow her personal styling business. "Telling my daughter that mummy has been able to quit her job means everything to me."</p>
+          <p class="eyebrow" style="color:var(--sage);">she's now living her purpose</p>
+          <p>She quit her 25 year career in corporate financial services to grow her personal styling business</p>
+          <p style="margin-top:8px; font-size:13px; opacity:0.9;">Telling my daughter that mummy has been able to quit her job" and that I will be able to take her to school and pick her up, means everything to me because I wasn't able to do that for our boys. You've changed my life Tracy. Thank you.</p>
         </div>
       </div>
     </div>
@@ -1335,7 +1368,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <section class="faq" id="faq-s">
   <div class="container">
     <div class="heading-col">
-      <h2 class="heading-section" style="font-size:180px; line-height:0.9;">Questions</h2>
+      <h2 class="heading-section" style="font-size:230px; line-height:1;">QUESTIONS</h2>
       <img src="https://static.showit.co/400/Z3BItzGDT7aYgmOmZYOvNg/173187/marissa-grootes-ywpnwdnzhkg-unsplash.jpg" alt="FAQ">
     </div>
     <div class="faq-list">
@@ -1356,6 +1389,26 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         <p class="faq-answer">To join, click the link below to secure your spot. Begin your journey to a freedom-filled business and life.</p>
       </details>
       <details class="faq-item">
+        <summary>How long is the program?</summary>
+        <p class="faq-answer">The mentorship lasts for one year, allowing for deep, meaningful integration and growth. This ensures you have ample time to implement the strategies and see real results.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I fall behind?</summary>
+        <p class="faq-answer">This program is designed for relaxed integration, so you can move at your own pace without the pressure of falling behind. We believe in sustainable progress, not rushed timelines.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How is this different from other mentorship programs?</summary>
+        <p class="faq-answer">Freedom-Filled&trade; Business is a mentorship with mastermind elements. It's not a typical program where you're forced into a rigid structure or niche. Instead, we focus on personalised guidance, practical implementation, and building a business that aligns with your unique strengths and values.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What kind of support will I receive?</summary>
+        <p class="faq-answer">You'll have access to monthly group coaching calls, Freedom-Maker Circles (mini mastermind groups), and a resource library. Plus, you'll be part of an exclusive, elevated community on Circle designed for deep connection and support.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the investment and payment options?</summary>
+        <p class="faq-answer">The mentorship will be offered at $6,000 AUD per year. There are three payment options available: pay in full for $6,000 AUD a 12-month payment plan at $500 AUD per month or a 6-pay option at $1,000 over 6 consecutive payments. A commitment for 12 months is required.</p>
+      </details>
+      <details class="faq-item">
         <summary>Can I still get support if I have questions outside of group sessions?</summary>
         <p class="faq-answer">Yes, our community platform on Circle is designed for ongoing support. You can ask questions, share experiences, and get feedback from both me and your peers throughout the program.</p>
       </details>
@@ -1370,24 +1423,49 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <section class="pricing" id="secure-your-spot-pricing-1" style="background:#050505;">
   <div class="container">
     <p class="label-text" style="margin-bottom:16px; color:var(--white);">PAYMENT OPTIONS</p>
-    <h2 class="heading-section" style="color:var(--white);">Secure Your Seat Now</h2>
+    <h2 class="heading-section" style="color:var(--white);">Secure Your Spot Now</h2>
     <div class="pricing-cards">
       <!-- Pay in Full Card -->
       <div class="pricing-card dark">
         <p class="card-label" style="font-family:'Chic Societe Script', cursive; font-size:38px; letter-spacing:0; text-transform:none; font-weight:400;">best value!</p>
+        <p class="card-label" style="font-size:11px;">ANNUAL ACCESS</p>
         <h3 class="card-type">Pay in Full</h3>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.7);">BE THE WOMAN WHO PAYS IN FULL</p>
         <p class="card-price">$6,000 AUD</p>
-        <p class="card-desc">One Time Payment (Save $600)</p>
-        <a href="#" class="btn btn-white">Apply Now &rarr;</a>
+        <p class="card-desc">One Time Payment(Save $600)</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px; color:rgba(255,255,255,0.7);">INCLUSIONS</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">12 Months Program Access</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">11 x Freedom Power Hours</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">20 x FreedomMaker Circles</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Resources Vault</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Business Circle Community</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px; color:rgba(255,255,255,0.7);">BONUSES</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">F.R.E.S.H Framework&trade;</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Meditation Library*</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Offers Process*</p>
+        <a href="#" class="btn btn-white" style="margin-top:20px;">APPLY NOW</a>
       </div>
       <!-- Monthly Card -->
       <div class="pricing-card light" style="border:1px solid rgba(255,255,255,0.1);">
-        <p class="card-label" style="color:var(--dark-teal);">Flexible</p>
+        <p class="card-label" style="color:var(--dark-teal);">Best Value!</p>
+        <p class="card-label" style="font-size:11px; color:var(--dark-teal);">ANNUAL ACCESS</p>
         <h3 class="card-type">Monthly</h3>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em;">MONTHLY PAYMENT</p>
         <p class="card-price">$550 AUD</p>
         <p class="card-desc" style="font-size:15px; text-transform:uppercase; letter-spacing:0.1em;">PER MONTH</p>
         <p class="card-desc">$6,600 AUD Total Payment Over 12 Months</p>
-        <a href="#" class="btn btn-sage">Apply Now &rarr;</a>
+        <p class="card-desc" style="font-size:13px;">Flexible payments&nbsp; Spread the cost over 12 months for manageable payments.</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px;">INCLUSIONS</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">12 Months Program Access</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">11 x Freedom Power Hours</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">20 x FreedomMaker Circles</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Resources Vault</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Business Circle Community</p>
+        <p class="card-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; margin-top:16px;">BONUSES</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">F.R.E.S.H Framework&trade;</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Meditation Library*</p>
+        <p class="card-desc" style="font-size:13px; margin-bottom:4px;">Freedom-Filled Offers Process*</p>
+        <a href="#" class="btn btn-sage" style="margin-top:20px;">APPLY NOW</a>
       </div>
     </div>
   </div>
