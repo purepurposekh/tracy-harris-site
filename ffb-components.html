@@ -90,12 +90,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================ */
 .hero { background: var(--cream); position: relative; overflow: hidden; }
 .hero .container { position: relative; min-height: 807px; display: flex; align-items: stretch; }
-.hero-panel { background: var(--white); width: 67%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px; text-align: center; min-height: 711px; margin-top: 39px; }
-.hero-panel .heading-hero { margin-bottom: 24px; }
-.hero-panel .body-text { max-width: 444px; margin-bottom: 32px; color: var(--dark-teal); }
-.hero-image { position: absolute; right: 0; top: 130px; width: 48.2%; height: 564px; background-image: url('https://static.showit.co/800/aHJ_7e00RV-MrsdMdJddaQ/173187/th-pb-2024-outfit1-25.jpg'); background-size: 170%; background-position: 50% 50%; background-repeat: no-repeat; z-index: 2; }
+.hero-panel { background: var(--white); width: 66.9%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 0; text-align: center; min-height: 711px; margin-top: 39px; }
+.hero-panel-inner { max-width: 444px; display: flex; flex-direction: column; align-items: center; margin-right: 22%; }
+.hero-panel .heading-hero { margin-bottom: 24px; font-family: 'Editors Note Regular', serif; font-size: 65px; font-weight: 400; line-height: 1; letter-spacing: 0; color: rgba(36,53,49,1); text-align: center; }
+.hero-panel .heading-hero em { font-family: 'Editors Note Light Italic', serif; font-style: italic; }
+.hero-panel .body-text { max-width: 444px; margin-bottom: 32px; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0; color: rgba(36,53,49,1); text-align: center; }
+.hero-image { position: absolute; right: 0; top: 130px; width: 578px; height: 564px; background-image: url('https://static.showit.co/800/aHJ_7e00RV-MrsdMdJddaQ/173187/th-pb-2024-outfit1-25.jpg'); background-size: 170%; background-position: 50% 50%; background-repeat: no-repeat; z-index: 2; }
 .hero-logo { width: 41px; height: 58px; margin-bottom: 20px; }
 .hero-logo img { width: 100%; height: 100%; object-fit: contain; }
+.hero .btn { font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.05em; }
 
 /* ============================================
    3. THE FFB DIFFERENCE
@@ -421,12 +424,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .label-text { font-size: 13px; }
   .eyebrow { font-size: 13px; }
 
-  /* Hero - matches original mobile: full-width photo at top (tall), content left-aligned below */
+  /* Hero mobile - original: monogram at top, then photo (full width), then heading+body left-aligned */
   .hero .container { min-height: auto; flex-direction: column; }
-  .hero-image { position: relative; right: auto; top: auto; width: calc(100% + 48px); margin-left: -24px; height: 55vw; background-size: cover; background-position: 50% 50%; order: -1; z-index: 2; }
-  .hero-panel { width: 100%; padding: 40px 24px 48px; text-align: left; min-height: auto; margin-top: 0; align-items: flex-start; }
-  .hero-panel .heading-hero { font-size: 43px; text-align: left; }
-  .hero-panel .body-text { font-size: 14px; text-align: left; line-height: 1.7; max-width: 100%; }
+  .hero-panel { width: 100%; padding: 0; text-align: left; min-height: auto; margin-top: 0; align-items: flex-start; order: 2; }
+  .hero-panel-inner { max-width: 100%; margin-right: 0; align-items: flex-start; padding: 32px 24px 48px; }
+  .hero-logo { width: 52px; height: 56px; order: -2; align-self: center; margin: 16px auto; position: relative; z-index: 3; }
+  .hero-image { position: relative; right: auto; top: auto; width: calc(100% + 48px); margin-left: -24px; height: 52vw; background-size: cover; background-position: 50% 50%; order: 1; z-index: 2; }
+  .hero-panel .heading-hero { font-size: 43px; text-align: left; line-height: 1; color: rgba(36,53,49,1); }
+  .hero-panel .body-text { font-size: 14px; text-align: left; line-height: 1.7; max-width: 100%; color: rgba(36,53,49,1); }
   .hero-panel .btn { align-self: flex-start; }
 
   /* FFB Difference - Showit mobile: 40px heading center, 15px body center, line-height 1.4 */
@@ -617,12 +622,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 <section class="hero" id="hero">
   <div class="container">
     <div class="hero-panel">
-      <div class="hero-logo">
-        <img src="https://static.showit.co/file/X49f_4eeRp2jtFRUSCgK0g/173187/ffb_logo_symbol.svg" alt="FFB Logo">
+      <div class="hero-panel-inner">
+        <div class="hero-logo">
+          <img src="https://static.showit.co/file/X49f_4eeRp2jtFRUSCgK0g/173187/ffb_logo_symbol.svg" alt="FFB Logo">
+        </div>
+        <h1 class="heading-hero">Your Journey to <em>Freedom</em> Begins Here</h1>
+        <p class="body-text">My year-long mentorship &amp; implementation program, Freedom-Filled&trade; Business, is designed to help you grow courses and memberships that are freedom-filled, give you life, and reward you abundantly.</p>
+        <a href="#pricing" class="btn btn-sage">Apply Now &rarr;</a>
       </div>
-      <h1 class="heading-hero">Your Journey to <em>Freedom</em> Begins Here</h1>
-      <p class="body-text">My year-long mentorship &amp; implementation program, Freedom-Filled&trade; Business, is designed to help you grow courses and memberships that are freedom-filled, give you life, and reward you abundantly.</p>
-      <a href="#pricing" class="btn btn-sage">Apply Now &rarr;</a>
     </div>
     <div class="hero-image"></div>
   </div>
